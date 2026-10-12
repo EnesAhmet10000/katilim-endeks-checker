@@ -1,0 +1,25 @@
+{
+  "name": "@katilim/extension",
+  "version": "1.0.0",
+  "description": "Katilim Finans Uygunluk Kontrolu Tarayici Eklentisi (Chrome, Edge, Brave, Firefox, Safari)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.js chrome",
+    "build:firefox": "node build.js firefox",
+    "build:safari": "node build.js safari",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@katilim/compliance-engine": "^1.0.0",
+    "@katilim/shared-types": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.268",
+    "@types/node": "^20.12.12",
+    "esbuild": "^0.21.3",
+    "rimraf": "^5.0.7",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11"
+  }
+}

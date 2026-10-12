@@ -1,0 +1,28 @@
+{
+  "name": "@katilim/compliance-engine",
+  "version": "1.0.0",
+  "description": "Deterministic Islamic Finance compliance evaluation engine for BIST stocks and TEFAS funds",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test dist/__tests__/**/*.test.js",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@katilim/shared-types": "^1.0.0"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.7",
+    "typescript": "^5.4.5"
+  }
+}

@@ -1,0 +1,14 @@
+node_modules/
+**/dist/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+
+# Local handoffs and unrelated personal notes
+*.zip
+AI_Trading_Chat_Summary_*.pdf
+Prompt.txt
+qa-preview.html

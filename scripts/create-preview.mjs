@@ -1,0 +1,4 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import {parseKapMembership,resolveCompany} from '../packages/compliance-engine/dist/index.js';
+const evaluation=parseKapMembership(readFileSync('kap-petkm-fixture.html','utf8'),resolveCompany('PETKM'),'2026-10-12T09:16:28.814Z');
+writeFileSync('qa-preview.html',`<!doctype html><html lang="tr"><meta charset="utf-8"><title>Katılım Kontrol — local fixture preview</title><body style="font:16px system-ui;background:#edf2f7;padding:30px"><h1>Yerel arayüz kontrolü</h1><p>12.10.2026 KAP yanıtından alınmış test verisi. Bu sayfa canlı kontrol değildir.</p><script>let handler;window.chrome={runtime:{onMessage:{addListener(fn){handler=fn;}},sendMessage(){}}};</script><script src="/apps/extension/dist/chrome/content.js"></script><script>handler({type:'SHOW_RESULT',query:'Petkim',evaluation:${JSON.stringify(evaluation).replace(/</g,'\\u003c')}},{},()=>{});</script></body></html>`);

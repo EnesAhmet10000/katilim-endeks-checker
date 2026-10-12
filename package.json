@@ -1,0 +1,33 @@
+{
+  "name": "katilim-endeksi-checker",
+  "version": "1.0.0",
+  "description": "BIST Hisseleri ve Yatırım Fonları için Katılım Finans Uygunluk Kontrolü Tarayıcı Eklentisi ve API",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=@katilim/shared-types && npm run build --workspace=@katilim/compliance-engine && npm run build --workspace=@katilim/api && npm run build:extension",
+    "test": "npm run test --workspaces --if-present && node scripts/test-extension.mjs",
+    "start:api": "npm --workspace=apps/api run start",
+    "dev:api": "npm --workspace=apps/api run dev",
+    "build:extension": "npm --workspace=apps/extension run build",
+    "build:extension:firefox": "npm --workspace=apps/extension run build:firefox",
+    "build:extension:safari": "npm --workspace=apps/extension run build:safari"
+  },
+  "keywords": [
+    "katilim-endeksi",
+    "bist",
+    "tefas",
+    "kap",
+    "browser-extension",
+    "islamic-finance"
+  ],
+  "author": "Antigravity",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}
