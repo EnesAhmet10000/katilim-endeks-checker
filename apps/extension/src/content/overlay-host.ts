@@ -292,6 +292,11 @@ class KatilimOverlayManager {
         background: #f0fdf4;
         color: #166534;
       }
+      .index-chip.excluded {
+        border-color: #fecdd3;
+        background: #fff1f2;
+        color: #9f1239;
+      }
 
       /* Criteria Table */
       .criteria-list {
@@ -544,7 +549,7 @@ class KatilimOverlayManager {
           </div>
           <div class="indices-grid">
             ${evaluation.indices.map(i => `
-              <div class="index-chip ${i.isMember ? 'included' : ''}">
+              <div class="index-chip ${i.isMember ? 'included' : 'excluded'}">
                 <span>${this.escapeHtml(i.indexName)}</span>
                 <span>${i.isMember ? '✓' : 'Listede yok'}</span>
               </div>

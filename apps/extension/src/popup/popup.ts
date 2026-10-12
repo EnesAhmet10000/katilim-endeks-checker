@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="section-title">BIST Katılım Endeksleri</div>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px;">
             ${ev.indices.map(i => `
-              <div style="padding: 4px 6px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px; font-size: 10px; font-weight: 600; display: flex; justify-content: space-between;">
+              <div style="padding: 4px 6px; background: ${i.isMember ? '#f0fdf4' : '#fff1f2'}; color: ${i.isMember ? '#166534' : '#9f1239'}; border: 1px solid ${i.isMember ? '#86efac' : '#fecdd3'}; border-radius: 4px; font-size: 10px; font-weight: 600; display: flex; justify-content: space-between;">
                 <span>${escapeHtml(i.indexName)}</span>
                 <span>${i.isMember ? '✓' : 'Listede yok'}</span>
               </div>
