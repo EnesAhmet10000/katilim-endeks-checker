@@ -1,11 +1,15 @@
 import { sourceLinks, instrumentQuery } from '@katilim/compliance-engine';
 import { ComplianceEvaluation, DisambiguationCandidate, InstrumentType } from '@katilim/shared-types';
+import { applyView, bindViewControls, normalizeView, readView, ViewPreferences } from '../view-preferences.js';
 
 class KatilimOverlayManager {
   private container: HTMLElement | null = null;
   private shadow: ShadowRoot | null = null;
+  private view: ViewPreferences = normalizeView();
+  private disposeView?: () => void;
 
   constructor() {
+    void readView().then(view=>{this.view=view;this.mountView();});
     this.initMessageListener();
     console.log('🌙 Katılım Finans content script initialized.');
   }
@@ -64,6 +68,13 @@ class KatilimOverlayManager {
   private getStyles(): string {
     return `
       * { box-sizing: border-box; margin: 0; padding: 0; }
+      [hidden] { display: none !important; }
+      .view-controls { padding:10px 18px; background:#f8fafc; color:#334155; font-size:12px; border-bottom:1px solid #e2e8f0; }
+      .view-controls select, .view-controls button { padding:5px 8px; border:1px solid #cbd5e1; border-radius:6px; background:white; color:#334155; font:inherit; }
+      .view-controls button { margin-left:8px; cursor:pointer; }
+      .view-controls fieldset { border:0; margin-top:10px; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+      .view-controls legend { margin-bottom:8px; }
+      .view-controls fieldset label { display:flex; align-items:center; gap:6px; }
 
       .overlay-card {
         width: 430px;
@@ -512,6 +523,7 @@ class KatilimOverlayManager {
   }
 
   public renderResult(query: string, evaluation: ComplianceEvaluation) {
+    this.disposeView?.();
     const shadow = this.ensureShadowHost();
     const inst = evaluation.instrument;
     const isStock = inst.type === InstrumentType.STOCK;
@@ -525,7 +537,7 @@ class KatilimOverlayManager {
     let indicesHtml = '';
     if (isStock && evaluation.indices && evaluation.indices.length > 0) {
       indicesHtml = `
-        <div class="section-box">
+        <div class="section-box" data-view-section="indices">
           <div class="section-title">
             <span>BIST Katılım Endeksleri</span>
             <span style="font-weight: 500; text-transform: none;">${this.escapeHtml(evaluation.indices[0].period || 'Kaynak tarihi bilinmiyor')}</span>
@@ -545,7 +557,7 @@ class KatilimOverlayManager {
     let criteriaHtml = '';
     if (evaluation.criteria && evaluation.criteria.length > 0) {
       criteriaHtml = `
-        <div class="section-box">
+        <div class="section-box" data-view-section="criteria">
           <div class="section-title">${isStock ? 'KAP KAFİF beyanları' : 'Fon Katılım Kriterleri'} · ${this.escapeHtml(evaluation.financialPeriod || '')}</div>
           <div class="criteria-list">
             ${evaluation.criteria.map(c => `
@@ -570,7 +582,7 @@ class KatilimOverlayManager {
     let sourcesHtml = '';
     if (evaluation.sources && evaluation.sources.length > 0) {
       sourcesHtml = `
-        <div class="section-box">
+        <div class="section-box" data-view-section="sources">
           <div class="section-title">Okunan Kaynaklar</div>
           <div class="sources-list">
             ${evaluation.sources.map(s => `
@@ -599,8 +611,9 @@ class KatilimOverlayManager {
           <button class="close-btn" id="closeCard">✕</button>
         </div>
 
+          <div class="view-controls" id="viewControls"></div>
         <div class="card-body">
-          <div class="instrument-meta">
+          <div class="instrument-meta" data-view-section="identity">
             <div class="symbol-row">
               <span class="symbol-badge">${this.escapeHtml(inst.symbol)}</span>
               <span class="type-pill ${isStock ? 'type-stock' : 'type-fund'}">
@@ -614,18 +627,18 @@ class KatilimOverlayManager {
             <span class="status-icon">${statusIcon}</span>
             <div>
               <div class="status-title">${this.escapeHtml(evaluation.statusLabel)}</div>
-              <div class="status-reason">${this.escapeHtml(evaluation.summaryReason)}</div>
+              <div class="status-reason" data-view-section="reason">${this.escapeHtml(evaluation.summaryReason)}</div>
             </div>
           </div>
 
-          ${evaluation.asOf ? `<p style="font-size:12px;color:#64748b;">Kontrol: ${this.escapeHtml(new Date(evaluation.asOf).toLocaleString('tr-TR'))} ${evaluation.isCached ? '(önbellek)' : ''}</p>` : ''}
+          ${evaluation.asOf ? `<p data-view-section="timestamp" style="font-size:12px;color:#64748b;">Kontrol: ${this.escapeHtml(new Date(evaluation.asOf).toLocaleString('tr-TR'))} ${evaluation.isCached ? '(önbellek)' : ''}</p>` : ''}
           ${indicesHtml}
           ${criteriaHtml}
-          ${evaluation.fundProfile ? `<div class="section-box"><div class="section-title">KAP Fon Kaydı</div><p>${this.escapeHtml(evaluation.fundProfile.umbrellaName || 'Şemsiye fon adı belirtilmemiş')}</p><p>Tür: ${this.escapeHtml(evaluation.fundProfile.umbrellaType || 'Bu sayfada doğrulanamadı')}</p></div>` : ''}
-          ${evaluation.fundData ? `<div class="section-box"><div class="section-title">TEFAS fon profili</div><p>${this.escapeHtml(evaluation.fundData.tradingStatus || 'İşlem durumu doğrulanamadı')}</p><p>ISIN: ${this.escapeHtml(evaluation.fundData.isin || 'Doğrulanamadı')}</p></div>${evaluation.fundData.allocation.length?`<div class="section-box"><div class="section-title">Varlık türü dağılımı · ${this.escapeHtml(evaluation.fundData.allocationDate || '')}</div>${evaluation.fundData.allocation.map(a=>`<div class="criterion-row"><span>${this.escapeHtml(a.name)}</span><b>%${a.percent.toLocaleString('tr-TR',{maximumFractionDigits:2})}</b></div>`).join('')}</div>`:''}` : ''}
-          ${isStock&&!evaluation.criteria.length ? '<div class="section-box">Bu şirket için KAFİF oranları doğrulanmadı. Eski veya örnek değerler kullanılmaz.</div>' : !isStock&&!evaluation.fundData?.allocation.length?'<div class="section-box">Güncel portföy dağılımı doğrulanmadı. İcazet belgesi ayrıca incelenmelidir.</div>':''}
+          ${evaluation.fundProfile ? `<div class="section-box" data-view-section="fundProfile"><div class="section-title">KAP Fon Kaydı</div><p>${this.escapeHtml(evaluation.fundProfile.umbrellaName || 'Şemsiye fon adı belirtilmemiş')}</p><p>Tür: ${this.escapeHtml(evaluation.fundProfile.umbrellaType || 'Bu sayfada doğrulanamadı')}</p></div>` : ''}
+          ${evaluation.fundData ? `<div class="section-box" data-view-section="fundProfile"><div class="section-title">TEFAS fon profili</div><p>${this.escapeHtml(evaluation.fundData.tradingStatus || 'İşlem durumu doğrulanamadı')}</p><p>ISIN: ${this.escapeHtml(evaluation.fundData.isin || 'Doğrulanamadı')}</p></div>${evaluation.fundData.allocation.length?`<div class="section-box" data-view-section="allocation"><div class="section-title">Varlık türü dağılımı · ${this.escapeHtml(evaluation.fundData.allocationDate || '')}</div>${evaluation.fundData.allocation.map(a=>`<div class="criterion-row"><span>${this.escapeHtml(a.name)}</span><b>%${a.percent.toLocaleString('tr-TR',{maximumFractionDigits:2})}</b></div>`).join('')}</div>`:''}` : ''}
+          ${isStock&&!evaluation.criteria.length ? '<div class="section-box" data-view-section="warnings">Bu şirket için KAFİF oranları doğrulanmadı. Eski veya örnek değerler kullanılmaz.</div>' : !isStock&&!evaluation.fundData?.allocation.length?'<div class="section-box" data-view-section="warnings">Güncel portföy dağılımı doğrulanmadı. İcazet belgesi ayrıca incelenmelidir.</div>':''}
           ${sourcesHtml}
-          ${evaluation.dataWarnings?.length?`<div class="section-box"><div class="section-title">Veri kapsamı</div>${evaluation.dataWarnings.map(w=>`<p style="font-size:12px;margin-bottom:6px;">${this.escapeHtml(w)}</p>`).join('')}</div>`:''}
+          ${evaluation.dataWarnings?.length?`<div class="section-box" data-view-section="warnings"><div class="section-title">Veri kapsamı</div>${evaluation.dataWarnings.map(w=>`<p style="font-size:12px;margin-bottom:6px;">${this.escapeHtml(w)}</p>`).join('')}</div>`:''}
         </div>
 
         <div class="card-footer">
@@ -639,11 +652,12 @@ class KatilimOverlayManager {
               <button class="btn btn-fintables" id="fintablesBtn">Fintables ↗</button>
             ` : inst.type===InstrumentType.MUTUAL_FUND?'<button class="btn" id="tefasBtn">TEFAS’ta Kontrol Et ↗</button>':''}
           </div>
-          <div class="disclaimer">API anahtarı gerekmez · Hesap veya izleme yok<br>${this.escapeHtml(evaluation.disclaimer)}</div>
+          <div class="disclaimer" data-view-section="disclaimer">API anahtarı gerekmez · Hesap veya izleme yok<br>${this.escapeHtml(evaluation.disclaimer)}</div>
         </div>
       </div>
     `;
 
+    this.mountView();
     shadow.getElementById('closeCard')?.addEventListener('click', () => this.remove());
 
     shadow.getElementById('refreshBtn')?.addEventListener('click', () => {
@@ -749,7 +763,16 @@ class KatilimOverlayManager {
     shadow.getElementById('closeCard')?.addEventListener('click', () => this.remove());
   }
 
+  private mountView() {
+    this.disposeView?.();
+    const controls=this.shadow?.getElementById('viewControls');
+    if(!controls||!this.shadow) return;
+    applyView(this.shadow,this.view);
+    this.disposeView=bindViewControls(controls,this.view,view=>{this.view=view;if(this.shadow) applyView(this.shadow,view);});
+  }
+
   public remove() {
+    this.disposeView?.();
     if (this.container && this.container.parentNode) {
       this.container.parentNode.removeChild(this.container);
       this.container = null;

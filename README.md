@@ -1,4 +1,6 @@
-# Katılım Endeksi Checker — 1.3.0
+# Katılım Endeksi Checker — 1.4.0
+
+Display modes are available in both the result card and popup: **Basit** (result and source actions), **Tam** (all details, default), and **Özel** (choose visible sections using **Özelleştir**). Preferences stay in local extension storage, apply to stocks and funds, survive refresh/reopening, and synchronize across open extension views. Presentation choices do not change the evaluation or source requests.
 
 Select a BIST ticker, company name, fund code or full fund name, right-click and choose **Katılım Uygunluğunu Kontrol Et**. The Chrome extension resolves the official KAP identity, reads BIST participation membership, KAFİF disclosures and available TEFAS fund profiles/asset allocation. It works without an API key, account, subscription or local server.
 

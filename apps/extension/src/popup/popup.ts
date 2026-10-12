@@ -1,4 +1,5 @@
 import { sourceLinks, instrumentQuery } from '@katilim/compliance-engine';
+import { applyView, bindViewControls, normalizeView, readView } from '../view-preferences.js';
 const escapeHtml = (text: string) => (text || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]!));
 import { ComplianceCheckResponse, ComplianceEvaluation, InstrumentSummary, InstrumentType } from '@katilim/shared-types';
 
@@ -10,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const resultsList = document.getElementById('resultsList') as HTMLElement;
   const loadingState = document.getElementById('loadingState') as HTMLElement;
   const detailCard = document.getElementById('detailCard') as HTMLElement;
+  let view=normalizeView();
+  void readView().then(saved=>{view=saved;applyView(detailCard,view);bindViewControls(document.getElementById('viewControls')!,view,prefs=>{view=prefs;applyView(detailCard,view);});});
 
   let debounceTimer: any = null;
 
@@ -131,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const icon = ev.statusBadgeVariant === 'success' ? '✅' : ev.statusBadgeVariant === 'danger' ? '❌' : '⚠️';
 
     detailCard.innerHTML = `
-      <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div data-view-section="identity" style="display: flex; justify-content: space-between; align-items: center;">
         <div>
           <span style="font-size: 16px; font-weight: 800; color: #0f172a;">${escapeHtml(inst.symbol)}</span>
           <div style="font-size: 11px; color: #475569;">${escapeHtml(inst.name)}</div>
@@ -145,12 +148,12 @@ document.addEventListener('DOMContentLoaded', () => {
         <span style="font-size: 20px;">${icon}</span>
         <div>
           <div style="font-weight: 800; font-size: 12px; margin-bottom: 2px;">${escapeHtml(ev.statusLabel)}</div>
-          <div style="font-size: 11px; line-height: 1.35;">${escapeHtml(ev.summaryReason)}</div>
+          <div data-view-section="reason" style="font-size: 11px; line-height: 1.35;">${escapeHtml(ev.summaryReason)}</div>
         </div>
       </div>
 
       ${isStock && ev.indices.length > 0 ? `
-        <div>
+        <div data-view-section="indices">
           <div class="section-title">BIST Katılım Endeksleri</div>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px;">
             ${ev.indices.map(i => `
@@ -164,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ` : ''}
 
       ${ev.criteria.length > 0 ? `
-        <div>
+        <div data-view-section="criteria">
           <div class="section-title">${isStock ? 'KAP KAFİF beyanları' : 'Fon Kriterleri'} · ${escapeHtml(ev.financialPeriod||'')}</div>
           ${ev.criteria.map(c => `
             <div class="row-item">
@@ -177,17 +180,19 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       ` : ''}
 
-      ${ev.fundProfile?`<div style="font-size:11px;margin:8px 0;">Şemsiye türü: ${escapeHtml(ev.fundProfile.umbrellaType||'Doğrulanamadı')}</div>`:''}
-      ${ev.fundData?`<div class="section-title">TEFAS fon profili</div><p>${escapeHtml(ev.fundData.tradingStatus||'Doğrulanamadı')}</p><p>ISIN: ${escapeHtml(ev.fundData.isin||'Doğrulanamadı')}</p>${ev.fundData.allocation.length?`<div class="section-title">Varlık dağılımı · ${escapeHtml(ev.fundData.allocationDate||'')}</div>${ev.fundData.allocation.map(a=>`<div class="row-item"><span>${escapeHtml(a.name)}</span><b>%${a.percent.toLocaleString('tr-TR',{maximumFractionDigits:2})}</b></div>`).join('')}`:''}`:''}
-      <div style="font-size:11px;margin:8px 0;color:#475569;">${ev.asOf ? `Kontrol: ${escapeHtml(new Date(ev.asOf).toLocaleString('tr-TR'))} ${ev.isCached ? '(önbellek)' : ''}` : 'Güncel kaynak doğrulanmadı.'}</div>
-      <div class="section-title">Okunan kaynaklar</div>${ev.sources.map(s=>`<p><a href="${escapeHtml(s.url||sourceLinks(inst).kap)}" target="_blank" rel="noopener noreferrer">${escapeHtml(s.title)} ↗</a><br><small>${escapeHtml(s.financialPeriod||s.publishedAt||'')}</small></p>`).join('')}
-      ${ev.dataWarnings?.map(w=>`<p style="font-size:11px;">${escapeHtml(w)}</p>`).join('')||''}
+      ${ev.fundProfile?`<div data-view-section="fundProfile" style="font-size:11px;margin:8px 0;">Şemsiye türü: ${escapeHtml(ev.fundProfile.umbrellaType||'Doğrulanamadı')}</div>`:''}
+      ${ev.fundData?`<div data-view-section="fundProfile"><div class="section-title">TEFAS fon profili</div><p>${escapeHtml(ev.fundData.tradingStatus||'Doğrulanamadı')}</p><p>ISIN: ${escapeHtml(ev.fundData.isin||'Doğrulanamadı')}</p></div>${ev.fundData.allocation.length?`<div data-view-section="allocation"><div class="section-title">Varlık dağılımı · ${escapeHtml(ev.fundData.allocationDate||'')}</div>${ev.fundData.allocation.map(a=>`<div class="row-item"><span>${escapeHtml(a.name)}</span><b>%${a.percent.toLocaleString('tr-TR',{maximumFractionDigits:2})}</b></div>`).join('')}</div>`:''}`:''}
+      <div data-view-section="timestamp" style="font-size:11px;margin:8px 0;color:#475569;">${ev.asOf ? `Kontrol: ${escapeHtml(new Date(ev.asOf).toLocaleString('tr-TR'))} ${ev.isCached ? '(önbellek)' : ''}` : 'Güncel kaynak doğrulanmadı.'}</div>
+      <div data-view-section="sources"><div class="section-title">Okunan kaynaklar</div>${ev.sources.map(s=>`<p><a href="${escapeHtml(s.url||sourceLinks(inst).kap)}" target="_blank" rel="noopener noreferrer">${escapeHtml(s.title)} ↗</a><br><small>${escapeHtml(s.financialPeriod||s.publishedAt||'')}</small></p>`).join('')}</div>
+      <div data-view-section="warnings">${ev.dataWarnings?.map(w=>`<p style="font-size:11px;">${escapeHtml(w)}</p>`).join('')||''}</div>
       <button id="refreshDetail" class="tag-btn">↻ Yenile</button>
       <a href="${escapeHtml(sourceLinks(inst).kap)}" target="_blank" rel="noopener noreferrer">KAP ↗</a> ${isStock ? `· <a href="${escapeHtml(sourceLinks(inst).helalFinans)}" target="_blank" rel="noopener noreferrer">Helal Finans ↗</a>` : inst.type===InstrumentType.MUTUAL_FUND?`· <a href="${escapeHtml(sourceLinks(inst).tefas)}" target="_blank" rel="noopener noreferrer">TEFAS’ta Kontrol Et ↗</a>`:''}
-      <div style="font-size: 9px; color: #94a3b8; text-align: center; margin-top: 6px;">
+      ${isStock?`· <a href="${escapeHtml(sourceLinks(inst).fintables)}" target="_blank" rel="noopener noreferrer">Fintables ↗</a>`:''}
+      <div data-view-section="disclaimer" style="font-size: 9px; color: #94a3b8; text-align: center; margin-top: 6px;">
         API anahtarı gerekmez · Hesap veya izleme yok<br>${escapeHtml(ev.disclaimer)}
       </div>
     `;
+    applyView(detailCard,view);
     detailCard.querySelector('#refreshDetail')?.addEventListener('click', () => performDirectCheck(instrumentQuery(inst),true));
   }
 

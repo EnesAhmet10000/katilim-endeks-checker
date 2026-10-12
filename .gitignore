@@ -9,6 +9,7 @@ Thumbs.db
 
 # Local handoffs and unrelated personal notes
 *.zip
+katilim-finans-chrome-v*/
 AI_Trading_Chat_Summary_*.pdf
 Prompt.txt
 qa-preview.html

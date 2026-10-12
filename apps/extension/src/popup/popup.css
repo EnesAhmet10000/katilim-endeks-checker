@@ -330,3 +330,10 @@ body {
 .hidden {
   display: none !important;
 }
+[hidden] { display:none !important; }
+.view-controls { padding:10px 16px; background:#f8fafc; color:#334155; font-size:12px; }
+.view-controls select, .view-controls button { padding:5px 8px; border:1px solid #cbd5e1; border-radius:6px; background:white; color:#334155; font:inherit; }
+.view-controls button { margin-left:8px; cursor:pointer; }
+.view-controls fieldset { border:0; margin-top:10px; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.view-controls legend { margin-bottom:8px; }
+.view-controls fieldset label { display:flex; align-items:center; gap:6px; }
