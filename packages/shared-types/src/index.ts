@@ -66,7 +66,7 @@ export interface CriterionCheck {
   thresholdValue?: number | string;
   thresholdFormatted?: string;
   unit?: '%' | 'TL' | 'TEXT' | 'BOOLEAN';
-  isPassed: boolean;
+  isPassed: boolean | null;
   statusText: string;
   note?: string;
 }
@@ -94,6 +94,8 @@ export interface SourceProvenance {
 }
 
 export interface ComplianceEvaluation {
+  dataWarnings?: string[];
+  fundData?: { category?: string; tradingStatus?: string; isin?: string; interestContent?: string; allocationDate?: string; allocation: { code: string; name: string; percent: number }[] };
   fundProfile?: { umbrellaName?: string; umbrellaType?: string; reportedParticipation: boolean | null };
   instrument: InstrumentSummary;
   status: ComplianceStatus;

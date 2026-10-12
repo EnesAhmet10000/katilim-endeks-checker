@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ${ev.indices.map(i => `
               <div style="padding: 4px 6px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px; font-size: 10px; font-weight: 600; display: flex; justify-content: space-between;">
                 <span>${escapeHtml(i.indexName)}</span>
-                <span>${i.isMember ? '✅' : '—'}</span>
+                <span>${i.isMember ? '✓' : 'Listede yok'}</span>
               </div>
             `).join('')}
           </div>
@@ -165,12 +165,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       ${ev.criteria.length > 0 ? `
         <div>
-          <div class="section-title">${isStock ? 'KAP Finansal Kriterler' : 'Fon Kriterleri'}</div>
+          <div class="section-title">${isStock ? 'KAP KAFİF beyanları' : 'Fon Kriterleri'} · ${escapeHtml(ev.financialPeriod||'')}</div>
           ${ev.criteria.map(c => `
             <div class="row-item">
-              <span>${c.name}</span>
-              <span style="font-weight: 600; color: ${c.isPassed ? '#166534' : '#be123c'};">
-                ${c.actualFormatted ? c.actualFormatted : ''} (${c.isPassed ? '✅' : '❌'})
+              <span>${escapeHtml(c.name)}</span>
+              <span style="font-weight: 600; color: ${c.isPassed===null ? '#475569' : c.isPassed ? '#166534' : '#be123c'};">
+                ${escapeHtml(c.actualFormatted||'Doğrulanamadı')}
               </span>
             </div>
           `).join('')}
@@ -178,11 +178,14 @@ document.addEventListener('DOMContentLoaded', () => {
       ` : ''}
 
       ${ev.fundProfile?`<div style="font-size:11px;margin:8px 0;">Şemsiye türü: ${escapeHtml(ev.fundProfile.umbrellaType||'Doğrulanamadı')}</div>`:''}
-      <div style="font-size:11px;margin:8px 0;color:#475569;">${ev.asOf ? `Kontrol: ${escapeHtml(new Date(ev.asOf).toLocaleString('tr-TR'))} ${ev.isCached ? '(önbellek)' : ''}` : 'Güncel kaynak doğrulanmadı.'}<br>${isStock?'Güncel finansal oranlar doğrulanmadı.':'Güncel portföy ve icazet doğrulanmadı.'}</div>
+      ${ev.fundData?`<div class="section-title">TEFAS fon profili</div><p>${escapeHtml(ev.fundData.tradingStatus||'Doğrulanamadı')}</p><p>ISIN: ${escapeHtml(ev.fundData.isin||'Doğrulanamadı')}</p>${ev.fundData.allocation.length?`<div class="section-title">Varlık dağılımı · ${escapeHtml(ev.fundData.allocationDate||'')}</div>${ev.fundData.allocation.map(a=>`<div class="row-item"><span>${escapeHtml(a.name)}</span><b>%${a.percent.toLocaleString('tr-TR',{maximumFractionDigits:2})}</b></div>`).join('')}`:''}`:''}
+      <div style="font-size:11px;margin:8px 0;color:#475569;">${ev.asOf ? `Kontrol: ${escapeHtml(new Date(ev.asOf).toLocaleString('tr-TR'))} ${ev.isCached ? '(önbellek)' : ''}` : 'Güncel kaynak doğrulanmadı.'}</div>
+      <div class="section-title">Okunan kaynaklar</div>${ev.sources.map(s=>`<p><a href="${escapeHtml(s.url||sourceLinks(inst).kap)}" target="_blank" rel="noopener noreferrer">${escapeHtml(s.title)} ↗</a><br><small>${escapeHtml(s.financialPeriod||s.publishedAt||'')}</small></p>`).join('')}
+      ${ev.dataWarnings?.map(w=>`<p style="font-size:11px;">${escapeHtml(w)}</p>`).join('')||''}
       <button id="refreshDetail" class="tag-btn">↻ Yenile</button>
       <a href="${escapeHtml(sourceLinks(inst).kap)}" target="_blank" rel="noopener noreferrer">KAP ↗</a> ${isStock ? `· <a href="${escapeHtml(sourceLinks(inst).helalFinans)}" target="_blank" rel="noopener noreferrer">Helal Finans ↗</a>` : inst.type===InstrumentType.MUTUAL_FUND?`· <a href="${escapeHtml(sourceLinks(inst).tefas)}" target="_blank" rel="noopener noreferrer">TEFAS’ta Kontrol Et ↗</a>`:''}
       <div style="font-size: 9px; color: #94a3b8; text-align: center; margin-top: 6px;">
-        ${escapeHtml(ev.disclaimer)}
+        API anahtarı gerekmez · Hesap veya izleme yok<br>${escapeHtml(ev.disclaimer)}
       </div>
     `;
     detailCard.querySelector('#refreshDetail')?.addEventListener('click', () => performDirectCheck(instrumentQuery(inst),true));

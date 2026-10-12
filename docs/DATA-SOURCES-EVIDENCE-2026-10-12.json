@@ -1,0 +1,277 @@
+{
+  "checkedDate": "2026-10-12",
+  "checkedAt": "2026-10-12T09:45:21.035Z",
+  "method": "Direct HTTPS requests with normal certificate verification. No API key, account, remote source execution or bot-challenge bypass.",
+  "bist": {
+    "url": "https://borsaistanbul.com/datum/hisse_endeks_katilim_ds.csv",
+    "httpStatus": 200,
+    "rows": 516,
+    "indices": {
+      "XK030EA": {
+        "count": 30,
+        "dates": [
+          "12/10/2026"
+        ],
+        "hasPETKM": true
+      },
+      "XKTUM": {
+        "count": 238,
+        "dates": [
+          "12/10/2026"
+        ],
+        "hasPETKM": true
+      },
+      "XK100": {
+        "count": 100,
+        "dates": [
+          "12/10/2026"
+        ],
+        "hasPETKM": true
+      },
+      "XK050": {
+        "count": 50,
+        "dates": [
+          "12/10/2026"
+        ],
+        "hasPETKM": true
+      },
+      "XK030": {
+        "count": 30,
+        "dates": [
+          "12/10/2026"
+        ],
+        "hasPETKM": true
+      },
+      "XSRDK": {
+        "count": 27,
+        "dates": [
+          "12/10/2026"
+        ],
+        "hasPETKM": true
+      },
+      "XKTMT": {
+        "count": 41,
+        "dates": [
+          "12/10/2026"
+        ],
+        "hasPETKM": false
+      }
+    }
+  },
+  "kap": {
+    "url": "https://www.kap.org.tr/tr/kfifAllInfoListByItem/KPY97SummaryGrid",
+    "httpStatus": 200,
+    "rows": 573,
+    "columns": [
+      "Kod",
+      "Şirket",
+      "Sunum Para Birimi",
+      "Verilerin Ait Olduğu Finansal Tablo Yılı / Dönemi",
+      "Finansal Tablo Niteliği",
+      "1) Şirketin kendisi, tüzel kişi ortakları veya iştiraklerinin esas sözleşmesinde yer alan faaliyet alanları arasında Katılım Finansı İlkelerine uygun olmayan faaliyet yer alıyor mu?",
+      "2) Şirket esas sözleşmesinde Katılım Finansı İlkelerine uygun olmayan imtiyaz bulunuyor mu?",
+      "3) Şirketin Standart madde 1.5 ve Rehber madde 1.D&#x27;de tanımlanan eylemleri desteklediğine ilişkin bir açıklama ve/veya karar bulunuyor mu?",
+      "4) Şirketin doğrudan Katılım Finansı İlkelerine aykırı kabul edilen faaliyetleri ve/veya geliri bulunuyor mu?",
+      "5) Şirketin Katılım Finansı İlkelerine Uygun Olmayan Gelirlerinin Oranı (%) [ (4B+4C-4D) / 4E ] * 100",
+      "6) Şirketin Katılım Finansı İlkelerine Uygun Olmayan Varlıklarının Oranı (%) [ 5F-5G) / 5H ] * 100",
+      "7) Şirketin Katılım Finansı İlkelerine Uygun Olmayan Borçlarının Oranı (%) [ (6I-6J) / 5H ] * 100"
+    ],
+    "samples": [
+      [
+        "BIMAS",
+        "BİM BİRLEŞİK MAĞAZALAR A.Ş.",
+        "1.000 TL",
+        "2026 / 6 Aylık",
+        "Konsolide",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "SASA",
+        "SASA POLYESTER SANAYİ A.Ş.",
+        "1.000 TL",
+        "2026 / 6 Aylık",
+        "Konsolide",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "1,01",
+        "0,01",
+        "41,35"
+      ],
+      [
+        "PETKM",
+        "PETKİM PETROKİMYA HOLDİNG A.Ş.",
+        "1.000 TL",
+        "2026 / 6 Aylık",
+        "Konsolide",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "0,25",
+        "2,99",
+        "24,19"
+      ],
+      [
+        "THYAO",
+        "TÜRK HAVA YOLLARI A.O.",
+        "1.000.000 TL",
+        "2026 / 6 Aylık",
+        "Konsolide",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "EVET",
+        "5,84",
+        "18,72",
+        "8,65"
+      ],
+      [
+        "ASELS",
+        "ASELSAN ELEKTRONİK SANAYİ VE TİCARET A.Ş.",
+        "1.000 TL",
+        "2026 / 6 Aylık",
+        "Konsolide",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "4,14",
+        "12,95",
+        "13,9"
+      ]
+    ]
+  },
+  "tefas": {
+    "baseUrl": "https://www.tefas.gov.tr/api/funds/",
+    "probes": [
+      {
+        "endpoint": "fonBilgiGetir",
+        "status": 200,
+        "contentType": "application/json;charset=UTF-8",
+        "length": 321,
+        "errorCode": null,
+        "errorMessage": null,
+        "count": 1,
+        "sample": {
+          "fonKodu": "KUA",
+          "fonUnvan": "KUVEYT TÜRK PORTFÖY AGRESİF KATILIM FONU",
+          "sonFiyat": 1.408496,
+          "gunlukGetiri": 0.7969,
+          "payAdet": 60163678,
+          "portBuyukluk": 84740307.82,
+          "fonKategori": "Katılım Fonu",
+          "kategoriDerece": 65,
+          "kategoriFonSay": 121,
+          "yatirimciSayi": 1883,
+          "pazarPayi": 0.02
+        }
+      },
+      {
+        "endpoint": "fonProfilBilgiGetir",
+        "status": 200,
+        "contentType": "application/json;charset=UTF-8",
+        "length": 521,
+        "errorCode": null,
+        "errorMessage": null,
+        "count": 1,
+        "sample": {
+          "fonKodu": "KUA",
+          "fonUnvan": "KUVEYT TÜRK PORTFÖY AGRESİF KATILIM FONU",
+          "isinKodu": "TRYKTPY00715",
+          "sonIsSaat": "17:45",
+          "minAlis": 1,
+          "minSatis": 1,
+          "maxAlis": 10000000000,
+          "maxSatis": 10000000000,
+          "kapLink": "https://www.kap.org.tr/tr/fon-bilgileri/genel/kua-kuveyt-turk-portfoy-agresif-katilim-fonu",
+          "tefasDurum": "TEFAS'ta işlem görüyor",
+          "cikisKomisyonu": null,
+          "girisKomisyonu": null,
+          "basIsSaat": "09:00",
+          "fonSatisValor": 2,
+          "fonGeriAlisValor": 1,
+          "faizIcerigi": null,
+          "riskDegeri": "5"
+        }
+      },
+      {
+        "endpoint": "dagilimSiraliGetirT",
+        "status": 200,
+        "contentType": "application/json;charset=UTF-8",
+        "length": 5928,
+        "errorCode": null,
+        "errorMessage": null,
+        "count": 8,
+        "sample": {
+          "fonKodu": "KUA",
+          "fonUnvan": "KUVEYT TÜRK PORTFÖY AGRESİF KATILIM FONU",
+          "tarih": "2026-10-12",
+          "bb": null,
+          "byf": null,
+          "d": null,
+          "db": null,
+          "bpp": null,
+          "btaa": null,
+          "btas": 6.74,
+          "dt": null,
+          "dot": null,
+          "eut": null,
+          "fb": null,
+          "fkb": null,
+          "gas": null,
+          "gsykb": null,
+          "gsyy": null,
+          "gykb": null,
+          "gyy": null,
+          "hb": null,
+          "hs": 65.5,
+          "kba": null,
+          "kh": null,
+          "khau": null,
+          "khd": null,
+          "khtl": null,
+          "kks": null,
+          "kksd": null,
+          "kkstl": 23.74,
+          "kksyd": null,
+          "km": null,
+          "kmbyf": null,
+          "kmkba": null,
+          "kmkks": null,
+          "kibd": null,
+          "osks": null,
+          "ost": null,
+          "r": null,
+          "t": null,
+          "tpp": null,
+          "tr": null,
+          "vdm": null,
+          "vm": null,
+          "vmau": null,
+          "vmd": null,
+          "vmtl": null,
+          "vint": null,
+          "yba": null,
+          "ybkb": null,
+          "ybosb": null,
+          "ybyf": null,
+          "yhs": null,
+          "ymk": null,
+          "yyf": 4.02,
+          "oksyd": null,
+          "osdb": null,
+          "bilFiyat": "1791798242175"
+        }
+      }
+    ]
+  },
+  "integrationStatus": "Research probes only. The extension and production API have not been modified to consume these sources."
+}

@@ -12,7 +12,6 @@ class KatilimOverlayManager {
 
   private initMessageListener() {
     chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
-      console.log('🌙 Katılım Finans received message:', message.type, message.query);
       if (message.type === 'SHOW_LOADING') {
         this.renderLoading(message.query);
         sendResponse({ received: true });
@@ -65,7 +64,7 @@ class KatilimOverlayManager {
   private getStyles(): string {
     return `
       * { box-sizing: border-box; margin: 0; padding: 0; }
-      
+
       .overlay-card {
         width: 430px;
         max-width: calc(100vw - 32px);
@@ -435,8 +434,8 @@ class KatilimOverlayManager {
       }
 
       .disclaimer {
-        font-size: 10px;
-        color: #94a3b8;
+        font-size: 11px;
+        color: #475569;
         line-height: 1.35;
         text-align: center;
       }
@@ -502,7 +501,7 @@ class KatilimOverlayManager {
             <div class="spinner"></div>
             <div>
               <div style="font-weight: 700; font-size: 14px; color: #1e293b;">${this.escapeHtml(query)} analiz ediliyor...</div>
-              <div style="font-size: 11px; color: #64748b; margin-top: 4px;">KAP, Helal Finans ve Fintables verileri sorgulanıyor</div>
+              <div style="font-size: 11px; color: #64748b; margin-top: 4px;">Borsa İstanbul, KAP ve TEFAS resmi kaynakları kontrol ediliyor</div>
             </div>
           </div>
         </div>
@@ -529,13 +528,13 @@ class KatilimOverlayManager {
         <div class="section-box">
           <div class="section-title">
             <span>BIST Katılım Endeksleri</span>
-            <span style="font-weight: 500; text-transform: none;">KAP şirket sayfası</span>
+            <span style="font-weight: 500; text-transform: none;">${this.escapeHtml(evaluation.indices[0].period || 'Kaynak tarihi bilinmiyor')}</span>
           </div>
           <div class="indices-grid">
             ${evaluation.indices.map(i => `
               <div class="index-chip ${i.isMember ? 'included' : ''}">
                 <span>${this.escapeHtml(i.indexName)}</span>
-                <span>${i.isMember ? '✅' : '—'}</span>
+                <span>${i.isMember ? '✓' : 'Listede yok'}</span>
               </div>
             `).join('')}
           </div>
@@ -547,19 +546,19 @@ class KatilimOverlayManager {
     if (evaluation.criteria && evaluation.criteria.length > 0) {
       criteriaHtml = `
         <div class="section-box">
-          <div class="section-title">${isStock ? 'KAP Finansal Oran Kriterleri' : 'Fon Katılım Kriterleri'}</div>
+          <div class="section-title">${isStock ? 'KAP KAFİF beyanları' : 'Fon Katılım Kriterleri'} · ${this.escapeHtml(evaluation.financialPeriod || '')}</div>
           <div class="criteria-list">
             ${evaluation.criteria.map(c => `
               <div class="criterion-row">
                 <div class="criterion-info">
-                  <span class="crit-name">${c.name}</span>
+                  <span class="crit-name">${this.escapeHtml(c.name)}</span>
                   <span class="crit-ratio">
-                    ${c.actualFormatted ? `Gerçekleşen: <b>${c.actualFormatted}</b>` : ''} 
-                    ${c.thresholdFormatted ? `| Limit: ${c.thresholdFormatted}` : ''}
+                    ${c.actualFormatted ? `Beyan: <b>${this.escapeHtml(c.actualFormatted)}</b>` : ''}
+                    ${c.thresholdFormatted ? `| Limit: ${this.escapeHtml(c.thresholdFormatted)}` : ''}
                   </span>
                 </div>
-                <span class="crit-status ${c.isPassed ? 'pass' : 'fail'}">
-                  ${c.isPassed ? '✅ Limit Altında' : '❌ Aşıldı'}
+                <span class="crit-status ${c.isPassed===null ? '' : c.isPassed ? 'pass' : 'fail'}">
+                  ${this.escapeHtml(c.statusText)}
                 </span>
               </div>
             `).join('')}
@@ -579,6 +578,7 @@ class KatilimOverlayManager {
                 <div>
                   <div class="source-name">${this.escapeHtml(s.sourceName)}</div>
                   <div style="font-size: 10px; color: #64748b;">${this.escapeHtml(s.badgeText)}</div>
+                  <div style="font-size:11px;color:#475569;">${this.escapeHtml(s.financialPeriod || s.publishedAt || '')}</div>
                 </div>
                 ${s.url ? `<a href="${this.escapeHtml(s.url)}" target="_blank" rel="noopener noreferrer" class="source-link">Kaynağa Git ↗</a>` : ''}
               </div>
@@ -622,8 +622,10 @@ class KatilimOverlayManager {
           ${indicesHtml}
           ${criteriaHtml}
           ${evaluation.fundProfile ? `<div class="section-box"><div class="section-title">KAP Fon Kaydı</div><p>${this.escapeHtml(evaluation.fundProfile.umbrellaName || 'Şemsiye fon adı belirtilmemiş')}</p><p>Tür: ${this.escapeHtml(evaluation.fundProfile.umbrellaType || 'Bu sayfada doğrulanamadı')}</p></div>` : ''}
-          ${!evaluation.criteria.length ? `<div class="section-box">${isStock?'Güncel finansal oranlar doğrulanmadı. Eski veya örnek değerler kullanılmaz.':'Güncel portföy dağılımı ve icazet belgesi doğrulanmadı.'}</div>` : ''}
+          ${evaluation.fundData ? `<div class="section-box"><div class="section-title">TEFAS fon profili</div><p>${this.escapeHtml(evaluation.fundData.tradingStatus || 'İşlem durumu doğrulanamadı')}</p><p>ISIN: ${this.escapeHtml(evaluation.fundData.isin || 'Doğrulanamadı')}</p></div>${evaluation.fundData.allocation.length?`<div class="section-box"><div class="section-title">Varlık türü dağılımı · ${this.escapeHtml(evaluation.fundData.allocationDate || '')}</div>${evaluation.fundData.allocation.map(a=>`<div class="criterion-row"><span>${this.escapeHtml(a.name)}</span><b>%${a.percent.toLocaleString('tr-TR',{maximumFractionDigits:2})}</b></div>`).join('')}</div>`:''}` : ''}
+          ${isStock&&!evaluation.criteria.length ? '<div class="section-box">Bu şirket için KAFİF oranları doğrulanmadı. Eski veya örnek değerler kullanılmaz.</div>' : !isStock&&!evaluation.fundData?.allocation.length?'<div class="section-box">Güncel portföy dağılımı doğrulanmadı. İcazet belgesi ayrıca incelenmelidir.</div>':''}
           ${sourcesHtml}
+          ${evaluation.dataWarnings?.length?`<div class="section-box"><div class="section-title">Veri kapsamı</div>${evaluation.dataWarnings.map(w=>`<p style="font-size:12px;margin-bottom:6px;">${this.escapeHtml(w)}</p>`).join('')}</div>`:''}
         </div>
 
         <div class="card-footer">
@@ -637,7 +639,7 @@ class KatilimOverlayManager {
               <button class="btn btn-fintables" id="fintablesBtn">Fintables ↗</button>
             ` : inst.type===InstrumentType.MUTUAL_FUND?'<button class="btn" id="tefasBtn">TEFAS’ta Kontrol Et ↗</button>':''}
           </div>
-          <div class="disclaimer">${this.escapeHtml(evaluation.disclaimer)}</div>
+          <div class="disclaimer">API anahtarı gerekmez · Hesap veya izleme yok<br>${this.escapeHtml(evaluation.disclaimer)}</div>
         </div>
       </div>
     `;
@@ -655,18 +657,18 @@ class KatilimOverlayManager {
 
     shadow.getElementById('kapBtn')?.addEventListener('click', () => {
       const primaryUrl = sourceLinks(inst).kap;
-      window.open(primaryUrl, '_blank');
+      window.open(primaryUrl, '_blank', 'noopener,noreferrer');
     });
 
-    shadow.getElementById('tefasBtn')?.addEventListener('click', () => window.open(sourceLinks(inst).tefas,'_blank'));
+    shadow.getElementById('tefasBtn')?.addEventListener('click', () => window.open(sourceLinks(inst).tefas,'_blank','noopener,noreferrer'));
 
     if (isStock) {
       shadow.getElementById('helalFinansBtn')?.addEventListener('click', () => {
-        window.open(sourceLinks(inst).helalFinans, '_blank');
+        window.open(sourceLinks(inst).helalFinans, '_blank','noopener,noreferrer');
       });
 
       shadow.getElementById('fintablesBtn')?.addEventListener('click', () => {
-        window.open(sourceLinks(inst).fintables, '_blank');
+        window.open(sourceLinks(inst).fintables, '_blank','noopener,noreferrer');
       });
     }
   }
@@ -690,7 +692,7 @@ class KatilimOverlayManager {
             ${candidates.map(c => `
               <div class="candidate-item" data-symbol="${this.escapeHtml(instrumentQuery(c))}">
                 <div>
-                  <div style="font-weight: 700; font-size: 13px; color: #0284c7;">${c.symbol}</div>
+                  <div style="font-weight: 700; font-size: 13px; color: #0284c7;">${this.escapeHtml(c.symbol)}</div>
                   <div style="font-size: 11px; color: #475569;">${this.escapeHtml(c.name)}</div>
                 </div>
                 <span class="type-pill ${c.type === InstrumentType.STOCK ? 'type-stock' : 'type-fund'}">

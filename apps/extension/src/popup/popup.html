@@ -14,14 +14,14 @@
         <svg class="header-icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
         <span>Katılım Kontrol</span>
       </div>
-      <div class="version-badge">v1.2</div>
+      <div class="version-badge">v1.3</div>
     </header>
 
     <!-- Search Input Area -->
     <div class="search-section">
       <div class="search-input-wrapper">
         <svg class="search-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-        <input type="text" id="searchInput" placeholder="Hisse veya fon ara (örn: TOASO, MAVI, KUA)..." autofocus autocomplete="off">
+        <input type="text" id="searchInput" aria-label="Hisse veya fon ara" maxlength="256" placeholder="Hisse veya fon ara (örn: TOASO, MAVI, KUA)..." autofocus autocomplete="off">
         <button id="clearSearchBtn" class="clear-btn hidden">✕</button>
       </div>
     </div>
@@ -34,7 +34,7 @@
       <button class="tag-btn" data-query="THYAO">THYAO</button>
       <button class="tag-btn" data-query="SASA">SASA</button>
       <button class="tag-btn" data-query="KUA">KUA (Fon)</button>
-      <button class="tag-btn" data-query="KTV">KTV (Sukuk)</button>
+      <button class="tag-btn" data-query="FON:TTE">TTE (Fon)</button>
     </div>
 
     <!-- Main Content Area: Autocomplete List OR Evaluation Card -->
@@ -61,8 +61,8 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="footer-text">TKBB & Borsa İstanbul Standartları</div>
-      <a href="https://www.kap.org.tr" target="_blank" class="footer-link">KAP ↗</a>
+      <div class="footer-text">BIST · KAP · TEFAS kaynakları</div>
+      <a href="https://www.kap.org.tr" target="_blank" rel="noopener noreferrer" class="footer-link">KAP ↗</a>
     </footer>
   </div>
 

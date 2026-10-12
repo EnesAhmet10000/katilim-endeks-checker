@@ -1,8 +1,9 @@
 import { BrowserRuntime } from '../adapters/browser-runtime.js';
-import { ComplianceCheckResponse, InstrumentType } from '@katilim/shared-types';
-import { COMPANY_DIRECTORY, CompanyIdentity, KAP_DIRECTORY_URL, parseCompanyDirectory, fetchKapText, resolveCompany, checkLiveInstrument } from '@katilim/compliance-engine';
+import { ComplianceCheckResponse } from '@katilim/shared-types';
+import { COMPANY_DIRECTORY, CompanyIdentity, KAP_DIRECTORY_URL, parseCompanyDirectory, fetchKapText } from '@katilim/compliance-engine';
 import { LocalComplianceEvaluator } from './local-evaluator.js';
 import { FUND_DIRECTORY, FundIdentity, KAP_FUNDS_DIRECTORY_URL, parseFundDirectory, resolveInstrument, searchInstruments } from '@katilim/compliance-engine';
+import { checkPublicInstrument } from '@katilim/compliance-engine';
 
 const localEvaluator = new LocalComplianceEvaluator();
 const HOUR = 60 * 60 * 1000;
@@ -30,6 +31,7 @@ async function loadDirectory(force: boolean): Promise<CompanyIdentity[]> {
 }
 
 async function check(query: string, force=false): Promise<ComplianceCheckResponse> {
+ if(typeof query!=='string'||!query.trim()||query.length>256) return {success:false,error:'En fazla 256 karakterlik bir hisse veya fon adı seçin.',resolution:{isResolved:false,isAmbiguous:false,originalQuery:'',normalizedQuery:''},executionTimeMs:0};
  const start=performance.now();
  const [directory,funds]=await Promise.all([loadDirectory(force),loadFunds(force)]);
  const official=resolveInstrument(query,localEvaluator.sanitizeQuery(query),directory,funds);
@@ -39,11 +41,11 @@ async function check(query: string, force=false): Promise<ComplianceCheckRespons
  let instrument=response.resolution.instrument;
  if(!instrument) return response;
  response.resolution.instrument=instrument;
- const key=`kap-source-v2-${instrument.type}-${instrument.symbol}`;
+ const key=`public-source-v3-${instrument.type}-${instrument.symbol}`;
  const cached=await BrowserRuntime.getStorage(key);
  if(!force && cached?.asOf && cached.instrument?.kapUrl===instrument.kapUrl && Date.now()-Date.parse(cached.asOf)<HOUR) response.evaluation={...cached,isCached:true,cachedAt:cached.asOf};
  else {
-  response.evaluation=await checkLiveInstrument(instrument);
+  response.evaluation=await checkPublicInstrument(instrument,force);
   if(response.evaluation.asOf) await BrowserRuntime.setStorage(key,response.evaluation);
  }
  response.executionTimeMs=Math.round(performance.now()-start);

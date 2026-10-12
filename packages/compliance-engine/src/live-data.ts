@@ -56,8 +56,9 @@ export function parseKapMembership(html: string, instrument: InstrumentSummary, 
 }
 
 export async function fetchKapText(url: string): Promise<string> {
+ if(!url.startsWith('https://www.kap.org.tr/tr/')) throw new Error('İzin verilmeyen KAP adresi.');
  const controller=new AbortController(); const timeout=setTimeout(()=>controller.abort(),12000);
- try {const res=await fetch(url,{signal:controller.signal,credentials:'omit',cache:'no-store'}); if(!res.ok) throw new Error(`KAP HTTP ${res.status}`); if(!res.url.startsWith('https://www.kap.org.tr/')) throw new Error('KAP yönlendirmesi doğrulanamadı.'); return await res.text();} finally {clearTimeout(timeout);}
+ try {const res=await fetch(url,{signal:controller.signal,credentials:'omit',referrerPolicy:'no-referrer',redirect:'error',cache:'no-store'}); if(!res.ok) throw new Error(`KAP HTTP ${res.status}`); if(!res.url.startsWith('https://www.kap.org.tr/')) throw new Error('KAP yönlendirmesi doğrulanamadı.'); return await res.text();} finally {clearTimeout(timeout);}
 }
 
 export async function checkLiveInstrument(instrument: InstrumentSummary): Promise<ComplianceEvaluation> {

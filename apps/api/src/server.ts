@@ -8,6 +8,7 @@ import { registerComplianceRoutes } from './controllers/compliance.controller.js
 
 export async function createServer() {
   const server = Fastify({
+    disableRequestLogging: true,
     logger: {
       level: config.nodeEnv === 'development' ? 'info' : 'warn'
     }
@@ -15,7 +16,7 @@ export async function createServer() {
 
   // Security & Middleware
   await server.register(cors, {
-    origin: true
+    origin: false
   });
 
   await server.register(helmet, {

@@ -17,9 +17,9 @@
   "devDependencies": {
     "@types/chrome": "^0.0.268",
     "@types/node": "^20.12.12",
-    "esbuild": "^0.21.3",
+    "esbuild": "^0.28.2",
     "rimraf": "^5.0.7",
     "typescript": "^5.4.5",
-    "vite": "^5.2.11"
+    "vite": "^7.3.7"
   }
 }

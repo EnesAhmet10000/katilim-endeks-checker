@@ -1,6 +1,6 @@
 export const config = {
   port: Number(process.env.PORT) || 3000,
-  host: process.env.HOST || '0.0.0.0',
+  host: process.env.HOST || '127.0.0.1',
   nodeEnv: process.env.NODE_ENV || 'development',
   cache: {
     instrumentMetadataTtlMs: 24 * 60 * 60 * 1000, // 24 hours

@@ -1,6 +1,6 @@
-# Katılım Endeksi Checker — 1.2.0
+# Katılım Endeksi Checker — 1.3.0
 
-Select a BIST ticker, company name, fund code or full fund name, right-click and choose **Katılım Uygunluğunu Kontrol Et**. The Chrome extension resolves the official KAP identity, reads company index membership or fund umbrella metadata and opens source links. It works without a local API server.
+Select a BIST ticker, company name, fund code or full fund name, right-click and choose **Katılım Uygunluğunu Kontrol Et**. The Chrome extension resolves the official KAP identity, reads BIST participation membership, KAFİF disclosures and available TEFAS fund profiles/asset allocation. It works without an API key, account, subscription or local server.
 
 ## What changed
 
@@ -9,9 +9,12 @@ Select a BIST ticker, company name, fund code or full fund name, right-click and
 - Coverage is directory-wide: 803 company symbol entries and 3,523 fund codes from KAP's ALL fund directory, including participation and conventional funds, pension funds and exchange-traded funds. These counts describe identities, not completed financial assessments or TEFAS availability.
 - Fund identities are refreshed daily on use. The current official KAP fund page is read for umbrella name/type when those fields exist. Missing umbrella fields remain unknown; portfolio and religious approval are not inferred from the fund name.
 - Search covers both directories. For code collisions, the user selects the intended instrument. `BIST:CODE` and `FON:CODE` explicitly choose stocks or funds.
-- Membership is fetched on demand, cached for one hour, and labelled with the actual fetch time. **Yenile** bypasses both caches. Expired or failed fetches do not produce a negative or positive compliance verdict.
+- Source results are fetched on demand and cached for one hour. **Yenile** bypasses identity, result and shared-source caches. Failed refreshes do not reuse expired results or produce a negative or positive compliance verdict.
 - Static sample ratios, synthetic disclosure links and inferred Helal Finans/Fintables observations are excluded from the production result. Their buttons are links for manual review.
-- KAP page membership and fund registration/umbrella metadata are shown separately from a complete compliance assessment. KAFİF ratios, effective BIST period lists, current fund portfolio reports and approval documents are **not yet integrated**. Missing evidence stays missing.
+- Seven BIST participation indices are read from the official dated CSV. Lists dated tomorrow are labelled as upcoming rather than today's membership; older than seven days or further-future files fail closed.
+- KAFİF activity/governance declarations and three financial ratios are read with the financial period and identity verification. Missing values stay unknown; disclosed ratios do not automatically become a religious verdict.
+- TEFAS profiles and dated asset-type allocation are queried for mutual, pension and ETF funds when supported. Allocation older than 14 days is not used. Null interest-content does not mean interest-free. Individual holdings and approval documents still require separate review.
+- Free public-source access was tested; availability and redistribution rights are not guaranteed. There is no paid fallback or bypass of source access restrictions.
 - Chrome uses activeTab injection on request; no all-page content script, all_urls permission or localhost connection.
 
 ## Build and test
@@ -24,7 +27,7 @@ npm test
 
 Load `apps/extension/dist/chrome` through `chrome://extensions` → Developer mode → Load unpacked. Reload an existing unpacked installation and reload the target page after updating.
 
-The `packages/compliance-engine` deterministic engine and legacy dataset remain for unit examples. They are not verified live financial feeds. Production extension checks use `live-data.ts`. The optional API also uses the live KAP membership reader; its unused legacy source adapters are prototypes, not connected providers.
+The deterministic engine and legacy dataset remain for unit examples and are excluded from the production extension. Production extension and optional API checks use `public-sources.ts`. The optional API is not required, deployed or contacted by the extension.
 
 ## Delivery and limitations
 
@@ -32,7 +35,9 @@ The `packages/compliance-engine` deterministic engine and legacy dataset remain 
 - [Chrome Store preparation](docs/CHROME-STORE-AR.md)
 - [Privacy policy draft](docs/privacy-policy.html)
 - [QA evidence](docs/QA-2026-10-12.md)
+- [1.3 release, security checks and limitations (Arabic)](docs/RELEASE-1.3.0-AR.md)
+- [Actual live-source evidence](docs/public-source-coverage-2026-10-12.json)
 
-The v1.2.0 ZIP is a local test/submission preparation package. No Chrome Web Store upload or public publication has occurred. Store approval and installed-browser context-menu checks remain separate from the code, fixture, worker and live-fetch tests.
+The v1.3.0 ZIP is a local test/submission preparation package. No Chrome Web Store upload or publication has occurred. Store approval and installed-browser context-menu checks remain separate from the code, fixture, worker, rendered-interface and live-fetch tests. Chrome Store developer registration has a one-time fee; local installation is free.
 
 KAP markup may change or requests may be blocked. Parsing failures fail closed and show unavailable data. Index membership alone is not a complete religious assessment or investment recommendation.

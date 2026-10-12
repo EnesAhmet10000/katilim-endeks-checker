@@ -1,4 +1,4 @@
-import { checkLiveInstrument, unverifiedEvaluation, resolveCompany } from '@katilim/compliance-engine';
+import { checkPublicInstrument } from '@katilim/compliance-engine';
 import {
   ComplianceCheckResponse,
   ComplianceEvaluation,
@@ -55,7 +55,7 @@ export class ComplianceService {
     // 3. Evaluate according to instrument type
     let evaluation: ComplianceEvaluation;
 
-    evaluation = await checkLiveInstrument(instrument);
+    evaluation = await checkPublicInstrument(instrument, forceRefresh);
 
     // 4. Save to Cache
     if (evaluation.asOf) this.cache.set(cacheKey, evaluation, 60 * 60 * 1000);

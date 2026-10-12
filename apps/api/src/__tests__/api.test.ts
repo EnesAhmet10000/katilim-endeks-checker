@@ -10,11 +10,15 @@ describe('Katılım API Integration Tests', () => {
   const originalFetch=globalThis.fetch;
   const fixture=readFileSync(new URL('../../../../kap-petkm-fixture.html',import.meta.url),'utf8');
   const fundFixture=readFileSync(new URL('../../../../kap-fund-kua-fixture.html',import.meta.url),'utf8');
+  const bist=readFileSync(new URL('../../../../bist-membership-fixture.csv',import.meta.url),'utf8');
+  const kafif=readFileSync(new URL('../../../../kap-kafif-fixture.html',import.meta.url),'utf8');
+  const profile=readFileSync(new URL('../../../../tefas-profile-fixture.json',import.meta.url),'utf8');
+  const allocation=readFileSync(new URL('../../../../tefas-allocation-fixture.json',import.meta.url),'utf8');
 
   before(async () => {
     globalThis.fetch = (async (input: any) => {
-      const url=String(input); const symbol=url.includes('tofas')?'TOASO':url.includes('sasa')?'SASA':'PETKM';
-      return {ok:true,url,text:async()=>url.includes('/fon-bilgileri/')?fundFixture:fixture.replaceAll('PETKM',symbol)} as Response;
+      const url=String(input);
+      return {ok:true,url,text:async()=>url.includes('.csv')?bist:url.includes('KPY97')?kafif:url.includes('fonProfil')?profile:url.includes('dagilim')?allocation:fundFixture} as Response;
     }) as typeof fetch;
     server = await createServer();
     await server.ready();
@@ -39,9 +43,9 @@ describe('Katılım API Integration Tests', () => {
     assert.strictEqual(body.resolution.instrument.type, InstrumentType.STOCK);
     assert.strictEqual(body.evaluation.status, ComplianceStatus.UNCERTAIN);
     assert.strictEqual(body.evaluation.statusBadgeVariant, 'warning');
-    assert.strictEqual(body.evaluation.criteria.length, 0);
+    assert.strictEqual(body.evaluation.criteria.length, 7);
     assert.ok(body.evaluation.indices.length >= 4);
-    assert.strictEqual(body.evaluation.indices.find((i: any) => i.indexCode === 'XKTUM')?.isMember, true);
+    assert.strictEqual(body.evaluation.indices.find((i: any) => i.indexCode === 'XKTUM')?.isMember, false);
   });
 
   it('GET /api/v1/compliance/check for Turkish company name "Tofaş" resolves to TOASO', async () => {
@@ -80,6 +84,7 @@ describe('Katılım API Integration Tests', () => {
     assert.strictEqual(body.evaluation.status, ComplianceStatus.UNCERTAIN);
     assert.strictEqual(body.evaluation.fundProfile.reportedParticipation,true);
     assert.strictEqual(body.evaluation.criteria.length,0);
+    assert.ok(body.evaluation.fundData.allocation.length>0);
     assert.strictEqual(body.evaluation.indices.length, 0); // No stock indices for funds
   });
 

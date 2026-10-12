@@ -1,0 +1,1310 @@
+[
+  {
+    "query": "BIST:PETKM",
+    "evaluation": {
+      "instrument": {
+        "id": "stock-petkm",
+        "symbol": "PETKM",
+        "name": "PETKİM PETROKİMYA HOLDİNG A.Ş.",
+        "type": "STOCK",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1053-petkim-petrokimya-holding-a-s"
+      },
+      "status": "UNCERTAIN",
+      "statusLabel": "BIST ileri tarihli liste: 2026-10-13",
+      "statusBadgeVariant": "warning",
+      "summaryReason": "Resmi endeks üyeliği ve şirketin finansal dönem beyanları ayrı gösterilir. KAFİF oranlarından otomatik dini hüküm veya endeks üyeliği üretilmez.",
+      "confidence": "MEDIUM",
+      "ruleSetVersion": "Kaynak kontrolü 1.3",
+      "ruleSetAuthority": "Resmi kaynak beyanları",
+      "asOf": "2026-10-12T20:24:41.296Z",
+      "isCached": false,
+      "criteria": [
+        {
+          "id": "kafif-1",
+          "name": "Uygun olmayan faaliyet alanı beyanı",
+          "category": "ACTIVITY",
+          "description": "1) Şirketin kendisi, tüzel kişi ortakları veya iştiraklerinin esas sözleşmesinde yer alan faaliyet alanları arasında Katılım Finansı İlkelerine uygun olmayan faaliyet yer alıyor mu?",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": "HAYIR",
+          "actualFormatted": "HAYIR",
+          "unit": "TEXT"
+        },
+        {
+          "id": "kafif-2",
+          "name": "Uygun olmayan imtiyaz beyanı",
+          "category": "ACTIVITY",
+          "description": "2) Şirket esas sözleşmesinde Katılım Finansı İlkelerine uygun olmayan imtiyaz bulunuyor mu?",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": "HAYIR",
+          "actualFormatted": "HAYIR",
+          "unit": "TEXT"
+        },
+        {
+          "id": "kafif-3",
+          "name": "Standart 1.5 / Rehber 1.D beyanı",
+          "category": "ACTIVITY",
+          "description": "3) Şirketin Standart madde 1.5 ve Rehber madde 1.D&#x27;de tanımlanan eylemleri desteklediğine ilişkin bir açıklama ve/veya karar bulunuyor mu?",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": "HAYIR",
+          "actualFormatted": "HAYIR",
+          "unit": "TEXT"
+        },
+        {
+          "id": "kafif-4",
+          "name": "Doğrudan aykırı faaliyet / gelir beyanı",
+          "category": "ACTIVITY",
+          "description": "4) Şirketin doğrudan Katılım Finansı İlkelerine aykırı kabul edilen faaliyetleri ve/veya geliri bulunuyor mu?",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": "HAYIR",
+          "actualFormatted": "HAYIR",
+          "unit": "TEXT"
+        },
+        {
+          "id": "kafif-5",
+          "name": "Uygun olmayan gelir oranı",
+          "category": "FINANCIAL_RATIO",
+          "description": "5) Şirketin Katılım Finansı İlkelerine Uygun Olmayan Gelirlerinin Oranı (%) [ (4B+4C-4D) / 4E ] * 100",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": 0.25,
+          "actualFormatted": "%0,25",
+          "unit": "%"
+        },
+        {
+          "id": "kafif-6",
+          "name": "Uygun olmayan varlık oranı",
+          "category": "FINANCIAL_RATIO",
+          "description": "6) Şirketin Katılım Finansı İlkelerine Uygun Olmayan Varlıklarının Oranı (%) [ 5F-5G) / 5H ] * 100",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": 2.99,
+          "actualFormatted": "%2,99",
+          "unit": "%"
+        },
+        {
+          "id": "kafif-7",
+          "name": "Uygun olmayan borç oranı",
+          "category": "FINANCIAL_RATIO",
+          "description": "7) Şirketin Katılım Finansı İlkelerine Uygun Olmayan Borçlarının Oranı (%) [ (6I-6J) / 5H ] * 100",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": 24.19,
+          "actualFormatted": "%24,19",
+          "unit": "%"
+        }
+      ],
+      "indices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        }
+      ],
+      "sources": [
+        {
+          "sourceName": "Borsa İstanbul",
+          "tier": "OFFICIAL_PRIMARY",
+          "url": "https://borsaistanbul.com/datum/hisse_endeks_katilim_ds.csv",
+          "title": "BIST resmi katılım endeks bileşenleri",
+          "badgeText": "Resmi kaynak okundu",
+          "fetchedAt": "2026-10-12T20:24:41.460Z",
+          "publishedAt": "2026-10-13"
+        },
+        {
+          "sourceName": "Kamuyu Aydınlatma Platformu (KAP)",
+          "tier": "OFFICIAL_PRIMARY",
+          "url": "https://www.kap.org.tr/tr/kfifAllInfoListByItem/KPY97SummaryGrid",
+          "title": "KAP KAFİF şirket beyanları",
+          "badgeText": "Resmi kaynak okundu",
+          "fetchedAt": "2026-10-12T20:24:41.475Z",
+          "financialPeriod": "2026 / 6 Aylık"
+        }
+      ],
+      "disclaimer": "Bu bilgi yatırım tavsiyesi veya dini fetva değildir. Endeks üyeliği tek başına tam uygunluk değerlendirmesi değildir.",
+      "financialPeriod": "2026 / 6 Aylık",
+      "dataWarnings": [
+        "BIST dosyası ileri tarihli: 2026-10-13. Bu liste bugünkü üyelik olarak yorumlanmaz."
+      ]
+    }
+  },
+  {
+    "query": "BIST:BIMAS",
+    "evaluation": {
+      "instrument": {
+        "id": "stock-bimas",
+        "symbol": "BIMAS",
+        "name": "BİM BİRLEŞİK MAĞAZALAR A.Ş.",
+        "type": "STOCK",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1406-bim-birlesik-magazalar-a-s"
+      },
+      "status": "UNCERTAIN",
+      "statusLabel": "BIST ileri tarihli liste: 2026-10-13",
+      "statusBadgeVariant": "warning",
+      "summaryReason": "Resmi endeks üyeliği ve şirketin finansal dönem beyanları ayrı gösterilir. KAFİF oranlarından otomatik dini hüküm veya endeks üyeliği üretilmez.",
+      "confidence": "MEDIUM",
+      "ruleSetVersion": "Kaynak kontrolü 1.3",
+      "ruleSetAuthority": "Resmi kaynak beyanları",
+      "asOf": "2026-10-12T20:24:41.484Z",
+      "isCached": false,
+      "criteria": [
+        {
+          "id": "kafif-1",
+          "name": "Uygun olmayan faaliyet alanı beyanı",
+          "category": "ACTIVITY",
+          "description": "1) Şirketin kendisi, tüzel kişi ortakları veya iştiraklerinin esas sözleşmesinde yer alan faaliyet alanları arasında Katılım Finansı İlkelerine uygun olmayan faaliyet yer alıyor mu?",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": "HAYIR",
+          "actualFormatted": "HAYIR",
+          "unit": "TEXT"
+        },
+        {
+          "id": "kafif-2",
+          "name": "Uygun olmayan imtiyaz beyanı",
+          "category": "ACTIVITY",
+          "description": "2) Şirket esas sözleşmesinde Katılım Finansı İlkelerine uygun olmayan imtiyaz bulunuyor mu?",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": "HAYIR",
+          "actualFormatted": "HAYIR",
+          "unit": "TEXT"
+        },
+        {
+          "id": "kafif-3",
+          "name": "Standart 1.5 / Rehber 1.D beyanı",
+          "category": "ACTIVITY",
+          "description": "3) Şirketin Standart madde 1.5 ve Rehber madde 1.D&#x27;de tanımlanan eylemleri desteklediğine ilişkin bir açıklama ve/veya karar bulunuyor mu?",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": "HAYIR",
+          "actualFormatted": "HAYIR",
+          "unit": "TEXT"
+        },
+        {
+          "id": "kafif-4",
+          "name": "Doğrudan aykırı faaliyet / gelir beyanı",
+          "category": "ACTIVITY",
+          "description": "4) Şirketin doğrudan Katılım Finansı İlkelerine aykırı kabul edilen faaliyetleri ve/veya geliri bulunuyor mu?",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": "HAYIR",
+          "actualFormatted": "HAYIR",
+          "unit": "TEXT"
+        },
+        {
+          "id": "kafif-5",
+          "name": "Uygun olmayan gelir oranı",
+          "category": "FINANCIAL_RATIO",
+          "description": "5) Şirketin Katılım Finansı İlkelerine Uygun Olmayan Gelirlerinin Oranı (%) [ (4B+4C-4D) / 4E ] * 100",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": 0,
+          "actualFormatted": "%0",
+          "unit": "%"
+        },
+        {
+          "id": "kafif-6",
+          "name": "Uygun olmayan varlık oranı",
+          "category": "FINANCIAL_RATIO",
+          "description": "6) Şirketin Katılım Finansı İlkelerine Uygun Olmayan Varlıklarının Oranı (%) [ 5F-5G) / 5H ] * 100",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": 0,
+          "actualFormatted": "%0",
+          "unit": "%"
+        },
+        {
+          "id": "kafif-7",
+          "name": "Uygun olmayan borç oranı",
+          "category": "FINANCIAL_RATIO",
+          "description": "7) Şirketin Katılım Finansı İlkelerine Uygun Olmayan Borçlarının Oranı (%) [ (6I-6J) / 5H ] * 100",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": 0,
+          "actualFormatted": "%0",
+          "unit": "%"
+        }
+      ],
+      "indices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        }
+      ],
+      "sources": [
+        {
+          "sourceName": "Borsa İstanbul",
+          "tier": "OFFICIAL_PRIMARY",
+          "url": "https://borsaistanbul.com/datum/hisse_endeks_katilim_ds.csv",
+          "title": "BIST resmi katılım endeks bileşenleri",
+          "badgeText": "Resmi kaynak okundu",
+          "fetchedAt": "2026-10-12T20:24:41.460Z",
+          "publishedAt": "2026-10-13"
+        },
+        {
+          "sourceName": "Kamuyu Aydınlatma Platformu (KAP)",
+          "tier": "OFFICIAL_PRIMARY",
+          "url": "https://www.kap.org.tr/tr/kfifAllInfoListByItem/KPY97SummaryGrid",
+          "title": "KAP KAFİF şirket beyanları",
+          "badgeText": "Resmi kaynak okundu",
+          "fetchedAt": "2026-10-12T20:24:41.475Z",
+          "financialPeriod": "2026 / 6 Aylık"
+        }
+      ],
+      "disclaimer": "Bu bilgi yatırım tavsiyesi veya dini fetva değildir. Endeks üyeliği tek başına tam uygunluk değerlendirmesi değildir.",
+      "financialPeriod": "2026 / 6 Aylık",
+      "dataWarnings": [
+        "BIST dosyası ileri tarihli: 2026-10-13. Bu liste bugünkü üyelik olarak yorumlanmaz."
+      ]
+    }
+  },
+  {
+    "query": "BIST:THYAO",
+    "evaluation": {
+      "instrument": {
+        "id": "stock-thyao",
+        "symbol": "THYAO",
+        "name": "TÜRK HAVA YOLLARI A.O.",
+        "type": "STOCK",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1107-turk-hava-yollari-a-o"
+      },
+      "status": "UNCERTAIN",
+      "statusLabel": "BIST ileri tarihli liste: 2026-10-13",
+      "statusBadgeVariant": "warning",
+      "summaryReason": "Resmi endeks üyeliği ve şirketin finansal dönem beyanları ayrı gösterilir. KAFİF oranlarından otomatik dini hüküm veya endeks üyeliği üretilmez.",
+      "confidence": "MEDIUM",
+      "ruleSetVersion": "Kaynak kontrolü 1.3",
+      "ruleSetAuthority": "Resmi kaynak beyanları",
+      "asOf": "2026-10-12T20:24:41.491Z",
+      "isCached": false,
+      "criteria": [
+        {
+          "id": "kafif-1",
+          "name": "Uygun olmayan faaliyet alanı beyanı",
+          "category": "ACTIVITY",
+          "description": "1) Şirketin kendisi, tüzel kişi ortakları veya iştiraklerinin esas sözleşmesinde yer alan faaliyet alanları arasında Katılım Finansı İlkelerine uygun olmayan faaliyet yer alıyor mu?",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": "HAYIR",
+          "actualFormatted": "HAYIR",
+          "unit": "TEXT"
+        },
+        {
+          "id": "kafif-2",
+          "name": "Uygun olmayan imtiyaz beyanı",
+          "category": "ACTIVITY",
+          "description": "2) Şirket esas sözleşmesinde Katılım Finansı İlkelerine uygun olmayan imtiyaz bulunuyor mu?",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": "HAYIR",
+          "actualFormatted": "HAYIR",
+          "unit": "TEXT"
+        },
+        {
+          "id": "kafif-3",
+          "name": "Standart 1.5 / Rehber 1.D beyanı",
+          "category": "ACTIVITY",
+          "description": "3) Şirketin Standart madde 1.5 ve Rehber madde 1.D&#x27;de tanımlanan eylemleri desteklediğine ilişkin bir açıklama ve/veya karar bulunuyor mu?",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": "HAYIR",
+          "actualFormatted": "HAYIR",
+          "unit": "TEXT"
+        },
+        {
+          "id": "kafif-4",
+          "name": "Doğrudan aykırı faaliyet / gelir beyanı",
+          "category": "ACTIVITY",
+          "description": "4) Şirketin doğrudan Katılım Finansı İlkelerine aykırı kabul edilen faaliyetleri ve/veya geliri bulunuyor mu?",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": "EVET",
+          "actualFormatted": "EVET",
+          "unit": "TEXT"
+        },
+        {
+          "id": "kafif-5",
+          "name": "Uygun olmayan gelir oranı",
+          "category": "FINANCIAL_RATIO",
+          "description": "5) Şirketin Katılım Finansı İlkelerine Uygun Olmayan Gelirlerinin Oranı (%) [ (4B+4C-4D) / 4E ] * 100",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": 5.84,
+          "actualFormatted": "%5,84",
+          "unit": "%"
+        },
+        {
+          "id": "kafif-6",
+          "name": "Uygun olmayan varlık oranı",
+          "category": "FINANCIAL_RATIO",
+          "description": "6) Şirketin Katılım Finansı İlkelerine Uygun Olmayan Varlıklarının Oranı (%) [ 5F-5G) / 5H ] * 100",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": 18.72,
+          "actualFormatted": "%18,72",
+          "unit": "%"
+        },
+        {
+          "id": "kafif-7",
+          "name": "Uygun olmayan borç oranı",
+          "category": "FINANCIAL_RATIO",
+          "description": "7) Şirketin Katılım Finansı İlkelerine Uygun Olmayan Borçlarının Oranı (%) [ (6I-6J) / 5H ] * 100",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": 8.65,
+          "actualFormatted": "%8,65",
+          "unit": "%"
+        }
+      ],
+      "indices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        }
+      ],
+      "sources": [
+        {
+          "sourceName": "Borsa İstanbul",
+          "tier": "OFFICIAL_PRIMARY",
+          "url": "https://borsaistanbul.com/datum/hisse_endeks_katilim_ds.csv",
+          "title": "BIST resmi katılım endeks bileşenleri",
+          "badgeText": "Resmi kaynak okundu",
+          "fetchedAt": "2026-10-12T20:24:41.460Z",
+          "publishedAt": "2026-10-13"
+        },
+        {
+          "sourceName": "Kamuyu Aydınlatma Platformu (KAP)",
+          "tier": "OFFICIAL_PRIMARY",
+          "url": "https://www.kap.org.tr/tr/kfifAllInfoListByItem/KPY97SummaryGrid",
+          "title": "KAP KAFİF şirket beyanları",
+          "badgeText": "Resmi kaynak okundu",
+          "fetchedAt": "2026-10-12T20:24:41.475Z",
+          "financialPeriod": "2026 / 6 Aylık"
+        }
+      ],
+      "disclaimer": "Bu bilgi yatırım tavsiyesi veya dini fetva değildir. Endeks üyeliği tek başına tam uygunluk değerlendirmesi değildir.",
+      "financialPeriod": "2026 / 6 Aylık",
+      "dataWarnings": [
+        "BIST dosyası ileri tarihli: 2026-10-13. Bu liste bugünkü üyelik olarak yorumlanmaz."
+      ]
+    }
+  },
+  {
+    "query": "BIST:SASA",
+    "evaluation": {
+      "instrument": {
+        "id": "stock-sasa",
+        "symbol": "SASA",
+        "name": "SASA POLYESTER SANAYİ A.Ş.",
+        "type": "STOCK",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1068-sasa-polyester-sanayi-a-s"
+      },
+      "status": "UNCERTAIN",
+      "statusLabel": "BIST ileri tarihli liste: 2026-10-13",
+      "statusBadgeVariant": "warning",
+      "summaryReason": "Resmi endeks üyeliği ve şirketin finansal dönem beyanları ayrı gösterilir. KAFİF oranlarından otomatik dini hüküm veya endeks üyeliği üretilmez.",
+      "confidence": "MEDIUM",
+      "ruleSetVersion": "Kaynak kontrolü 1.3",
+      "ruleSetAuthority": "Resmi kaynak beyanları",
+      "asOf": "2026-10-12T20:24:41.497Z",
+      "isCached": false,
+      "criteria": [
+        {
+          "id": "kafif-1",
+          "name": "Uygun olmayan faaliyet alanı beyanı",
+          "category": "ACTIVITY",
+          "description": "1) Şirketin kendisi, tüzel kişi ortakları veya iştiraklerinin esas sözleşmesinde yer alan faaliyet alanları arasında Katılım Finansı İlkelerine uygun olmayan faaliyet yer alıyor mu?",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": "HAYIR",
+          "actualFormatted": "HAYIR",
+          "unit": "TEXT"
+        },
+        {
+          "id": "kafif-2",
+          "name": "Uygun olmayan imtiyaz beyanı",
+          "category": "ACTIVITY",
+          "description": "2) Şirket esas sözleşmesinde Katılım Finansı İlkelerine uygun olmayan imtiyaz bulunuyor mu?",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": "HAYIR",
+          "actualFormatted": "HAYIR",
+          "unit": "TEXT"
+        },
+        {
+          "id": "kafif-3",
+          "name": "Standart 1.5 / Rehber 1.D beyanı",
+          "category": "ACTIVITY",
+          "description": "3) Şirketin Standart madde 1.5 ve Rehber madde 1.D&#x27;de tanımlanan eylemleri desteklediğine ilişkin bir açıklama ve/veya karar bulunuyor mu?",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": "HAYIR",
+          "actualFormatted": "HAYIR",
+          "unit": "TEXT"
+        },
+        {
+          "id": "kafif-4",
+          "name": "Doğrudan aykırı faaliyet / gelir beyanı",
+          "category": "ACTIVITY",
+          "description": "4) Şirketin doğrudan Katılım Finansı İlkelerine aykırı kabul edilen faaliyetleri ve/veya geliri bulunuyor mu?",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": "HAYIR",
+          "actualFormatted": "HAYIR",
+          "unit": "TEXT"
+        },
+        {
+          "id": "kafif-5",
+          "name": "Uygun olmayan gelir oranı",
+          "category": "FINANCIAL_RATIO",
+          "description": "5) Şirketin Katılım Finansı İlkelerine Uygun Olmayan Gelirlerinin Oranı (%) [ (4B+4C-4D) / 4E ] * 100",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": 1.01,
+          "actualFormatted": "%1,01",
+          "unit": "%"
+        },
+        {
+          "id": "kafif-6",
+          "name": "Uygun olmayan varlık oranı",
+          "category": "FINANCIAL_RATIO",
+          "description": "6) Şirketin Katılım Finansı İlkelerine Uygun Olmayan Varlıklarının Oranı (%) [ 5F-5G) / 5H ] * 100",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": 0.01,
+          "actualFormatted": "%0,01",
+          "unit": "%"
+        },
+        {
+          "id": "kafif-7",
+          "name": "Uygun olmayan borç oranı",
+          "category": "FINANCIAL_RATIO",
+          "description": "7) Şirketin Katılım Finansı İlkelerine Uygun Olmayan Borçlarının Oranı (%) [ (6I-6J) / 5H ] * 100",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": 41.35,
+          "actualFormatted": "%41,35",
+          "unit": "%"
+        }
+      ],
+      "indices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        }
+      ],
+      "sources": [
+        {
+          "sourceName": "Borsa İstanbul",
+          "tier": "OFFICIAL_PRIMARY",
+          "url": "https://borsaistanbul.com/datum/hisse_endeks_katilim_ds.csv",
+          "title": "BIST resmi katılım endeks bileşenleri",
+          "badgeText": "Resmi kaynak okundu",
+          "fetchedAt": "2026-10-12T20:24:41.460Z",
+          "publishedAt": "2026-10-13"
+        },
+        {
+          "sourceName": "Kamuyu Aydınlatma Platformu (KAP)",
+          "tier": "OFFICIAL_PRIMARY",
+          "url": "https://www.kap.org.tr/tr/kfifAllInfoListByItem/KPY97SummaryGrid",
+          "title": "KAP KAFİF şirket beyanları",
+          "badgeText": "Resmi kaynak okundu",
+          "fetchedAt": "2026-10-12T20:24:41.475Z",
+          "financialPeriod": "2026 / 6 Aylık"
+        }
+      ],
+      "disclaimer": "Bu bilgi yatırım tavsiyesi veya dini fetva değildir. Endeks üyeliği tek başına tam uygunluk değerlendirmesi değildir.",
+      "financialPeriod": "2026 / 6 Aylık",
+      "dataWarnings": [
+        "BIST dosyası ileri tarihli: 2026-10-13. Bu liste bugünkü üyelik olarak yorumlanmaz."
+      ]
+    }
+  },
+  {
+    "query": "BIST:AKBNK",
+    "evaluation": {
+      "instrument": {
+        "id": "stock-akbnk",
+        "symbol": "AKBNK",
+        "name": "AKBANK T.A.Ş.",
+        "type": "STOCK",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/2413-akbank-t-a-s"
+      },
+      "status": "UNCERTAIN",
+      "statusLabel": "BIST ileri tarihli liste: 2026-10-13",
+      "statusBadgeVariant": "warning",
+      "summaryReason": "Resmi endeks üyeliği ve şirketin finansal dönem beyanları ayrı gösterilir. KAFİF oranlarından otomatik dini hüküm veya endeks üyeliği üretilmez.",
+      "confidence": "MEDIUM",
+      "ruleSetVersion": "Kaynak kontrolü 1.3",
+      "ruleSetAuthority": "Resmi kaynak beyanları",
+      "asOf": "2026-10-12T20:24:41.502Z",
+      "isCached": false,
+      "criteria": [],
+      "indices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        }
+      ],
+      "sources": [
+        {
+          "sourceName": "Borsa İstanbul",
+          "tier": "OFFICIAL_PRIMARY",
+          "url": "https://borsaistanbul.com/datum/hisse_endeks_katilim_ds.csv",
+          "title": "BIST resmi katılım endeks bileşenleri",
+          "badgeText": "Resmi kaynak okundu",
+          "fetchedAt": "2026-10-12T20:24:41.460Z",
+          "publishedAt": "2026-10-13"
+        }
+      ],
+      "disclaimer": "Bu bilgi yatırım tavsiyesi veya dini fetva değildir. Endeks üyeliği tek başına tam uygunluk değerlendirmesi değildir.",
+      "dataWarnings": [
+        "BIST dosyası ileri tarihli: 2026-10-13. Bu liste bugünkü üyelik olarak yorumlanmaz.",
+        "Bu şirket için KAFİF verisi doğrulanamadı."
+      ]
+    }
+  },
+  {
+    "query": "BIST:MAVI",
+    "evaluation": {
+      "instrument": {
+        "id": "stock-mavi",
+        "symbol": "MAVI",
+        "name": "MAVİ GİYİM SANAYİ VE TİCARET A.Ş.",
+        "type": "STOCK",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/3843-mavi-giyim-sanayi-ve-ticaret-a-s"
+      },
+      "status": "UNCERTAIN",
+      "statusLabel": "BIST ileri tarihli liste: 2026-10-13",
+      "statusBadgeVariant": "warning",
+      "summaryReason": "Resmi endeks üyeliği ve şirketin finansal dönem beyanları ayrı gösterilir. KAFİF oranlarından otomatik dini hüküm veya endeks üyeliği üretilmez.",
+      "confidence": "MEDIUM",
+      "ruleSetVersion": "Kaynak kontrolü 1.3",
+      "ruleSetAuthority": "Resmi kaynak beyanları",
+      "asOf": "2026-10-12T20:24:41.508Z",
+      "isCached": false,
+      "criteria": [
+        {
+          "id": "kafif-1",
+          "name": "Uygun olmayan faaliyet alanı beyanı",
+          "category": "ACTIVITY",
+          "description": "1) Şirketin kendisi, tüzel kişi ortakları veya iştiraklerinin esas sözleşmesinde yer alan faaliyet alanları arasında Katılım Finansı İlkelerine uygun olmayan faaliyet yer alıyor mu?",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": "HAYIR",
+          "actualFormatted": "HAYIR",
+          "unit": "TEXT"
+        },
+        {
+          "id": "kafif-2",
+          "name": "Uygun olmayan imtiyaz beyanı",
+          "category": "ACTIVITY",
+          "description": "2) Şirket esas sözleşmesinde Katılım Finansı İlkelerine uygun olmayan imtiyaz bulunuyor mu?",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": "HAYIR",
+          "actualFormatted": "HAYIR",
+          "unit": "TEXT"
+        },
+        {
+          "id": "kafif-3",
+          "name": "Standart 1.5 / Rehber 1.D beyanı",
+          "category": "ACTIVITY",
+          "description": "3) Şirketin Standart madde 1.5 ve Rehber madde 1.D&#x27;de tanımlanan eylemleri desteklediğine ilişkin bir açıklama ve/veya karar bulunuyor mu?",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": "HAYIR",
+          "actualFormatted": "HAYIR",
+          "unit": "TEXT"
+        },
+        {
+          "id": "kafif-4",
+          "name": "Doğrudan aykırı faaliyet / gelir beyanı",
+          "category": "ACTIVITY",
+          "description": "4) Şirketin doğrudan Katılım Finansı İlkelerine aykırı kabul edilen faaliyetleri ve/veya geliri bulunuyor mu?",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": "HAYIR",
+          "actualFormatted": "HAYIR",
+          "unit": "TEXT"
+        },
+        {
+          "id": "kafif-5",
+          "name": "Uygun olmayan gelir oranı",
+          "category": "FINANCIAL_RATIO",
+          "description": "5) Şirketin Katılım Finansı İlkelerine Uygun Olmayan Gelirlerinin Oranı (%) [ (4B+4C-4D) / 4E ] * 100",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": 4.22,
+          "actualFormatted": "%4,22",
+          "unit": "%"
+        },
+        {
+          "id": "kafif-6",
+          "name": "Uygun olmayan varlık oranı",
+          "category": "FINANCIAL_RATIO",
+          "description": "6) Şirketin Katılım Finansı İlkelerine Uygun Olmayan Varlıklarının Oranı (%) [ 5F-5G) / 5H ] * 100",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": 24.71,
+          "actualFormatted": "%24,71",
+          "unit": "%"
+        },
+        {
+          "id": "kafif-7",
+          "name": "Uygun olmayan borç oranı",
+          "category": "FINANCIAL_RATIO",
+          "description": "7) Şirketin Katılım Finansı İlkelerine Uygun Olmayan Borçlarının Oranı (%) [ (6I-6J) / 5H ] * 100",
+          "isPassed": null,
+          "statusText": "Şirket beyanı",
+          "note": "KAP KAFİF · 2026 / 6 Aylık. BIST üyeliğinden ayrı gösterilir; otomatik fetva verilmez.",
+          "actualValue": 8.7,
+          "actualFormatted": "%8,7",
+          "unit": "%"
+        }
+      ],
+      "indices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "İleri tarihli BIST listesi; bugünkü üyelik olarak yorumlanmaz."
+        }
+      ],
+      "sources": [
+        {
+          "sourceName": "Borsa İstanbul",
+          "tier": "OFFICIAL_PRIMARY",
+          "url": "https://borsaistanbul.com/datum/hisse_endeks_katilim_ds.csv",
+          "title": "BIST resmi katılım endeks bileşenleri",
+          "badgeText": "Resmi kaynak okundu",
+          "fetchedAt": "2026-10-12T20:24:41.460Z",
+          "publishedAt": "2026-10-13"
+        },
+        {
+          "sourceName": "Kamuyu Aydınlatma Platformu (KAP)",
+          "tier": "OFFICIAL_PRIMARY",
+          "url": "https://www.kap.org.tr/tr/kfifAllInfoListByItem/KPY97SummaryGrid",
+          "title": "KAP KAFİF şirket beyanları",
+          "badgeText": "Resmi kaynak okundu",
+          "fetchedAt": "2026-10-12T20:24:41.475Z",
+          "financialPeriod": "2026 / 6 Aylık"
+        }
+      ],
+      "disclaimer": "Bu bilgi yatırım tavsiyesi veya dini fetva değildir. Endeks üyeliği tek başına tam uygunluk değerlendirmesi değildir.",
+      "financialPeriod": "2026 / 6 Aylık",
+      "dataWarnings": [
+        "BIST dosyası ileri tarihli: 2026-10-13. Bu liste bugünkü üyelik olarak yorumlanmaz."
+      ]
+    }
+  },
+  {
+    "query": "FON:KUA",
+    "evaluation": {
+      "instrument": {
+        "id": "mutual_fund-kua",
+        "symbol": "KUA",
+        "name": "KUVEYT TÜRK PORTFÖY AGRESİF KATILIM FONU",
+        "type": "MUTUAL_FUND",
+        "kapUrl": "https://www.kap.org.tr/tr/fon-bilgileri/ozet/kua-kuveyt-turk-portfoy-agresif-katilim-fonu"
+      },
+      "status": "UNCERTAIN",
+      "statusLabel": "KAP: Katılım şemsiye fonu",
+      "statusBadgeVariant": "warning",
+      "summaryReason": "KAP şemsiye türü ve mevcut TEFAS verileri ayrı gösterilir. Portföy bileşenleri ve icazet incelenmeden tam uygunluk hükmü verilmez.",
+      "confidence": "MEDIUM",
+      "ruleSetVersion": "Kaynak kontrolü 1.3",
+      "ruleSetAuthority": "Resmi kaynak beyanları",
+      "asOf": "2026-10-12T20:24:41.513Z",
+      "isCached": false,
+      "criteria": [],
+      "indices": [],
+      "sources": [
+        {
+          "sourceName": "Kamuyu Aydınlatma Platformu (KAP)",
+          "tier": "OFFICIAL_PRIMARY",
+          "url": "https://www.kap.org.tr/tr/fon-bilgileri/ozet/kua-kuveyt-turk-portfoy-agresif-katilim-fonu",
+          "title": "KAP resmi fon kaydı",
+          "badgeText": "KATILIM ŞEMSİYE FONU",
+          "fetchedAt": "2026-10-12T20:24:41.513Z",
+          "notes": "Fon portföyü, yatırım stratejisi ve icazet bu kontrolde doğrulanmadı."
+        },
+        {
+          "sourceName": "TEFAS Fon Platformu",
+          "tier": "OFFICIAL_PRIMARY",
+          "url": "https://www.tefas.gov.tr/FonAnaliz.aspx?FonKod=KUA",
+          "title": "TEFAS fon profili",
+          "badgeText": "Resmi kaynak okundu",
+          "fetchedAt": "2026-10-12T20:24:41.513Z"
+        },
+        {
+          "sourceName": "TEFAS Fon Platformu",
+          "tier": "OFFICIAL_PRIMARY",
+          "url": "https://www.tefas.gov.tr/FonAnaliz.aspx?FonKod=KUA",
+          "title": "TEFAS varlık türü dağılımı",
+          "badgeText": "Resmi kaynak okundu",
+          "fetchedAt": "2026-10-12T20:24:41.513Z",
+          "publishedAt": "2026-10-12"
+        }
+      ],
+      "disclaimer": "Bu bilgi yatırım tavsiyesi veya dini fetva değildir. Endeks üyeliği tek başına tam uygunluk değerlendirmesi değildir.",
+      "fundData": {
+        "allocation": [
+          {
+            "code": "hs",
+            "name": "Hisse senedi",
+            "percent": 65.5
+          },
+          {
+            "code": "kkstl",
+            "name": "Kamu kira sertifikaları (TL)",
+            "percent": 23.74
+          },
+          {
+            "code": "btas",
+            "name": "BIST taahhütlü işlem pazarı satım",
+            "percent": 6.74
+          },
+          {
+            "code": "yyf",
+            "name": "Fon katılma payları",
+            "percent": 4.02
+          }
+        ],
+        "tradingStatus": "TEFAS'ta işlem görüyor",
+        "isin": "TRYKTPY00715",
+        "allocationDate": "2026-10-12"
+      },
+      "fundProfile": {
+        "umbrellaName": "KUVEYT TÜRK PORTFÖY YÖNETİMİ A.Ş. KATILIM ŞEMSİYE FONU",
+        "umbrellaType": "KATILIM ŞEMSİYE FONU",
+        "reportedParticipation": true
+      },
+      "dataWarnings": [
+        "Faiz içeriği alanı doğrulanamadı; boş değer faizsiz anlamına gelmez.",
+        "Varlık dağılımı tek tek menkul kıymetleri göstermez. İcazet belgesi ayrıca incelenmelidir."
+      ]
+    }
+  },
+  {
+    "query": "FON:TTE",
+    "evaluation": {
+      "instrument": {
+        "id": "mutual_fund-tte",
+        "symbol": "TTE",
+        "name": "İŞ PORTFÖY BIST TEKNOLOJİ AĞIRLIK SINIRLAMALI ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "type": "MUTUAL_FUND",
+        "kapUrl": "https://www.kap.org.tr/tr/fon-bilgileri/ozet/tte-is-portfoy-bist-teknoloji-agirlik-sinirlamali-endeksi-hisse-senedi-tl-fonu-hisse-senedi-yogun-fon"
+      },
+      "status": "UNCERTAIN",
+      "statusLabel": "KAP: Fon kaydı doğrulandı",
+      "statusBadgeVariant": "warning",
+      "summaryReason": "KAP şemsiye türü ve mevcut TEFAS verileri ayrı gösterilir. Portföy bileşenleri ve icazet incelenmeden tam uygunluk hükmü verilmez.",
+      "confidence": "MEDIUM",
+      "ruleSetVersion": "Kaynak kontrolü 1.3",
+      "ruleSetAuthority": "Resmi kaynak beyanları",
+      "asOf": "2026-10-12T20:24:41.621Z",
+      "isCached": false,
+      "criteria": [],
+      "indices": [],
+      "sources": [
+        {
+          "sourceName": "Kamuyu Aydınlatma Platformu (KAP)",
+          "tier": "OFFICIAL_PRIMARY",
+          "url": "https://www.kap.org.tr/tr/fon-bilgileri/ozet/tte-is-portfoy-bist-teknoloji-agirlik-sinirlamali-endeksi-hisse-senedi-tl-fonu-hisse-senedi-yogun-fon",
+          "title": "KAP resmi fon kaydı",
+          "badgeText": "HİSSE SENEDİ ŞEMSİYE FONU",
+          "fetchedAt": "2026-10-12T20:24:41.621Z",
+          "notes": "Fon portföyü, yatırım stratejisi ve icazet bu kontrolde doğrulanmadı."
+        },
+        {
+          "sourceName": "TEFAS Fon Platformu",
+          "tier": "OFFICIAL_PRIMARY",
+          "url": "https://www.tefas.gov.tr/FonAnaliz.aspx?FonKod=TTE",
+          "title": "TEFAS fon profili",
+          "badgeText": "Resmi kaynak okundu",
+          "fetchedAt": "2026-10-12T20:24:41.621Z"
+        },
+        {
+          "sourceName": "TEFAS Fon Platformu",
+          "tier": "OFFICIAL_PRIMARY",
+          "url": "https://www.tefas.gov.tr/FonAnaliz.aspx?FonKod=TTE",
+          "title": "TEFAS varlık türü dağılımı",
+          "badgeText": "Resmi kaynak okundu",
+          "fetchedAt": "2026-10-12T20:24:41.621Z",
+          "publishedAt": "2026-10-12"
+        }
+      ],
+      "disclaimer": "Bu bilgi yatırım tavsiyesi veya dini fetva değildir. Endeks üyeliği tek başına tam uygunluk değerlendirmesi değildir.",
+      "fundData": {
+        "allocation": [
+          {
+            "code": "hs",
+            "name": "Hisse senedi",
+            "percent": 96.39
+          },
+          {
+            "code": "tr",
+            "name": "Ters repo",
+            "percent": 2.61
+          },
+          {
+            "code": "yyf",
+            "name": "Fon katılma payları",
+            "percent": 1
+          }
+        ],
+        "tradingStatus": "TEFAS'ta işlem görüyor",
+        "isin": "TRMTTEWWWWW0",
+        "allocationDate": "2026-10-12"
+      },
+      "fundProfile": {
+        "umbrellaName": "İş Portföy Yönetimi A.Ş. Hisse Senedi Şemsiye Fonu",
+        "umbrellaType": "HİSSE SENEDİ ŞEMSİYE FONU",
+        "reportedParticipation": false
+      },
+      "dataWarnings": [
+        "Faiz içeriği alanı doğrulanamadı; boş değer faizsiz anlamına gelmez.",
+        "Varlık dağılımı tek tek menkul kıymetleri göstermez. İcazet belgesi ayrıca incelenmelidir."
+      ]
+    }
+  },
+  {
+    "query": "FON:EAE",
+    "evaluation": {
+      "instrument": {
+        "id": "pension_fund-eae",
+        "symbol": "EAE",
+        "name": "AGESA HAYAT VE EMEKLİLİK A.Ş. ALTIN EMEKLİLİK YATIRIM FONU",
+        "type": "PENSION_FUND",
+        "kapUrl": "https://www.kap.org.tr/tr/fon-bilgileri/ozet/eae-agesa-hayat-ve-emeklilik-a-s-altin-emeklilik-yatirim-fonu"
+      },
+      "status": "UNCERTAIN",
+      "statusLabel": "KAP: Fon kimliği doğrulandı",
+      "statusBadgeVariant": "warning",
+      "summaryReason": "KAP şemsiye türü ve mevcut TEFAS verileri ayrı gösterilir. Portföy bileşenleri ve icazet incelenmeden tam uygunluk hükmü verilmez.",
+      "confidence": "MEDIUM",
+      "ruleSetVersion": "Kaynak kontrolü 1.3",
+      "ruleSetAuthority": "Resmi kaynak beyanları",
+      "asOf": "2026-10-12T20:24:41.707Z",
+      "isCached": false,
+      "criteria": [],
+      "indices": [],
+      "sources": [
+        {
+          "sourceName": "Kamuyu Aydınlatma Platformu (KAP)",
+          "tier": "OFFICIAL_PRIMARY",
+          "url": "https://www.kap.org.tr/tr/fon-bilgileri/ozet/eae-agesa-hayat-ve-emeklilik-a-s-altin-emeklilik-yatirim-fonu",
+          "title": "KAP resmi fon kaydı",
+          "badgeText": "Fon kimliği okundu",
+          "fetchedAt": "2026-10-12T20:24:41.707Z",
+          "notes": "Fon portföyü, yatırım stratejisi ve icazet bu kontrolde doğrulanmadı."
+        },
+        {
+          "sourceName": "TEFAS Fon Platformu",
+          "tier": "OFFICIAL_PRIMARY",
+          "url": "https://www.tefas.gov.tr/FonAnaliz.aspx?FonKod=EAE",
+          "title": "TEFAS fon profili",
+          "badgeText": "Resmi kaynak okundu",
+          "fetchedAt": "2026-10-12T20:24:41.707Z"
+        },
+        {
+          "sourceName": "TEFAS Fon Platformu",
+          "tier": "OFFICIAL_PRIMARY",
+          "url": "https://www.tefas.gov.tr/FonAnaliz.aspx?FonKod=EAE",
+          "title": "TEFAS varlık türü dağılımı",
+          "badgeText": "Resmi kaynak okundu",
+          "fetchedAt": "2026-10-12T20:24:41.707Z",
+          "publishedAt": "2026-10-12"
+        }
+      ],
+      "disclaimer": "Bu bilgi yatırım tavsiyesi veya dini fetva değildir. Endeks üyeliği tek başına tam uygunluk değerlendirmesi değildir.",
+      "fundData": {
+        "allocation": [
+          {
+            "code": "km",
+            "name": "Kıymetli madenler",
+            "percent": 63.98
+          },
+          {
+            "code": "kmkks",
+            "name": "Kıymetli maden cinsi kamu kira sertifikaları",
+            "percent": 34.04
+          },
+          {
+            "code": "yyf",
+            "name": "Fon katılma payları",
+            "percent": 1.14
+          },
+          {
+            "code": "tr",
+            "name": "Ters repo",
+            "percent": 0.84
+          }
+        ],
+        "tradingStatus": "BEFAS'ta işlem görüyor",
+        "isin": "TRYCUHE00487",
+        "interestContent": "Faiz içerir",
+        "allocationDate": "2026-10-12"
+      },
+      "fundProfile": {
+        "reportedParticipation": null
+      },
+      "dataWarnings": [
+        "Varlık dağılımı tek tek menkul kıymetleri göstermez. İcazet belgesi ayrıca incelenmelidir."
+      ]
+    }
+  },
+  {
+    "query": "FON:APGLD",
+    "evaluation": {
+      "instrument": {
+        "id": "etf-apgld",
+        "symbol": "APGLD",
+        "name": "AK PORTFÖY ALTIN KATILIM BORSA YATIRIM FONU",
+        "type": "ETF",
+        "kapUrl": "https://www.kap.org.tr/tr/fon-bilgileri/ozet/apgld-ak-portfoy-altin-katilim-borsa-yatirim-fonu"
+      },
+      "status": "UNCERTAIN",
+      "statusLabel": "KAP: Fon kimliği doğrulandı",
+      "statusBadgeVariant": "warning",
+      "summaryReason": "KAP şemsiye türü ve mevcut TEFAS verileri ayrı gösterilir. Portföy bileşenleri ve icazet incelenmeden tam uygunluk hükmü verilmez.",
+      "confidence": "MEDIUM",
+      "ruleSetVersion": "Kaynak kontrolü 1.3",
+      "ruleSetAuthority": "Resmi kaynak beyanları",
+      "asOf": "2026-10-12T20:24:41.772Z",
+      "isCached": false,
+      "criteria": [],
+      "indices": [],
+      "sources": [
+        {
+          "sourceName": "Kamuyu Aydınlatma Platformu (KAP)",
+          "tier": "OFFICIAL_PRIMARY",
+          "url": "https://www.kap.org.tr/tr/fon-bilgileri/ozet/apgld-ak-portfoy-altin-katilim-borsa-yatirim-fonu",
+          "title": "KAP resmi fon kaydı",
+          "badgeText": "Fon kimliği okundu",
+          "fetchedAt": "2026-10-12T20:24:41.772Z",
+          "notes": "Fon portföyü, yatırım stratejisi ve icazet bu kontrolde doğrulanmadı."
+        }
+      ],
+      "disclaimer": "Bu bilgi yatırım tavsiyesi veya dini fetva değildir. Endeks üyeliği tek başına tam uygunluk değerlendirmesi değildir.",
+      "fundData": {
+        "allocation": []
+      },
+      "fundProfile": {
+        "reportedParticipation": null
+      },
+      "dataWarnings": [
+        "TEFAS fon profili doğrulanamadı; her KAP fonu TEFAS kapsamında olmayabilir.",
+        "Güncel TEFAS portföy dağılımı doğrulanamadı.",
+        "Faiz içeriği alanı doğrulanamadı; boş değer faizsiz anlamına gelmez.",
+        "Varlık dağılımı tek tek menkul kıymetleri göstermez. İcazet belgesi ayrıca incelenmelidir."
+      ]
+    }
+  }
+]
