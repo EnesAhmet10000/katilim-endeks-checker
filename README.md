@@ -1,14 +1,17 @@
-# Katılım Endeksi Checker — 1.1.0
+# Katılım Endeksi Checker — 1.2.0
 
-Select a BIST ticker or company name, right-click and choose **Katılım Uygunluğunu Kontrol Et**. The Chrome extension resolves the official KAP company identity, reads the company page's index memberships and opens source links. It works without a local API server.
+Select a BIST ticker, company name, fund code or full fund name, right-click and choose **Katılım Uygunluğunu Kontrol Et**. The Chrome extension resolves the official KAP identity, reads company index membership or fund umbrella metadata and opens source links. It works without a local API server.
 
 ## What changed
 
 - PETKİM / Petkim / PETKM / BIST:PETKM resolve to **PETKM** and its numbered KAP summary URL.
 - Company identities are refreshed from the KAP BIST directory at most once per 24 hours on use. A 12 October 2026 identity-only snapshot is bundled for offline resolution.
+- Coverage is directory-wide: 803 company symbol entries and 3,523 fund codes from KAP's ALL fund directory, including participation and conventional funds, pension funds and exchange-traded funds. These counts describe identities, not completed financial assessments or TEFAS availability.
+- Fund identities are refreshed daily on use. The current official KAP fund page is read for umbrella name/type when those fields exist. Missing umbrella fields remain unknown; portfolio and religious approval are not inferred from the fund name.
+- Search covers both directories. For code collisions, the user selects the intended instrument. `BIST:CODE` and `FON:CODE` explicitly choose stocks or funds.
 - Membership is fetched on demand, cached for one hour, and labelled with the actual fetch time. **Yenile** bypasses both caches. Expired or failed fetches do not produce a negative or positive compliance verdict.
 - Static sample ratios, synthetic disclosure links and inferred Helal Finans/Fintables observations are excluded from the production result. Their buttons are links for manual review.
-- KAP page membership is shown separately from a complete compliance assessment. KAFİF ratios, effective BIST period lists and live fund data are **not yet integrated**. Missing financial data stays missing.
+- KAP page membership and fund registration/umbrella metadata are shown separately from a complete compliance assessment. KAFİF ratios, effective BIST period lists, current fund portfolio reports and approval documents are **not yet integrated**. Missing evidence stays missing.
 - Chrome uses activeTab injection on request; no all-page content script, all_urls permission or localhost connection.
 
 ## Build and test
@@ -30,6 +33,6 @@ The `packages/compliance-engine` deterministic engine and legacy dataset remain 
 - [Privacy policy draft](docs/privacy-policy.html)
 - [QA evidence](docs/QA-2026-10-12.md)
 
-The v1.1.0 ZIP is a local test/submission preparation package. No Chrome Web Store upload or public publication has occurred. Store approval and installed-browser context-menu checks remain separate from the code, fixture, worker and live-fetch tests.
+The v1.2.0 ZIP is a local test/submission preparation package. No Chrome Web Store upload or public publication has occurred. Store approval and installed-browser context-menu checks remain separate from the code, fixture, worker and live-fetch tests.
 
 KAP markup may change or requests may be blocked. Parsing failures fail closed and show unavailable data. Index membership alone is not a complete religious assessment or investment recommendation.

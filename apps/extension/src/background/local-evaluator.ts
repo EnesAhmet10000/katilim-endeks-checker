@@ -1,4 +1,5 @@
 import { COMPANY_DIRECTORY, resolveCompany, unverifiedEvaluation } from '@katilim/compliance-engine';
+import { resolveInstrument, searchInstruments } from '@katilim/compliance-engine';
 import {
   ComplianceCheckResponse,
   ComplianceEvaluation,
@@ -67,8 +68,8 @@ export class LocalComplianceEvaluator {
       return { isResolved: false, isAmbiguous: false, originalQuery: rawQuery, normalizedQuery: '' };
     }
 
-    const official = resolveCompany(sanitized);
-    if (official) return { isResolved: true, instrument: official, isAmbiguous: false, originalQuery: rawQuery, normalizedQuery: sanitized };
+    const official = resolveInstrument(rawQuery,sanitized);
+    if (official.isResolved || official.isAmbiguous) return official;
     const normQuery = this.normalizeTurkish(sanitized);
     const upperQuery = sanitized.toUpperCase().replace(/[^A-Z0-9]/g, '');
 
@@ -194,7 +195,7 @@ export class LocalComplianceEvaluator {
   public search(query: string, limit: number = 8): InstrumentSummary[] {
     const sanitized = this.sanitizeQuery(query);
     if (!sanitized) return [];
-    const officialMatches = COMPANY_DIRECTORY.filter(r => this.normalizeTurkish(r.symbol).includes(this.normalizeTurkish(sanitized)) || this.normalizeTurkish(r.name).includes(this.normalizeTurkish(sanitized))).slice(0, limit).map(r => resolveCompany(r.symbol)!);
+    const officialMatches = searchInstruments(query,undefined,undefined,limit);
     if (officialMatches.length) return officialMatches;
 
     const norm = this.normalizeTurkish(sanitized);

@@ -9,11 +9,12 @@ describe('Katılım API Integration Tests', () => {
   let server: FastifyInstance;
   const originalFetch=globalThis.fetch;
   const fixture=readFileSync(new URL('../../../../kap-petkm-fixture.html',import.meta.url),'utf8');
+  const fundFixture=readFileSync(new URL('../../../../kap-fund-kua-fixture.html',import.meta.url),'utf8');
 
   before(async () => {
     globalThis.fetch = (async (input: any) => {
       const url=String(input); const symbol=url.includes('tofas')?'TOASO':url.includes('sasa')?'SASA':'PETKM';
-      return {ok:true,url,text:async()=>fixture.replaceAll('PETKM',symbol)} as Response;
+      return {ok:true,url,text:async()=>url.includes('/fon-bilgileri/')?fundFixture:fixture.replaceAll('PETKM',symbol)} as Response;
     }) as typeof fetch;
     server = await createServer();
     await server.ready();
@@ -66,7 +67,7 @@ describe('Katılım API Integration Tests', () => {
     assert.strictEqual(body.evaluation.statusBadgeVariant, 'warning');
   });
 
-  it('GET /api/v1/compliance/check for KUA returns unverified fund data', async () => {
+  it('GET /api/v1/compliance/check for KUA reads its official umbrella without inferring portfolio approval', async () => {
     const res = await server.inject({
       method: 'GET',
       url: '/api/v1/compliance/check?q=KUA'
@@ -76,7 +77,9 @@ describe('Katılım API Integration Tests', () => {
     const body = JSON.parse(res.payload);
     assert.strictEqual(body.resolution.instrument.symbol, 'KUA');
     assert.strictEqual(body.resolution.instrument.type, InstrumentType.MUTUAL_FUND);
-    assert.strictEqual(body.evaluation.status, ComplianceStatus.INSUFFICIENT_DATA);
+    assert.strictEqual(body.evaluation.status, ComplianceStatus.UNCERTAIN);
+    assert.strictEqual(body.evaluation.fundProfile.reportedParticipation,true);
+    assert.strictEqual(body.evaluation.criteria.length,0);
     assert.strictEqual(body.evaluation.indices.length, 0); // No stock indices for funds
   });
 

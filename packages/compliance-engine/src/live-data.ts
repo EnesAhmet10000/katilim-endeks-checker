@@ -30,8 +30,10 @@ export function resolveCompany(query: string, directory: CompanyIdentity[] = COM
 
 export function sourceLinks(instrument: InstrumentSummary) {
  const symbol=instrument.symbol;
- const kap=instrument.kapUrl && /^https:\/\/www\.kap\.org\.tr\/tr\/sirket-bilgileri\/ozet\/\d+-[a-z0-9-]+$/.test(instrument.kapUrl) ? instrument.kapUrl : KAP_DIRECTORY_URL;
- return {kap, helalFinans:`https://helalfinans.net/hisseler/${encodeURIComponent(symbol)}`,fintables:`https://fintables.com/sirketler/${encodeURIComponent(symbol)}`};
+ const stock=instrument.type===InstrumentType.STOCK;
+ const allowed=stock ? /^https:\/\/www\.kap\.org\.tr\/tr\/sirket-bilgileri\/ozet\/\d+-[a-z0-9-]+$/ : /^https:\/\/www\.kap\.org\.tr\/tr\/fon-bilgileri\/ozet\/[a-z0-9-]+$/;
+ const kap=instrument.kapUrl && allowed.test(instrument.kapUrl) ? instrument.kapUrl : stock?KAP_DIRECTORY_URL:'https://www.kap.org.tr/tr/YatirimFonlari/ALL';
+ return {kap, tefas:`https://www.tefas.gov.tr/FonAnaliz.aspx?FonKod=${encodeURIComponent(symbol)}`,helalFinans:`https://helalfinans.net/hisseler/${encodeURIComponent(symbol)}`,fintables:`https://fintables.com/sirketler/${encodeURIComponent(symbol)}`};
 }
 
 export function unverifiedEvaluation(instrument: InstrumentSummary): ComplianceEvaluation {
@@ -59,6 +61,23 @@ export async function fetchKapText(url: string): Promise<string> {
 }
 
 export async function checkLiveInstrument(instrument: InstrumentSummary): Promise<ComplianceEvaluation> {
- if(instrument.type!==InstrumentType.STOCK || !instrument.kapUrl) return unverifiedEvaluation(instrument);
- try {const html=await fetchKapText(sourceLinks(instrument).kap); return parseKapMembership(html,instrument,new Date().toISOString());} catch {return unverifiedEvaluation(instrument);}
+ if(!instrument.kapUrl || instrument.type===InstrumentType.UNKNOWN) return unverifiedEvaluation(instrument);
+ try {const html=await fetchKapText(sourceLinks(instrument).kap); const checkedAt=new Date().toISOString(); return instrument.type===InstrumentType.STOCK?parseKapMembership(html,instrument,checkedAt):parseKapFund(html,instrument,checkedAt);} catch {return unverifiedEvaluation(instrument);}
+}
+
+export function parseKapFund(html: string, instrument: InstrumentSummary, checkedAt: string): ComplianceEvaluation {
+ const markup=html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,'');
+ const text=htmlText(markup);
+ if(!new RegExp(`(?:^|\\s)${instrument.symbol}(?:\\s|$)`).test(text) || !normalizeIdentity(text).includes(normalizeIdentity(instrument.name))) throw new Error('KAP fon kimliği eşleşmedi.');
+ const fields=new Map<string,string>();
+ for(const m of markup.matchAll(/<h3\b[^>]*>([\s\S]*?)<\/h3>([\s\S]*?)(?=<h3\b|$)/g)) {
+  const value=m[2].match(/<p\b[^>]*>([\s\S]*?)<\/p>/);
+  if(value) fields.set(normalizeIdentity(htmlText(m[1])),htmlText(value[1]));
+ }
+ const umbrellaName=fields.get(normalizeIdentity('Fonun Bağlı Olduğu Şemsiye Fonun Ünvanı'));
+ const umbrellaType=fields.get(normalizeIdentity('Fonun Bağlı Olduğu Şemsiye Fonun Türü'));
+ // A fund name is never substituted for a missing official umbrella field.
+ const participation=umbrellaType ? normalizeIdentity(umbrellaType)==='KATILIMSEMSIYEFONU' : null;
+ const result=unverifiedEvaluation(instrument);
+ return {...result,status:ComplianceStatus.UNCERTAIN,statusLabel:participation===true?'KAP: Katılım şemsiye fonu':umbrellaType?'KAP: Fon kaydı doğrulandı':'KAP: Fon kimliği doğrulandı',summaryReason:umbrellaType?`Resmi şemsiye fon türü: ${umbrellaType}. Güncel portföy dağılımı ve icazet belgesi ayrıca doğrulanmalıdır; tam uygunluk hükmü verilmez.`:'KAP fon kimliği okundu; şemsiye türü bu sayfada doğrulanamadı. Portföy ve icazet bilgileri ayrıca incelenmelidir.',confidence:ConfidenceLevel.MEDIUM,asOf:checkedAt,fundProfile:{umbrellaName,umbrellaType,reportedParticipation:participation},sources:[{sourceName:SourceName.KAP,tier:SourceTier.OFFICIAL_PRIMARY,url:sourceLinks(instrument).kap,title:'KAP resmi fon kaydı',badgeText:umbrellaType||'Fon kimliği okundu',fetchedAt:checkedAt,notes:'Fon portföyü, yatırım stratejisi ve icazet bu kontrolde doğrulanmadı.'}]};
 }

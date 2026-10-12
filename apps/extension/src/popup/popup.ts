@@ -1,4 +1,4 @@
-import { sourceLinks } from '@katilim/compliance-engine';
+import { sourceLinks, instrumentQuery } from '@katilim/compliance-engine';
 const escapeHtml = (text: string) => (text || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]!));
 import { ComplianceCheckResponse, ComplianceEvaluation, InstrumentSummary, InstrumentType } from '@katilim/shared-types';
 
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     resultsList.classList.remove('hidden');
 
     resultsList.innerHTML = items.map(item => `
-      <div class="result-item" data-symbol="${escapeHtml(item.symbol)}">
+      <div class="result-item" data-symbol="${escapeHtml(instrumentQuery(item))}">
         <div class="result-info">
           <span class="result-symbol">${escapeHtml(item.symbol)}</span>
           <span class="result-name">${escapeHtml(item.name)}</span>
@@ -111,6 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
       loadingState.classList.add('hidden');
       if (response && response.success && response.evaluation) {
         renderDetailCard(response.evaluation);
+      } else if(response?.resolution?.isAmbiguous && response.resolution.candidates) {
+        renderResultsList(response.resolution.candidates.map(c=>({...c,id:instrumentQuery(c)})));
       } else {
         renderError(response?.error || `"${query}" için katılım uygunluğu tespit edilemedi.`);
       }
@@ -135,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div style="font-size: 11px; color: #475569;">${escapeHtml(inst.name)}</div>
         </div>
         <span class="type-pill ${isStock ? 'type-stock' : 'type-fund'}">
-          ${isStock ? 'Hisse' : 'Fon'}
+          ${isStock ? 'Hisse' : inst.type===InstrumentType.PENSION_FUND?'Emeklilik':inst.type===InstrumentType.ETF?'BYF':'Fon'}
         </span>
       </div>
 
@@ -175,14 +177,15 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       ` : ''}
 
-      <div style="font-size:11px;margin:8px 0;color:#475569;">${ev.asOf ? `Kontrol: ${escapeHtml(new Date(ev.asOf).toLocaleString('tr-TR'))} ${ev.isCached ? '(önbellek)' : ''}` : 'Güncel kaynak doğrulanmadı.'}<br>Güncel finansal oranlar doğrulanmadı.</div>
+      ${ev.fundProfile?`<div style="font-size:11px;margin:8px 0;">Şemsiye türü: ${escapeHtml(ev.fundProfile.umbrellaType||'Doğrulanamadı')}</div>`:''}
+      <div style="font-size:11px;margin:8px 0;color:#475569;">${ev.asOf ? `Kontrol: ${escapeHtml(new Date(ev.asOf).toLocaleString('tr-TR'))} ${ev.isCached ? '(önbellek)' : ''}` : 'Güncel kaynak doğrulanmadı.'}<br>${isStock?'Güncel finansal oranlar doğrulanmadı.':'Güncel portföy ve icazet doğrulanmadı.'}</div>
       <button id="refreshDetail" class="tag-btn">↻ Yenile</button>
-      ${isStock ? `<a href="${escapeHtml(sourceLinks(inst).kap)}" target="_blank" rel="noopener noreferrer">KAP ↗</a> · <a href="${escapeHtml(sourceLinks(inst).helalFinans)}" target="_blank" rel="noopener noreferrer">Helal Finans ↗</a>` : ''}
+      <a href="${escapeHtml(sourceLinks(inst).kap)}" target="_blank" rel="noopener noreferrer">KAP ↗</a> ${isStock ? `· <a href="${escapeHtml(sourceLinks(inst).helalFinans)}" target="_blank" rel="noopener noreferrer">Helal Finans ↗</a>` : inst.type===InstrumentType.MUTUAL_FUND?`· <a href="${escapeHtml(sourceLinks(inst).tefas)}" target="_blank" rel="noopener noreferrer">TEFAS’ta Kontrol Et ↗</a>`:''}
       <div style="font-size: 9px; color: #94a3b8; text-align: center; margin-top: 6px;">
         ${escapeHtml(ev.disclaimer)}
       </div>
     `;
-    detailCard.querySelector('#refreshDetail')?.addEventListener('click', () => performDirectCheck(inst.symbol,true));
+    detailCard.querySelector('#refreshDetail')?.addEventListener('click', () => performDirectCheck(instrumentQuery(inst),true));
   }
 
   function renderError(msg: string) {

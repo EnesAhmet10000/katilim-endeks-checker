@@ -1,4 +1,5 @@
 import { resolveCompany } from '@katilim/compliance-engine';
+import { resolveInstrument, searchInstruments } from '@katilim/compliance-engine';
 import {
   DisambiguationCandidate,
   InstrumentSummary,
@@ -117,8 +118,8 @@ export class EntityResolverService {
       };
     }
 
-    const official = resolveCompany(sanitized);
-    if (official) return { isResolved: true, instrument: official, isAmbiguous: false, originalQuery: rawQuery, normalizedQuery: sanitized };
+    const official = resolveInstrument(rawQuery,sanitized);
+    if (official.isResolved || official.isAmbiguous) return official;
     const normQuery = this.normalizeTurkish(sanitized);
     const upperQuery = sanitized.toUpperCase().replace(/[^A-Z0-9]/g, '');
 
@@ -314,6 +315,8 @@ export class EntityResolverService {
    * Autocomplete search for instruments by query
    */
   public search(query: string, limit: number = 8): InstrumentSummary[] {
+    const officialMatches=searchInstruments(query,undefined,undefined,limit);
+    if(officialMatches.length) return officialMatches;
     const sanitized = this.sanitizeQuery(query);
     if (!sanitized) return [];
 

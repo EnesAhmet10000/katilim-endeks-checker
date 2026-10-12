@@ -55,7 +55,7 @@ export class ComplianceService {
     // 3. Evaluate according to instrument type
     let evaluation: ComplianceEvaluation;
 
-    evaluation = await checkLiveInstrument(resolveCompany(instrument.symbol) || instrument);
+    evaluation = await checkLiveInstrument(instrument);
 
     // 4. Save to Cache
     if (evaluation.asOf) this.cache.set(cacheKey, evaluation, 60 * 60 * 1000);

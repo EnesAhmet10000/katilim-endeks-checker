@@ -1,9 +1,9 @@
 # تجهيز Chrome Web Store
 
-حزمة الإصدار التجريبي: `katilim-finans-chrome-v1.1.0.zip`. يحتوي جذر ZIP ملف manifest.json مباشرة. لا يحتاج مستخدم الإضافة إلى خادم محلي.
+حزمة الإصدار التجريبي: `katilim-finans-chrome-v1.2.0.zip`. يحتوي جذر ZIP ملف manifest.json مباشرة. لا يحتاج مستخدم الإضافة إلى خادم محلي.
 
 الغرض الواحد المقترح:
-> Seçilen BIST hisse kodunu veya şirket adını resmi KAP şirket kimliğiyle eşleştirmek, kaynak bağlantılarını açmak ve KAP sayfasında gösterilen katılım endeksi üyeliğini kontrol etmek.
+> Seçilen hisse veya fon kodunu/adını resmi KAP kimliğiyle eşleştirmek, kaynak bağlantılarını açmak ve KAP sayfasında gösterilen endeks üyeliğini ya da fonun şemsiye türünü kontrol etmek.
 
 تبرير الأذونات:
 - contextMenus: قائمة فحص النص المحدد.

@@ -1,0 +1,233 @@
+[
+  {
+    "query": "BIST:THYAO",
+    "symbol": "THYAO",
+    "type": "STOCK",
+    "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1107-turk-hava-yollari-a-o",
+    "status": "UNCERTAIN",
+    "checkedAt": "2026-10-12T09:35:15.709Z",
+    "label": "KAP: Katılım Tüm üyeliği gösterilmiyor",
+    "indices": [
+      {
+        "indexCode": "XKTUM",
+        "indexName": "BIST Katılım Tüm",
+        "isMember": false,
+        "description": "KAP şirket sayfasında gösterilen üyelik; dönem listesi ayrıca kontrol edilmelidir."
+      },
+      {
+        "indexCode": "XKT100",
+        "indexName": "BIST Katılım 100",
+        "isMember": false,
+        "description": "KAP şirket sayfasında gösterilen üyelik; dönem listesi ayrıca kontrol edilmelidir."
+      },
+      {
+        "indexCode": "XKT50",
+        "indexName": "BIST Katılım 50",
+        "isMember": false,
+        "description": "KAP şirket sayfasında gösterilen üyelik; dönem listesi ayrıca kontrol edilmelidir."
+      },
+      {
+        "indexCode": "XKT30",
+        "indexName": "BIST Katılım 30",
+        "isMember": false,
+        "description": "KAP şirket sayfasında gösterilen üyelik; dönem listesi ayrıca kontrol edilmelidir."
+      }
+    ]
+  },
+  {
+    "query": "BIST:AKBNK",
+    "symbol": "AKBNK",
+    "type": "STOCK",
+    "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/2413-akbank-t-a-s",
+    "status": "UNCERTAIN",
+    "checkedAt": "2026-10-12T09:35:15.230Z",
+    "label": "KAP: Katılım Tüm üyeliği gösterilmiyor",
+    "indices": [
+      {
+        "indexCode": "XKTUM",
+        "indexName": "BIST Katılım Tüm",
+        "isMember": false,
+        "description": "KAP şirket sayfasında gösterilen üyelik; dönem listesi ayrıca kontrol edilmelidir."
+      },
+      {
+        "indexCode": "XKT100",
+        "indexName": "BIST Katılım 100",
+        "isMember": false,
+        "description": "KAP şirket sayfasında gösterilen üyelik; dönem listesi ayrıca kontrol edilmelidir."
+      },
+      {
+        "indexCode": "XKT50",
+        "indexName": "BIST Katılım 50",
+        "isMember": false,
+        "description": "KAP şirket sayfasında gösterilen üyelik; dönem listesi ayrıca kontrol edilmelidir."
+      },
+      {
+        "indexCode": "XKT30",
+        "indexName": "BIST Katılım 30",
+        "isMember": false,
+        "description": "KAP şirket sayfasında gösterilen üyelik; dönem listesi ayrıca kontrol edilmelidir."
+      }
+    ]
+  },
+  {
+    "query": "BIST:BIMAS",
+    "symbol": "BIMAS",
+    "type": "STOCK",
+    "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1406-bim-birlesik-magazalar-a-s",
+    "status": "UNCERTAIN",
+    "checkedAt": "2026-10-12T09:35:15.348Z",
+    "label": "KAP: Katılım endeksinde yer alıyor",
+    "indices": [
+      {
+        "indexCode": "XKTUM",
+        "indexName": "BIST Katılım Tüm",
+        "isMember": true,
+        "description": "KAP şirket sayfasında gösterilen üyelik; dönem listesi ayrıca kontrol edilmelidir."
+      },
+      {
+        "indexCode": "XKT100",
+        "indexName": "BIST Katılım 100",
+        "isMember": true,
+        "description": "KAP şirket sayfasında gösterilen üyelik; dönem listesi ayrıca kontrol edilmelidir."
+      },
+      {
+        "indexCode": "XKT50",
+        "indexName": "BIST Katılım 50",
+        "isMember": true,
+        "description": "KAP şirket sayfasında gösterilen üyelik; dönem listesi ayrıca kontrol edilmelidir."
+      },
+      {
+        "indexCode": "XKT30",
+        "indexName": "BIST Katılım 30",
+        "isMember": true,
+        "description": "KAP şirket sayfasında gösterilen üyelik; dönem listesi ayrıca kontrol edilmelidir."
+      }
+    ]
+  },
+  {
+    "query": "BIST:SASA",
+    "symbol": "SASA",
+    "type": "STOCK",
+    "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1068-sasa-polyester-sanayi-a-s",
+    "status": "UNCERTAIN",
+    "checkedAt": "2026-10-12T09:35:15.240Z",
+    "label": "KAP: Katılım Tüm üyeliği gösterilmiyor",
+    "indices": [
+      {
+        "indexCode": "XKTUM",
+        "indexName": "BIST Katılım Tüm",
+        "isMember": false,
+        "description": "KAP şirket sayfasında gösterilen üyelik; dönem listesi ayrıca kontrol edilmelidir."
+      },
+      {
+        "indexCode": "XKT100",
+        "indexName": "BIST Katılım 100",
+        "isMember": false,
+        "description": "KAP şirket sayfasında gösterilen üyelik; dönem listesi ayrıca kontrol edilmelidir."
+      },
+      {
+        "indexCode": "XKT50",
+        "indexName": "BIST Katılım 50",
+        "isMember": false,
+        "description": "KAP şirket sayfasında gösterilen üyelik; dönem listesi ayrıca kontrol edilmelidir."
+      },
+      {
+        "indexCode": "XKT30",
+        "indexName": "BIST Katılım 30",
+        "isMember": false,
+        "description": "KAP şirket sayfasında gösterilen üyelik; dönem listesi ayrıca kontrol edilmelidir."
+      }
+    ]
+  },
+  {
+    "query": "BIST:MAVI",
+    "symbol": "MAVI",
+    "type": "STOCK",
+    "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/3843-mavi-giyim-sanayi-ve-ticaret-a-s",
+    "status": "UNCERTAIN",
+    "checkedAt": "2026-10-12T09:35:15.707Z",
+    "label": "KAP: Katılım endeksinde yer alıyor",
+    "indices": [
+      {
+        "indexCode": "XKTUM",
+        "indexName": "BIST Katılım Tüm",
+        "isMember": true,
+        "description": "KAP şirket sayfasında gösterilen üyelik; dönem listesi ayrıca kontrol edilmelidir."
+      },
+      {
+        "indexCode": "XKT100",
+        "indexName": "BIST Katılım 100",
+        "isMember": true,
+        "description": "KAP şirket sayfasında gösterilen üyelik; dönem listesi ayrıca kontrol edilmelidir."
+      },
+      {
+        "indexCode": "XKT50",
+        "indexName": "BIST Katılım 50",
+        "isMember": true,
+        "description": "KAP şirket sayfasında gösterilen üyelik; dönem listesi ayrıca kontrol edilmelidir."
+      },
+      {
+        "indexCode": "XKT30",
+        "indexName": "BIST Katılım 30",
+        "isMember": true,
+        "description": "KAP şirket sayfasında gösterilen üyelik; dönem listesi ayrıca kontrol edilmelidir."
+      }
+    ]
+  },
+  {
+    "query": "FON:KUA",
+    "symbol": "KUA",
+    "type": "MUTUAL_FUND",
+    "kapUrl": "https://www.kap.org.tr/tr/fon-bilgileri/ozet/kua-kuveyt-turk-portfoy-agresif-katilim-fonu",
+    "status": "UNCERTAIN",
+    "checkedAt": "2026-10-12T09:35:15.237Z",
+    "label": "KAP: Katılım şemsiye fonu",
+    "indices": [],
+    "fundProfile": {
+      "umbrellaName": "KUVEYT TÜRK PORTFÖY YÖNETİMİ A.Ş. KATILIM ŞEMSİYE FONU",
+      "umbrellaType": "KATILIM ŞEMSİYE FONU",
+      "reportedParticipation": true
+    }
+  },
+  {
+    "query": "FON:TTE",
+    "symbol": "TTE",
+    "type": "MUTUAL_FUND",
+    "kapUrl": "https://www.kap.org.tr/tr/fon-bilgileri/ozet/tte-is-portfoy-bist-teknoloji-agirlik-sinirlamali-endeksi-hisse-senedi-tl-fonu-hisse-senedi-yogun-fon",
+    "status": "UNCERTAIN",
+    "checkedAt": "2026-10-12T09:35:15.247Z",
+    "label": "KAP: Fon kaydı doğrulandı",
+    "indices": [],
+    "fundProfile": {
+      "umbrellaName": "İş Portföy Yönetimi A.Ş. Hisse Senedi Şemsiye Fonu",
+      "umbrellaType": "HİSSE SENEDİ ŞEMSİYE FONU",
+      "reportedParticipation": false
+    }
+  },
+  {
+    "query": "FON:EAE",
+    "symbol": "EAE",
+    "type": "PENSION_FUND",
+    "kapUrl": "https://www.kap.org.tr/tr/fon-bilgileri/ozet/eae-agesa-hayat-ve-emeklilik-a-s-altin-emeklilik-yatirim-fonu",
+    "status": "UNCERTAIN",
+    "checkedAt": "2026-10-12T09:35:16.045Z",
+    "label": "KAP: Fon kimliği doğrulandı",
+    "indices": [],
+    "fundProfile": {
+      "reportedParticipation": null
+    }
+  },
+  {
+    "query": "FON:APGLD",
+    "symbol": "APGLD",
+    "type": "ETF",
+    "kapUrl": "https://www.kap.org.tr/tr/fon-bilgileri/ozet/apgld-ak-portfoy-altin-katilim-borsa-yatirim-fonu",
+    "status": "UNCERTAIN",
+    "checkedAt": "2026-10-12T09:35:17.818Z",
+    "label": "KAP: Fon kimliği doğrulandı",
+    "indices": [],
+    "fundProfile": {
+      "reportedParticipation": null
+    }
+  }
+]

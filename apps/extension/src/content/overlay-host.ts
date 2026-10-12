@@ -1,4 +1,4 @@
-import { sourceLinks } from '@katilim/compliance-engine';
+import { sourceLinks, instrumentQuery } from '@katilim/compliance-engine';
 import { ComplianceEvaluation, DisambiguationCandidate, InstrumentType } from '@katilim/shared-types';
 
 class KatilimOverlayManager {
@@ -604,7 +604,7 @@ class KatilimOverlayManager {
             <div class="symbol-row">
               <span class="symbol-badge">${this.escapeHtml(inst.symbol)}</span>
               <span class="type-pill ${isStock ? 'type-stock' : 'type-fund'}">
-                ${isStock ? 'HİSSE SENEDİ' : 'YATIRIM FONU'}
+                ${isStock ? 'HİSSE SENEDİ' : inst.type===InstrumentType.PENSION_FUND?'EMEKLİLİK FONU':inst.type===InstrumentType.ETF?'BORSA YATIRIM FONU':'YATIRIM FONU'}
               </span>
             </div>
             <div class="company-name">${this.escapeHtml(inst.name)}</div>
@@ -621,7 +621,8 @@ class KatilimOverlayManager {
           ${evaluation.asOf ? `<p style="font-size:12px;color:#64748b;">Kontrol: ${this.escapeHtml(new Date(evaluation.asOf).toLocaleString('tr-TR'))} ${evaluation.isCached ? '(önbellek)' : ''}</p>` : ''}
           ${indicesHtml}
           ${criteriaHtml}
-          ${!evaluation.criteria.length ? '<div class="section-box">Güncel finansal oranlar doğrulanmadı. Eski veya örnek değerler kullanılmaz.</div>' : ''}
+          ${evaluation.fundProfile ? `<div class="section-box"><div class="section-title">KAP Fon Kaydı</div><p>${this.escapeHtml(evaluation.fundProfile.umbrellaName || 'Şemsiye fon adı belirtilmemiş')}</p><p>Tür: ${this.escapeHtml(evaluation.fundProfile.umbrellaType || 'Bu sayfada doğrulanamadı')}</p></div>` : ''}
+          ${!evaluation.criteria.length ? `<div class="section-box">${isStock?'Güncel finansal oranlar doğrulanmadı. Eski veya örnek değerler kullanılmaz.':'Güncel portföy dağılımı ve icazet belgesi doğrulanmadı.'}</div>` : ''}
           ${sourcesHtml}
         </div>
 
@@ -629,12 +630,12 @@ class KatilimOverlayManager {
           <div class="action-row">
             <button class="btn" id="refreshBtn">↻ Yenile</button>
             <button class="btn btn-primary" id="kapBtn">
-              ${isStock ? 'KAP ↗' : 'TEFAS ↗'}
+              KAP ↗
             </button>
             ${isStock ? `
               <button class="btn btn-helal" id="helalFinansBtn">Helal Finans ↗</button>
               <button class="btn btn-fintables" id="fintablesBtn">Fintables ↗</button>
-            ` : ''}
+            ` : inst.type===InstrumentType.MUTUAL_FUND?'<button class="btn" id="tefasBtn">TEFAS’ta Kontrol Et ↗</button>':''}
           </div>
           <div class="disclaimer">${this.escapeHtml(evaluation.disclaimer)}</div>
         </div>
@@ -647,17 +648,17 @@ class KatilimOverlayManager {
       this.renderLoading(query);
       chrome.runtime.sendMessage({
         type: 'PERFORM_CHECK',
-        query,
+        query: instrumentQuery(inst),
         forceRefresh: true
       });
     });
 
     shadow.getElementById('kapBtn')?.addEventListener('click', () => {
-      const primaryUrl = isStock
-        ? sourceLinks(inst).kap
-        : `https://www.tefas.gov.tr/FonAnaliz.aspx?FonKod=${inst.symbol}`;
+      const primaryUrl = sourceLinks(inst).kap;
       window.open(primaryUrl, '_blank');
     });
+
+    shadow.getElementById('tefasBtn')?.addEventListener('click', () => window.open(sourceLinks(inst).tefas,'_blank'));
 
     if (isStock) {
       shadow.getElementById('helalFinansBtn')?.addEventListener('click', () => {
@@ -687,7 +688,7 @@ class KatilimOverlayManager {
           <div style="font-size: 12px; color: #64748b;">"${this.escapeHtml(query)}" sorgusu için birden fazla olası varlık bulundu:</div>
           <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 8px;">
             ${candidates.map(c => `
-              <div class="candidate-item" data-symbol="${c.symbol}">
+              <div class="candidate-item" data-symbol="${this.escapeHtml(instrumentQuery(c))}">
                 <div>
                   <div style="font-weight: 700; font-size: 13px; color: #0284c7;">${c.symbol}</div>
                   <div style="font-size: 11px; color: #475569;">${this.escapeHtml(c.name)}</div>

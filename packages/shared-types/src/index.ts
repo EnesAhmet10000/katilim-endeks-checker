@@ -94,6 +94,7 @@ export interface SourceProvenance {
 }
 
 export interface ComplianceEvaluation {
+  fundProfile?: { umbrellaName?: string; umbrellaType?: string; reportedParticipation: boolean | null };
   instrument: InstrumentSummary;
   status: ComplianceStatus;
   statusLabel: string;
