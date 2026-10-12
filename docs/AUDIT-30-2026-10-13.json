@@ -1,0 +1,2994 @@
+{
+  "summary": {
+    "date": "2026-10-13",
+    "sampleCount": 30,
+    "universeCount": 626,
+    "identitiesVerified": 30,
+    "members": 11,
+    "nonMembers": 19,
+    "indexChecks": 210,
+    "kafifAvailable": 26,
+    "kafifFieldsChecked": 182,
+    "extractionErrors": 0,
+    "pageDifferenceCompanies": 3,
+    "equitiesVerified": 30
+  },
+  "method": "Actual bundled Chrome worker executed with live HTTPS fetch and simulated Chrome messaging/storage; independently compared against captured official CSV/HTML using Python. Not an installed-browser test or a comprehensive religious assessment.",
+  "rows": [
+    {
+      "symbol": "GLRYH",
+      "name": "GÜLER YATIRIM HOLDİNG A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1428-guler-yatirim-holding-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": false,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "EVET",
+        "HAYIR",
+        "HAYIR",
+        "EVET",
+        92.65,
+        55.36,
+        26.63
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST ANA",
+        "BIST TÜM-100",
+        "BIST MALİ",
+        "BIST HOLDİNG VE YATIRIM",
+        "BIST TÜM",
+        "BIST 500",
+        "BIST İSTANBUL"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": []
+    },
+    {
+      "symbol": "SAFKR",
+      "name": "SAFKAR EGE SOĞUTMACILIK KLİMA SOĞUK HAVA TESİSLERİ İHRACAT İTHALAT SANAYİ VE TİCARET A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/4550-safkar-ege-sogutmacilik-klima-soguk-hava-tesisleri-ihracat-ithalat-sanayi-ve-ticaret-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": true,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        4.82,
+        8.88,
+        4.36
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST ANA",
+        "BIST 500",
+        "BIST KATILIM TUM",
+        "BIST KATILIM 100",
+        "BIST TÜM-100",
+        "BIST TÜM",
+        "BIST METAL EŞYA, MAKİNA",
+        "BIST SINAİ",
+        "BIST İZMİR"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": []
+    },
+    {
+      "symbol": "FADE",
+      "name": "FADE GIDA YATIRIM SANAYİ TİCARET A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5021-fade-gida-yatirim-sanayi-ticaret-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": true,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        0.52,
+        0.58,
+        4.89
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST KATILIM TUM",
+        "BIST ANA",
+        "BIST TÜM",
+        "BIST İZMİR",
+        "BIST GERİ ALIM",
+        "BIST GIDA, İÇECEK",
+        "BIST SINAİ",
+        "BIST TÜM-100"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": []
+    },
+    {
+      "symbol": "CIMSA",
+      "name": "ÇİMSA ÇİMENTO SANAYİ VE TİCARET A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/908-cimsa-cimento-sanayi-ve-ticaret-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": true,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        1.39,
+        5.05,
+        29.64
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST SÜRDÜRÜLEBİLİRLİK 25",
+        "BIST TÜM",
+        "BIST KATILIM 100",
+        "BIST 100-30",
+        "BIST KATILIM TEMETTU",
+        "BIST TEMETTÜ",
+        "BIST TEMETTÜ 25",
+        "BIST KATILIM TUM",
+        "BIST KATILIM 50",
+        "BIST KATILIM 30",
+        "BIST TAŞ, TOPRAK",
+        "BIST 50",
+        "BIST YILDIZ",
+        "BIST SÜRDÜRÜLEBİLİRLİK KATILIM",
+        "BIST 500",
+        "BIST SÜRDÜRÜLEBİLİRLİK",
+        "BIST SINAİ",
+        "BIST 100"
+      ],
+      "pageDifferences": [
+        "XK030EA"
+      ],
+      "errors": [],
+      "notes": [
+        "KAP page / dated BIST list differ: XK030EA"
+      ]
+    },
+    {
+      "symbol": "OFSYM",
+      "name": "OFİS YEM GIDA SANAYİ TİCARET A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5851-ofis-yem-gida-sanayi-ticaret-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": false,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        2.71,
+        0.54,
+        37.5
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST 500",
+        "BIST TÜM",
+        "BIST SINAİ",
+        "BIST ANA",
+        "BIST TÜM-100",
+        "BIST GERİ ALIM",
+        "BIST GIDA, İÇECEK",
+        "BIST ANKARA"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": []
+    },
+    {
+      "symbol": "ISMEN",
+      "name": "İŞ YATIRIM MENKUL DEĞERLER A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1533-is-yatirim-menkul-degerler-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 0,
+      "member": false,
+      "financialPeriod": null,
+      "financialValues": [],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST TEMETTU 5 YIL",
+        "BIST MALİ",
+        "BIST YILDIZ",
+        "BIST TEMETTÜ",
+        "BIST 500",
+        "BIST SÜRDÜRÜLEBİLİRLİK",
+        "BIST TEMETTÜ 25",
+        "BIST 100",
+        "BIST TEMETTU 10 YIL",
+        "BIST 100-30",
+        "BIST TÜM",
+        "BIST ARACI KURUM"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": [
+        "KAFIF matching row absent; no financial verdict verified"
+      ]
+    },
+    {
+      "symbol": "OBAMS",
+      "name": "OBA MAKARNACILIK SANAYİ VE TİCARET A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5934-oba-makarnacilik-sanayi-ve-ticaret-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": true,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        2.37,
+        0,
+        0
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST 100-30",
+        "BIST GIDA, İÇECEK",
+        "BIST KATILIM 50",
+        "BIST KATILIM 100",
+        "BIST 100",
+        "BIST KATILIM TUM",
+        "BIST SINAİ",
+        "BIST KATILIM 30",
+        "BIST 500",
+        "BIST YILDIZ",
+        "BIST TÜM"
+      ],
+      "pageDifferences": [
+        "XK030EA"
+      ],
+      "errors": [],
+      "notes": [
+        "KAP page / dated BIST list differ: XK030EA"
+      ]
+    },
+    {
+      "symbol": "PSGYO",
+      "name": "PASİFİK GAYRİMENKUL YATIRIM ORTAKLIĞI A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5371-pasifik-gayrimenkul-yatirim-ortakligi-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": false,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        60.63,
+        0,
+        21.01
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST TÜM-100",
+        "BIST GAYRİMENKUL YAT. ORT.",
+        "BIST TÜM",
+        "BIST TEMETTÜ",
+        "BIST 500",
+        "BIST MALİ",
+        "BIST ANA"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": []
+    },
+    {
+      "symbol": "LUKSK",
+      "name": "LÜKS KADİFE TİCARET VE SANAYİİ A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1017-luks-kadife-ticaret-ve-sanayii-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": false,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        8.41,
+        1.76,
+        2.63
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST TEKSTİL, DERİ",
+        "BIST KAYSERİ",
+        "BIST TÜM-100",
+        "BIST SINAİ",
+        "BIST TÜM",
+        "BIST KOBI SANAYİ",
+        "BIST ANA"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": []
+    },
+    {
+      "symbol": "EKGYO",
+      "name": "EMLAK KONUT GAYRİMENKUL YATIRIM ORTAKLIĞI A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1531-emlak-konut-gayrimenkul-yatirim-ortakligi-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": true,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        3.8,
+        7.92,
+        9.29
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST KATILIM 30",
+        "BIST GAYRİMENKUL YAT. ORT.",
+        "BIST KATILIM 50",
+        "BIST 30",
+        "BIST 100",
+        "BIST YILDIZ",
+        "BIST 500",
+        "BIST KATILIM 100",
+        "BIST MALİ",
+        "BIST 50",
+        "BIST KATILIM TUM",
+        "BIST TÜM"
+      ],
+      "pageDifferences": [
+        "XK030EA"
+      ],
+      "errors": [],
+      "notes": [
+        "KAP page / dated BIST list differ: XK030EA"
+      ]
+    },
+    {
+      "symbol": "KOPOL",
+      "name": "KOZA POLYESTER SANAYİ VE TİCARET A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5806-koza-polyester-sanayi-ve-ticaret-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": false,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        8.78,
+        0.57,
+        21.69
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST 500",
+        "BIST YILDIZ",
+        "BIST SINAİ",
+        "BIST TÜM-100",
+        "BIST KİMYA, PETROL, PLASTİK",
+        "BIST TÜM"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": []
+    },
+    {
+      "symbol": "DZGYO",
+      "name": "DENİZ GAYRİMENKUL YATIRIM ORTAKLIĞI A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/912-deniz-gayrimenkul-yatirim-ortakligi-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": false,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "EVET",
+        93.44,
+        0.65,
+        24.49
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST TÜM",
+        "BIST GAYRİMENKUL YAT. ORT.",
+        "BIST TÜM-100",
+        "BIST ANA",
+        "BIST 500",
+        "BIST MALİ"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": []
+    },
+    {
+      "symbol": "AEFES",
+      "name": "ANADOLU EFES BİRACILIK VE MALT SANAYİİ A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/858-anadolu-efes-biracilik-ve-malt-sanayii-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": false,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "EVET",
+        "EVET",
+        "HAYIR",
+        "EVET",
+        1.36,
+        17.88,
+        20.77
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST 100",
+        "BIST 50",
+        "BIST YILDIZ",
+        "BIST TEMETTU 10 YIL",
+        "BIST 500",
+        "BIST TÜM",
+        "BIST TEMETTÜ 25",
+        "BIST 30",
+        "BIST TEMETTÜ",
+        "BIST SÜRDÜRÜLEBİLİRLİK 25",
+        "BIST KURUMSAL YÖNETİM",
+        "BIST TEMETTU 5 YIL",
+        "BIST İSTANBUL",
+        "BIST GIDA, İÇECEK",
+        "BIST SINAİ",
+        "BIST SÜRDÜRÜLEBİLİRLİK"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": []
+    },
+    {
+      "symbol": "ATAGY",
+      "name": "ATA GAYRİMENKUL YATIRIM ORTAKLIĞI A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/867-ata-gayrimenkul-yatirim-ortakligi-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": false,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "EVET",
+        22.59,
+        3.45,
+        0
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST TÜM-100",
+        "BIST TÜM",
+        "BIST GAYRİMENKUL YAT. ORT.",
+        "BIST MALİ"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": []
+    },
+    {
+      "symbol": "MAKTK",
+      "name": "MAKİNA TAKIM ENDÜSTRİSİ A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1018-makina-takim-endustrisi-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": false,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        19.39,
+        0,
+        0
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST ANA",
+        "BIST TÜM",
+        "BIST KOCAELİ",
+        "BIST METAL EŞYA, MAKİNA",
+        "BIST SINAİ",
+        "BIST TÜM-100",
+        "BIST 500"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": []
+    },
+    {
+      "symbol": "TEKTU",
+      "name": "TEK-ART İNŞAAT TİCARET TURİZM SANAYİ VE YATIRIMLAR A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1092-tek-art-insaat-ticaret-turizm-sanayi-ve-yatirimlar-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": false,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "EVET",
+        30.61,
+        0.08,
+        0.02
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST TÜM",
+        "BIST KONAKLAMA",
+        "BIST ANA",
+        "BIST TÜM-100",
+        "BIST TURİZM",
+        "BIST ANTALYA",
+        "BIST 500",
+        "BIST HİZMETLER"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": []
+    },
+    {
+      "symbol": "YIGIT",
+      "name": "YİĞİT AKÜ MALZEMELERİ NAKLİYAT TURİZM İNŞAAT SANAYİ VE TİCARET A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5965-yigit-aku-malzemeleri-nakliyat-turizm-insaat-sanayi-ve-ticaret-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": true,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        3.6,
+        13.43,
+        5.61
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST SINAİ",
+        "BIST TÜM-100",
+        "BIST TÜM",
+        "BIST ANKARA",
+        "BIST KATILIM TUM",
+        "BIST 500",
+        "BIST METAL EŞYA, MAKİNA",
+        "BIST KATILIM 100",
+        "BIST ANA"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": []
+    },
+    {
+      "symbol": "RUBNS",
+      "name": "RUBENİS TEKSTİL SANAYİ TİCARET A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5478-rubenis-tekstil-sanayi-ticaret-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": true,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        2.36,
+        0,
+        7.71
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST KATILIM TUM",
+        "BIST 500",
+        "BIST ANA",
+        "BIST TÜM",
+        "BIST SINAİ",
+        "BIST TÜM-100",
+        "BIST TEKSTİL, DERİ"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": []
+    },
+    {
+      "symbol": "MNDRS",
+      "name": "MENDERES TEKSTİL SANAYİ VE TİCARET A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1027-menderes-tekstil-sanayi-ve-ticaret-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": false,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        9.67,
+        12.02,
+        15.78
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST TÜM-100",
+        "BIST 500",
+        "BIST TÜM",
+        "BIST ANA",
+        "BIST DENİZLİ",
+        "BIST TEKSTİL, DERİ",
+        "BIST SINAİ"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": []
+    },
+    {
+      "symbol": "REEDR",
+      "name": "REEDER TEKNOLOJİ SANAYİ VE TİCARET A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5866-reeder-teknoloji-sanayi-ve-ticaret-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": true,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        3.64,
+        0.07,
+        4.44
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST KATILIM TUM",
+        "BIST BİLİŞİM",
+        "BIST GERİ ALIM",
+        "BIST ANA",
+        "BIST TÜM",
+        "BIST 500",
+        "BIST TÜM-100",
+        "BIST TEKNOLOJİ"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": []
+    },
+    {
+      "symbol": "ASGYO",
+      "name": "ASCE GAYRİMENKUL YATIRIM ORTAKLIĞI A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/4687-asce-gayrimenkul-yatirim-ortakligi-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": false,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        51.98,
+        2.96,
+        0
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST ANA",
+        "BIST TÜM-100",
+        "BIST MALİ",
+        "BIST GAYRİMENKUL YAT. ORT.",
+        "BIST 500",
+        "BIST TÜM",
+        "BIST GERİ ALIM"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": []
+    },
+    {
+      "symbol": "MOBTL",
+      "name": "MOBİLTEL İLETİŞİM HİZMETLERİ SANAYİ VE TİCARET A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5462-mobiltel-iletisim-hizmetleri-sanayi-ve-ticaret-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": false,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "EVET",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        4.51,
+        0.84,
+        19.5
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST İSTANBUL",
+        "BIST TÜM",
+        "BIST TEKNOLOJİ",
+        "BIST 500",
+        "BIST YILDIZ",
+        "BIST BİLİŞİM",
+        "BIST TÜM-100"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": []
+    },
+    {
+      "symbol": "MERIT",
+      "name": "MERİT TURİZM YATIRIM VE İŞLETME A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1594-merit-turizm-yatirim-ve-isletme-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": false,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "EVET",
+        "HAYIR",
+        "HAYIR",
+        "EVET",
+        87.01,
+        99.11,
+        0.03
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST İSTANBUL",
+        "BIST ANA",
+        "BIST TÜM",
+        "BIST HİZMETLER",
+        "BIST TURİZM",
+        "BIST 500",
+        "BIST KONAKLAMA",
+        "BIST TEMETTÜ",
+        "BIST TÜM-100"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": []
+    },
+    {
+      "symbol": "SMART",
+      "name": "SMARTİKS YAZILIM A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/4872-smartiks-yazilim-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": true,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        0.19,
+        0.02,
+        12.11
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST 500",
+        "BIST BİLİŞİM",
+        "BIST KATILIM TUM",
+        "BIST İSTANBUL",
+        "BIST TEKNOLOJİ",
+        "BIST TÜM-100",
+        "BIST TÜM",
+        "BIST ANA"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": []
+    },
+    {
+      "symbol": "PENTA",
+      "name": "PENTA TEKNOLOJİ ÜRÜNLERİ DAĞITIM TİCARET A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/3909-penta-teknoloji-urunleri-dagitim-ticaret-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": true,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        0.09,
+        0.19,
+        3.45
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST KATILIM TUM",
+        "BIST 500",
+        "BIST TÜM",
+        "BIST ANA",
+        "BIST BİLİŞİM",
+        "BIST TÜM-100",
+        "BIST TEKNOLOJİ",
+        "BIST İSTANBUL"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": []
+    },
+    {
+      "symbol": "YEOTK",
+      "name": "YEO TEKNOLOJİ ENERJİ VE ENDÜSTRİ A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/2900-yeo-teknoloji-enerji-ve-endustri-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": true,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        "HAYIR",
+        3.81,
+        5.41,
+        18.45
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": true,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST HİZMETLER",
+        "BIST KATILIM TUM",
+        "BIST TÜM",
+        "BIST 500",
+        "BIST İSTANBUL",
+        "BIST ANA",
+        "BIST TÜM-100",
+        "BIST KATILIM 100"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": []
+    },
+    {
+      "symbol": "BESLR",
+      "name": "BESLER GIDA VE KİMYA SANAYİ VE TİCARET A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1002-besler-gida-ve-kimya-sanayi-ve-ticaret-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 7,
+      "member": false,
+      "financialPeriod": "2026 / 6 Aylık",
+      "financialValues": [
+        "HAYIR",
+        "EVET",
+        "HAYIR",
+        "HAYIR",
+        5.19,
+        10.06,
+        22.33
+      ],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST GIDA, İÇECEK",
+        "BIST TÜM",
+        "BIST 500",
+        "BIST BURSA",
+        "BIST YILDIZ",
+        "BIST SÜRDÜRÜLEBİLİRLİK",
+        "BIST SINAİ",
+        "BIST TÜM-100"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": []
+    },
+    {
+      "symbol": "VAKFN",
+      "name": "VAKIF FİNANSAL KİRALAMA A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1115-vakif-finansal-kiralama-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 0,
+      "member": false,
+      "financialPeriod": null,
+      "financialValues": [],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST FİN. KİR. FAKTORİNG",
+        "BIST 500",
+        "BIST TÜM",
+        "BIST TÜM-100",
+        "BIST MALİ",
+        "BIST YILDIZ"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": [
+        "KAFIF matching row absent; no financial verdict verified"
+      ]
+    },
+    {
+      "symbol": "LIDFA",
+      "name": "LİDER FAKTORİNG A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1509-lider-faktoring-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 0,
+      "member": false,
+      "financialPeriod": null,
+      "financialValues": [],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST FİN. KİR. FAKTORİNG",
+        "BIST MALİ",
+        "BIST 500",
+        "BIST ANA",
+        "BIST KURUMSAL YÖNETİM",
+        "BIST TÜM-100",
+        "BIST TÜM"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": [
+        "KAFIF matching row absent; no financial verdict verified"
+      ]
+    },
+    {
+      "symbol": "AKBNK",
+      "name": "AKBANK T.A.Ş.",
+      "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/2413-akbank-t-a-s",
+      "equityVerified": true,
+      "identityVerified": true,
+      "indexMatches": 7,
+      "kafifMatches": 0,
+      "member": false,
+      "financialPeriod": null,
+      "financialValues": [],
+      "bistIndices": [
+        {
+          "indexCode": "XKTUM",
+          "indexName": "BIST Katılım Tüm",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK100",
+          "indexName": "BIST Katılım 100",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK050",
+          "indexName": "BIST Katılım 50",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030",
+          "indexName": "BIST Katılım 30",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XK030EA",
+          "indexName": "BIST Katılım 30 Eşit Ağırlıklı",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XSRDK",
+          "indexName": "BIST Katılım Sürdürülebilirlik",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        },
+        {
+          "indexCode": "XKTMT",
+          "indexName": "BIST Katılım Temettü",
+          "isMember": false,
+          "period": "2026-10-13",
+          "description": "Borsa İstanbul resmi bileşen listesi."
+        }
+      ],
+      "kapPageIndices": [
+        "BIST YILDIZ",
+        "BIST TEMETTU 5 YIL",
+        "BIST TEMETTÜ 25",
+        "BIST TEMETTÜ",
+        "BIST 30",
+        "BIST TÜM",
+        "BIST 50",
+        "BIST 100",
+        "BIST LİKİT BANKA",
+        "BIST SÜRDÜRÜLEBİLİRLİK 25",
+        "BIST MALİ",
+        "BIST BANKA",
+        "BIST SÜRDÜRÜLEBİLİRLİK",
+        "BIST 500"
+      ],
+      "pageDifferences": [],
+      "errors": [],
+      "notes": [
+        "KAFIF matching row absent; no financial verdict verified"
+      ]
+    }
+  ],
+  "responses": [
+    {
+      "url": "https://www.kap.org.tr/tr/bist-sirketler",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/bist-sirketler",
+      "startedAt": "2026-10-12T22:08:04.555Z",
+      "filename": "response-001.txt",
+      "sha256": "78f65e76420a9dd9d0b86bca38c0b88d16948b175ed31d20d5f04279b951054f"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/Pazarlar",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/Pazarlar",
+      "startedAt": "2026-10-12T22:08:04.719Z",
+      "filename": "response-002.txt",
+      "sha256": "e5d520e4013af16cebcf39706a10cca470b19fb18845d8e32b77a51c95c8ce10"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/bist-sirketler",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/bist-sirketler",
+      "startedAt": "2026-10-12T22:08:06.245Z",
+      "filename": "response-003.txt",
+      "sha256": "78f65e76420a9dd9d0b86bca38c0b88d16948b175ed31d20d5f04279b951054f"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/YatirimFonlari/ALL",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/YatirimFonlari/ALL",
+      "startedAt": "2026-10-12T22:08:06.246Z",
+      "filename": "response-004.txt",
+      "sha256": "f6483baf56ae10e6dc9343eac509656879cb1aae0557a29a57e47e96cd9adef5"
+    },
+    {
+      "url": "https://borsaistanbul.com/datum/hisse_endeks_katilim_ds.csv",
+      "status": 200,
+      "finalUrl": "https://borsaistanbul.com/datum/hisse_endeks_katilim_ds.csv",
+      "startedAt": "2026-10-12T22:08:07.647Z",
+      "filename": "response-005.txt",
+      "sha256": "885b5b71cc0425b41332b018ce8a33f27c65193783cc760f1fb34a9ff2ba86f0"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/kfifAllInfoListByItem/KPY97SummaryGrid",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/kfifAllInfoListByItem/KPY97SummaryGrid",
+      "startedAt": "2026-10-12T22:08:07.648Z",
+      "filename": "response-006.txt",
+      "sha256": "1c0bc75f448dfc2cdc7b7ee3a0db86df180c2f88cd09e23a0961d937619323ec"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1428-guler-yatirim-holding-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1428-guler-yatirim-holding-a-s",
+      "startedAt": "2026-10-12T22:08:07.779Z",
+      "filename": "response-007.txt",
+      "sha256": "048907c56f93623af4e37b4ab780f5b922d60b7f50f1628cd918d759c54870de"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/4550-safkar-ege-sogutmacilik-klima-soguk-hava-tesisleri-ihracat-ithalat-sanayi-ve-ticaret-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/4550-safkar-ege-sogutmacilik-klima-soguk-hava-tesisleri-ihracat-ithalat-sanayi-ve-ticaret-a-s",
+      "startedAt": "2026-10-12T22:08:07.809Z",
+      "filename": "response-008.txt",
+      "sha256": "ce44cffb012cfbe145c86c1412f9145600e4faaa6b4a67c0db991516580001c8"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5021-fade-gida-yatirim-sanayi-ticaret-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5021-fade-gida-yatirim-sanayi-ticaret-a-s",
+      "startedAt": "2026-10-12T22:08:07.835Z",
+      "filename": "response-009.txt",
+      "sha256": "8ab90927da61fc647982435be52af2843718122be44add35cd8bba67762b0235"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/908-cimsa-cimento-sanayi-ve-ticaret-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/908-cimsa-cimento-sanayi-ve-ticaret-a-s",
+      "startedAt": "2026-10-12T22:08:07.866Z",
+      "filename": "response-010.txt",
+      "sha256": "304ffe24bad22949143495d7422443b4c41c568a31a6c322d5e52853533336c6"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5851-ofis-yem-gida-sanayi-ticaret-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5851-ofis-yem-gida-sanayi-ticaret-a-s",
+      "startedAt": "2026-10-12T22:08:11.033Z",
+      "filename": "response-011.txt",
+      "sha256": "a31f6b83a259e43cd7a83172be1d752f62cd3e1fe3db4407ab2c217877b6ce3f"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1533-is-yatirim-menkul-degerler-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1533-is-yatirim-menkul-degerler-a-s",
+      "startedAt": "2026-10-12T22:08:11.099Z",
+      "filename": "response-012.txt",
+      "sha256": "d0239c1d7922f017aeb4a704958c868f240ee9c5bd55b276fd001e8cf9ab44e0"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5934-oba-makarnacilik-sanayi-ve-ticaret-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5934-oba-makarnacilik-sanayi-ve-ticaret-a-s",
+      "startedAt": "2026-10-12T22:08:11.137Z",
+      "filename": "response-013.txt",
+      "sha256": "a2724e018bc11a5d04b96cfdbe42f5c7fdad9bfb397d86be6a2941bc573a2ac6"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5371-pasifik-gayrimenkul-yatirim-ortakligi-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5371-pasifik-gayrimenkul-yatirim-ortakligi-a-s",
+      "startedAt": "2026-10-12T22:08:11.167Z",
+      "filename": "response-014.txt",
+      "sha256": "4f10035c72f7b97515efc466167116875508946297bb0993dcbc5ef00c7181c0"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1017-luks-kadife-ticaret-ve-sanayii-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1017-luks-kadife-ticaret-ve-sanayii-a-s",
+      "startedAt": "2026-10-12T22:08:11.279Z",
+      "filename": "response-015.txt",
+      "sha256": "b89d157053ee62f85b3627e3e74576f0b9d9d8e8af972c961bd1f5f9ea34ce99"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1531-emlak-konut-gayrimenkul-yatirim-ortakligi-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1531-emlak-konut-gayrimenkul-yatirim-ortakligi-a-s",
+      "startedAt": "2026-10-12T22:08:11.307Z",
+      "filename": "response-016.txt",
+      "sha256": "862aff3e778df58c852e138d66614098571966ec26a390cb1d5a5e5805577c89"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5806-koza-polyester-sanayi-ve-ticaret-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5806-koza-polyester-sanayi-ve-ticaret-a-s",
+      "startedAt": "2026-10-12T22:08:11.393Z",
+      "filename": "response-017.txt",
+      "sha256": "2ebc5fe3f75071ce7ce70d1a886f1b92e22655ea20c1179b6cfb8993dc23f98b"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/912-deniz-gayrimenkul-yatirim-ortakligi-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/912-deniz-gayrimenkul-yatirim-ortakligi-a-s",
+      "startedAt": "2026-10-12T22:08:11.420Z",
+      "filename": "response-018.txt",
+      "sha256": "cc4c4fe4edebf097a64c5eadbadad8fe86653cc530af8dda4af174ed335163a6"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/858-anadolu-efes-biracilik-ve-malt-sanayii-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/858-anadolu-efes-biracilik-ve-malt-sanayii-a-s",
+      "startedAt": "2026-10-12T22:08:11.465Z",
+      "filename": "response-019.txt",
+      "sha256": "9b6e66c3f7c1aadf39e44894d14ccbe733965a5ebdd39d44436995a1ec241c8b"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/867-ata-gayrimenkul-yatirim-ortakligi-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/867-ata-gayrimenkul-yatirim-ortakligi-a-s",
+      "startedAt": "2026-10-12T22:08:11.496Z",
+      "filename": "response-020.txt",
+      "sha256": "95bf2f4421109143031c7088710c14c6996ab34d0858d1461306577ed231308a"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1018-makina-takim-endustrisi-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1018-makina-takim-endustrisi-a-s",
+      "startedAt": "2026-10-12T22:08:11.529Z",
+      "filename": "response-021.txt",
+      "sha256": "3b53d94a7b47a01e7ee6edd1e1dc22a9f3ba31db6896ef2a3d5bbfffd1446eff"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1092-tek-art-insaat-ticaret-turizm-sanayi-ve-yatirimlar-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1092-tek-art-insaat-ticaret-turizm-sanayi-ve-yatirimlar-a-s",
+      "startedAt": "2026-10-12T22:08:11.559Z",
+      "filename": "response-022.txt",
+      "sha256": "800c866277b61e2fbc1bd2dc09ed98f597468a3a178181032b0d57c796014cab"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5965-yigit-aku-malzemeleri-nakliyat-turizm-insaat-sanayi-ve-ticaret-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5965-yigit-aku-malzemeleri-nakliyat-turizm-insaat-sanayi-ve-ticaret-a-s",
+      "startedAt": "2026-10-12T22:08:11.592Z",
+      "filename": "response-023.txt",
+      "sha256": "3541aba061b487d8a224c4586192086c383d005486c6d0d43f5ad26d92a4e310"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5478-rubenis-tekstil-sanayi-ticaret-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5478-rubenis-tekstil-sanayi-ticaret-a-s",
+      "startedAt": "2026-10-12T22:08:11.710Z",
+      "filename": "response-024.txt",
+      "sha256": "8257ba1d0840496728f5a1923f952654eaed9a8a4375a85f4c1d75ad66c2dc63"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1027-menderes-tekstil-sanayi-ve-ticaret-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1027-menderes-tekstil-sanayi-ve-ticaret-a-s",
+      "startedAt": "2026-10-12T22:08:11.745Z",
+      "filename": "response-025.txt",
+      "sha256": "5650e2ae674f6b80eede3b71ee99acfb0abef1953ea2d8fbd7e61f5bb51085ac"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5866-reeder-teknoloji-sanayi-ve-ticaret-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5866-reeder-teknoloji-sanayi-ve-ticaret-a-s",
+      "startedAt": "2026-10-12T22:08:11.772Z",
+      "filename": "response-026.txt",
+      "sha256": "57868c5990ff06bd878d6d2503735c21f558a1162c527618b929c74b65246140"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/4687-asce-gayrimenkul-yatirim-ortakligi-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/4687-asce-gayrimenkul-yatirim-ortakligi-a-s",
+      "startedAt": "2026-10-12T22:08:11.803Z",
+      "filename": "response-027.txt",
+      "sha256": "1ded47df31f4ea1ad6dd4fbbb2e7a35f79d6d1b7a425c5d846e3624ef329aa42"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5462-mobiltel-iletisim-hizmetleri-sanayi-ve-ticaret-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5462-mobiltel-iletisim-hizmetleri-sanayi-ve-ticaret-a-s",
+      "startedAt": "2026-10-12T22:08:11.830Z",
+      "filename": "response-028.txt",
+      "sha256": "af7dca1de86810e781eadc5e44eeb9ce21f37cdf61d5b63cf42d9a6a63b3c807"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1594-merit-turizm-yatirim-ve-isletme-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1594-merit-turizm-yatirim-ve-isletme-a-s",
+      "startedAt": "2026-10-12T22:08:11.861Z",
+      "filename": "response-029.txt",
+      "sha256": "2a812c9a92dc9e17ab51c6cda1dcdc370574d98f8a571bb6c9c203b745f835de"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/4872-smartiks-yazilim-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/4872-smartiks-yazilim-a-s",
+      "startedAt": "2026-10-12T22:08:11.900Z",
+      "filename": "response-030.txt",
+      "sha256": "8e95a1f9e36db608c56cd9d1e5c927cbfad584f00845e523b22fba509183ff4f"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/3909-penta-teknoloji-urunleri-dagitim-ticaret-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/3909-penta-teknoloji-urunleri-dagitim-ticaret-a-s",
+      "startedAt": "2026-10-12T22:08:12.023Z",
+      "filename": "response-031.txt",
+      "sha256": "75e9cacada0927de31e2f9dd7213850a11bfdbf865539e36e8ebaade3dd4c9ee"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/2900-yeo-teknoloji-enerji-ve-endustri-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/2900-yeo-teknoloji-enerji-ve-endustri-a-s",
+      "startedAt": "2026-10-12T22:08:12.146Z",
+      "filename": "response-032.txt",
+      "sha256": "a20dbe24925a9ebf526d323e907dd6d618546b147637bd452377cfa2bd4481e5"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1002-besler-gida-ve-kimya-sanayi-ve-ticaret-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1002-besler-gida-ve-kimya-sanayi-ve-ticaret-a-s",
+      "startedAt": "2026-10-12T22:08:12.267Z",
+      "filename": "response-033.txt",
+      "sha256": "bdb6017c68edba11b0a87cdb6ffe7d865feb821c0c38697a97fb726061f8aeb9"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1115-vakif-finansal-kiralama-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1115-vakif-finansal-kiralama-a-s",
+      "startedAt": "2026-10-12T22:08:12.298Z",
+      "filename": "response-034.txt",
+      "sha256": "88afa02d3486f003582ac10e9e9014f31c6bdce23fd9ce1f50fe27be0bd4e37a"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1509-lider-faktoring-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1509-lider-faktoring-a-s",
+      "startedAt": "2026-10-12T22:08:12.327Z",
+      "filename": "response-035.txt",
+      "sha256": "d8549739bf317fee01b3879f1ae5f157fcb5e0f85d8e6d3dce1c18394b97d198"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/2413-akbank-t-a-s",
+      "status": 200,
+      "finalUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/2413-akbank-t-a-s",
+      "startedAt": "2026-10-12T22:08:12.356Z",
+      "filename": "response-036.txt",
+      "sha256": "9c5f602459023d22fce04bd2fb68491477097d62a86efb9647440eb39bebf79a"
+    }
+  ],
+  "workerSha256": "5ca8886c65db969b83f179625dfb3f400cd339c814a22d5f896c50790e2e3196",
+  "sampleSelection": {
+    "pickedAt": "2026-10-12T22:05:47.785Z",
+    "method": "crypto.randomInt Fisher-Yates shuffle of official KAP equity markets; excludes bonds, funds and structured products; 30 distinct companies selected before results were read. Re-runs preserve companies and use their official equity symbol rather than other issuer codes.",
+    "universeCount": 626,
+    "sample": [
+      {
+        "symbol": "GLRYH",
+        "name": "GÜLER YATIRIM HOLDİNG A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1428-guler-yatirim-holding-a-s"
+      },
+      {
+        "symbol": "SAFKR",
+        "name": "SAFKAR EGE SOĞUTMACILIK KLİMA SOĞUK HAVA TESİSLERİ İHRACAT İTHALAT SANAYİ VE TİCARET A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/4550-safkar-ege-sogutmacilik-klima-soguk-hava-tesisleri-ihracat-ithalat-sanayi-ve-ticaret-a-s"
+      },
+      {
+        "symbol": "FADE",
+        "name": "FADE GIDA YATIRIM SANAYİ TİCARET A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5021-fade-gida-yatirim-sanayi-ticaret-a-s"
+      },
+      {
+        "symbol": "CIMSA",
+        "name": "ÇİMSA ÇİMENTO SANAYİ VE TİCARET A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/908-cimsa-cimento-sanayi-ve-ticaret-a-s"
+      },
+      {
+        "symbol": "OFSYM",
+        "name": "OFİS YEM GIDA SANAYİ TİCARET A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5851-ofis-yem-gida-sanayi-ticaret-a-s"
+      },
+      {
+        "symbol": "ISMEN",
+        "name": "İŞ YATIRIM MENKUL DEĞERLER A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1533-is-yatirim-menkul-degerler-a-s"
+      },
+      {
+        "symbol": "OBAMS",
+        "name": "OBA MAKARNACILIK SANAYİ VE TİCARET A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5934-oba-makarnacilik-sanayi-ve-ticaret-a-s"
+      },
+      {
+        "symbol": "PSGYO",
+        "name": "PASİFİK GAYRİMENKUL YATIRIM ORTAKLIĞI A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5371-pasifik-gayrimenkul-yatirim-ortakligi-a-s"
+      },
+      {
+        "symbol": "LUKSK",
+        "name": "LÜKS KADİFE TİCARET VE SANAYİİ A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1017-luks-kadife-ticaret-ve-sanayii-a-s"
+      },
+      {
+        "symbol": "EKGYO",
+        "name": "EMLAK KONUT GAYRİMENKUL YATIRIM ORTAKLIĞI A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1531-emlak-konut-gayrimenkul-yatirim-ortakligi-a-s"
+      },
+      {
+        "symbol": "KOPOL",
+        "name": "KOZA POLYESTER SANAYİ VE TİCARET A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5806-koza-polyester-sanayi-ve-ticaret-a-s"
+      },
+      {
+        "symbol": "DZGYO",
+        "name": "DENİZ GAYRİMENKUL YATIRIM ORTAKLIĞI A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/912-deniz-gayrimenkul-yatirim-ortakligi-a-s"
+      },
+      {
+        "symbol": "AEFES",
+        "name": "ANADOLU EFES BİRACILIK VE MALT SANAYİİ A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/858-anadolu-efes-biracilik-ve-malt-sanayii-a-s"
+      },
+      {
+        "symbol": "ATAGY",
+        "name": "ATA GAYRİMENKUL YATIRIM ORTAKLIĞI A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/867-ata-gayrimenkul-yatirim-ortakligi-a-s"
+      },
+      {
+        "symbol": "MAKTK",
+        "name": "MAKİNA TAKIM ENDÜSTRİSİ A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1018-makina-takim-endustrisi-a-s"
+      },
+      {
+        "symbol": "TEKTU",
+        "name": "TEK-ART İNŞAAT TİCARET TURİZM SANAYİ VE YATIRIMLAR A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1092-tek-art-insaat-ticaret-turizm-sanayi-ve-yatirimlar-a-s"
+      },
+      {
+        "symbol": "YIGIT",
+        "name": "YİĞİT AKÜ MALZEMELERİ NAKLİYAT TURİZM İNŞAAT SANAYİ VE TİCARET A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5965-yigit-aku-malzemeleri-nakliyat-turizm-insaat-sanayi-ve-ticaret-a-s"
+      },
+      {
+        "symbol": "RUBNS",
+        "name": "RUBENİS TEKSTİL SANAYİ TİCARET A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5478-rubenis-tekstil-sanayi-ticaret-a-s"
+      },
+      {
+        "symbol": "MNDRS",
+        "name": "MENDERES TEKSTİL SANAYİ VE TİCARET A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1027-menderes-tekstil-sanayi-ve-ticaret-a-s"
+      },
+      {
+        "symbol": "REEDR",
+        "name": "REEDER TEKNOLOJİ SANAYİ VE TİCARET A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5866-reeder-teknoloji-sanayi-ve-ticaret-a-s"
+      },
+      {
+        "symbol": "ASGYO",
+        "name": "ASCE GAYRİMENKUL YATIRIM ORTAKLIĞI A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/4687-asce-gayrimenkul-yatirim-ortakligi-a-s"
+      },
+      {
+        "symbol": "MOBTL",
+        "name": "MOBİLTEL İLETİŞİM HİZMETLERİ SANAYİ VE TİCARET A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/5462-mobiltel-iletisim-hizmetleri-sanayi-ve-ticaret-a-s"
+      },
+      {
+        "symbol": "MERIT",
+        "name": "MERİT TURİZM YATIRIM VE İŞLETME A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1594-merit-turizm-yatirim-ve-isletme-a-s"
+      },
+      {
+        "symbol": "SMART",
+        "name": "SMARTİKS YAZILIM A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/4872-smartiks-yazilim-a-s"
+      },
+      {
+        "symbol": "PENTA",
+        "name": "PENTA TEKNOLOJİ ÜRÜNLERİ DAĞITIM TİCARET A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/3909-penta-teknoloji-urunleri-dagitim-ticaret-a-s"
+      },
+      {
+        "symbol": "YEOTK",
+        "name": "YEO TEKNOLOJİ ENERJİ VE ENDÜSTRİ A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/2900-yeo-teknoloji-enerji-ve-endustri-a-s"
+      },
+      {
+        "symbol": "BESLR",
+        "name": "BESLER GIDA VE KİMYA SANAYİ VE TİCARET A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1002-besler-gida-ve-kimya-sanayi-ve-ticaret-a-s"
+      },
+      {
+        "symbol": "VAKFN",
+        "name": "VAKIF FİNANSAL KİRALAMA A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1115-vakif-finansal-kiralama-a-s"
+      },
+      {
+        "symbol": "LIDFA",
+        "name": "LİDER FAKTORİNG A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/1509-lider-faktoring-a-s"
+      },
+      {
+        "symbol": "AKBNK",
+        "name": "AKBANK T.A.Ş.",
+        "kapUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet/2413-akbank-t-a-s"
+      }
+    ]
+  }
+}

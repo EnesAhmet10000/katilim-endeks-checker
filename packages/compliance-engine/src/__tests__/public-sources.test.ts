@@ -34,6 +34,13 @@ describe('Free official sources: dates, identities, missing values and safe tran
   const result=parseKafif(kafif.replace(/>0,25</g,'><'),petkm,now);
   assert.equal(result.criteria[4].actualValue,undefined);assert.ok(result.warnings.length);
  });
+ it('reads annual KAP periods and still rejects future annual reports',()=>{
+  const annual=kafif.replace(/2026 \/ 6 Aylık/g,'2025 / Yıllık');
+  const result=parseKafif(annual,petkm,now);
+  assert.equal(result.period,'2025 / Yıllık');assert.equal(result.criteria.length,7);
+  assert.equal(result.criteria[4].actualValue,.25);
+  assert.throws(()=>parseKafif(annual.replace(/2025 \/ Yıllık/g,'2026 / Yıllık'),petkm,now));
+ });
  it('verifies fund identity and does not turn null interest-content into interest-free',()=>{
   const result=parseTefasProfile(profile,kua);assert.equal(result.isin,'TRYKTPY00715');assert.equal(result.interestContent,undefined);
   assert.throws(()=>parseTefasProfile(profile,{...kua,symbol:'TTE'}));assert.throws(()=>parseTefasProfile({errorCode:'429',resultList:[]},kua));

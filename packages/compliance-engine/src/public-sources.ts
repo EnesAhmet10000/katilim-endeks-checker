@@ -35,9 +35,9 @@ export function parseKafif(html: string, instrument: InstrumentSummary, now: str
  if(heads.length!==12||!heads[9].includes('Gelirlerinin Oranı')||!heads[10].includes('Varlıklarının Oranı')||!heads[11].includes('Borçlarının Oranı')) throw Error('KAFİF tablo şeması değişti.');
  const rows=[...markup.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)].map(m=>[...m[1].matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/gi)].map(m=>htmlText(m[1]))).filter(r=>r[0]===instrument.symbol);
  if(rows.length!==1||rows[0].length!==12||normalizeIdentity(rows[0][1])!==normalizeIdentity(instrument.name)) throw Error('KAFİF şirket kimliği doğrulanamadı.');
- const row=rows[0]; const period=row[3]; const pm=period.match(/^(\d{4}) \/ (3|6|9|12) Aylık$/);
+ const row=rows[0]; const period=row[3]; const pm=period.match(/^(\d{4}) \/ (?:(3|6|9|12) Aylık|Yıllık)$/);
  if(!pm) throw Error('KAFİF finansal dönemi okunamadı.');
- const periodEnd=new Date(Date.UTC(Number(pm[1]),Number(pm[2]),0)).toISOString().slice(0,10);
+ const periodEnd=new Date(Date.UTC(Number(pm[1]),Number(pm[2]||12),0)).toISOString().slice(0,10);
  const warnings: string[]=[];
  if(Date.parse(periodEnd)>Date.parse(now)) throw Error('KAFİF dönemi gelecekte.');
  if(Date.parse(now)-Date.parse(periodEnd)>370*DAY) warnings.push('KAFİF dönemi bir yıldan eski; güncel uygunluk değerlendirmesi yapılamaz.');

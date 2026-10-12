@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Katılım Finans Uygunluk Kontrolü",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "BIST hisseleri ve KAP fonları: resmi kimlik, katılım endeks listesi, KAFİF beyanları ve mevcut TEFAS portföy dağılımı.",
   "permissions": [
     "contextMenus",
