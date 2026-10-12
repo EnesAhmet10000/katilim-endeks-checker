@@ -1,6 +1,7 @@
 import { sourceLinks, instrumentQuery } from '@katilim/compliance-engine';
 import { ComplianceEvaluation, DisambiguationCandidate, InstrumentType } from '@katilim/shared-types';
 import { applyView, bindViewControls, normalizeView, readView, ViewPreferences } from '../view-preferences.js';
+import { resultAppearance } from '../result-appearance.js';
 
 class KatilimOverlayManager {
   private container: HTMLElement | null = null;
@@ -533,11 +534,8 @@ class KatilimOverlayManager {
     const inst = evaluation.instrument;
     const isStock = inst.type === InstrumentType.STOCK;
 
-    const statusIcon = evaluation.statusBadgeVariant === 'success'
-      ? '✅'
-      : evaluation.statusBadgeVariant === 'danger'
-      ? '❌'
-      : '⚠️';
+    const appearance = resultAppearance(evaluation);
+    const statusIcon = appearance.icon;
 
     let indicesHtml = '';
     if (isStock && evaluation.indices && evaluation.indices.length > 0) {
@@ -628,7 +626,7 @@ class KatilimOverlayManager {
             <div class="company-name">${this.escapeHtml(inst.name)}</div>
           </div>
 
-          <div class="status-banner ${evaluation.statusBadgeVariant}">
+          <div class="status-banner ${appearance.variant}">
             <span class="status-icon">${statusIcon}</span>
             <div>
               <div class="status-title">${this.escapeHtml(evaluation.statusLabel)}</div>

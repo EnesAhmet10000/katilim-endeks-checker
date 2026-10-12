@@ -1,5 +1,6 @@
 import { sourceLinks, instrumentQuery } from '@katilim/compliance-engine';
 import { applyView, bindViewControls, normalizeView, readView } from '../view-preferences.js';
+import { resultAppearance } from '../result-appearance.js';
 const escapeHtml = (text: string) => (text || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]!));
 import { ComplianceCheckResponse, ComplianceEvaluation, InstrumentSummary, InstrumentType } from '@katilim/shared-types';
 
@@ -131,7 +132,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const inst = ev.instrument;
     const isStock = inst.type === InstrumentType.STOCK;
 
-    const icon = ev.statusBadgeVariant === 'success' ? '✅' : ev.statusBadgeVariant === 'danger' ? '❌' : '⚠️';
+    const appearance=resultAppearance(ev);
+    const icon=appearance.icon;
 
     detailCard.innerHTML = `
       <div data-view-section="identity" style="display: flex; justify-content: space-between; align-items: center;">
@@ -144,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </span>
       </div>
 
-      <div class="status-box ${ev.statusBadgeVariant}">
+      <div class="status-box ${appearance.variant}">
         <span style="font-size: 20px;">${icon}</span>
         <div>
           <div style="font-weight: 800; font-size: 12px; margin-bottom: 2px;">${escapeHtml(ev.statusLabel)}</div>

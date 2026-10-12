@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build": "npm run build --workspace=@katilim/shared-types && npm run build --workspace=@katilim/compliance-engine && npm run build --workspace=@katilim/api && npm run build:extension",
-    "test": "npm run test --workspaces --if-present && node scripts/test-public-extension.mjs",
+    "test": "npm run test --workspaces --if-present && node scripts/test-public-extension.mjs && node scripts/test-result-appearance.mjs",
     "start:api": "npm --workspace=apps/api run start",
     "dev:api": "npm --workspace=apps/api run dev",
     "build:extension": "npm --workspace=apps/extension run build",

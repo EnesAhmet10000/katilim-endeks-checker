@@ -1,5 +1,5 @@
 import {readFileSync,writeFileSync} from 'node:fs';
-const rows=JSON.parse(readFileSync('docs/public-source-coverage-2026-10-12.json','utf8'));
+const rows=JSON.parse(readFileSync(process.argv[2]||'docs/public-source-coverage-2026-10-12.json','utf8'));
 const data={stock:rows.find(r=>r.query==='BIST:PETKM').evaluation,fund:rows.find(r=>r.query==='FON:KUA').evaluation};
 data.missing={...data.stock,status:'INSUFFICIENT_DATA',statusLabel:'Güncel veri doğrulanamadı',summaryReason:'Resmi kaynak bağlantısı kurulamadı. Eksik veri sıfır sayılmaz.',asOf:'',criteria:[],indices:[],sources:[],dataWarnings:['Güncel kaynak doğrulanamadı.']};
 const json=JSON.stringify(data).replace(/</g,'\\u003c');
