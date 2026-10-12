@@ -4,33 +4,13 @@ Check BIST participation-index membership and available official company/fund di
 
 [Download Chrome ZIP](https://github.com/EnesAhmet10000/katilim-endeks-checker/releases/download/v1.4.3/katilim-finans-chrome-v1.4.3.zip) · [Release and audit attachments](https://github.com/EnesAhmet10000/katilim-endeks-checker/releases/tag/v1.4.3) · [العربية: طريقة التثبيت](docs/INSTALL-AR.md)
 
-## Screenshots
+## Demo video
 
-The images show the actual extension interface rendered with recorded official-source responses. They illustrate presentation; dates and results are examples, not current trading or religious advice. The full/custom screenshots use the same recorded response captured before the displayed BIST list became effective, so its banner correctly appears yellow.
+[![Animated preview of the extension in use on stock search pages](docs/demo-preview.gif)](docs/demo.mp4)
 
-### Simple — Basit
+[▶ Watch the full video (56 seconds, original recording)](docs/demo.mp4) · [Download MP4](https://github.com/EnesAhmet10000/katilim-endeks-checker/releases/download/v1.4.3/katilim-demo.mp4)
 
-Result and the four stock actions: refresh, KAP, Helal Finans and Fintables.
-
-![Simple result card with confirmed BIST membership and four action buttons](docs/preview-result-colors-v1.4.2.png)
-
-### Full — Tam
-
-Company identity, source dates, participation indices, KAFİF disclosures and source links. Scroll the card for the remaining details.
-
-![Full stock card with company identity, dated indices and source actions](docs/preview-full-v1.4.3.png)
-
-### Custom — Özel
-
-Choose which sections appear using **Özelleştir**. Preferences are saved locally and shared between the popup and result card.
-
-![Custom mode with checkboxes for showing or hiding result sections](docs/preview-custom-v1.4.3.png)
-
-### Funds
-
-Official fund identity, available umbrella/profile fields and TEFAS allocation where supported.
-
-![Fund card showing KUA identity and official KAP and TEFAS profile fields](docs/preview-funds-v1.3.0.png)
+The recording shows the extension on real stock-search pages, including full details, custom visibility options and source navigation. The animated preview is silent; the full MP4 preserves the original recording and audio. Displayed dates and results belong to the recording.
 
 ## How to use
 

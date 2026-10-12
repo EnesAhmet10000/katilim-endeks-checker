@@ -9,7 +9,7 @@ The Chrome extension reads official BIST membership, KAP company disclosures and
 - Correct official KAP identity links and normalized stock symbols, including PETKM.
 - On-demand official-source requests, one-hour result caches, and forced refresh via **Yenile**.
 - **Fix:** valid annual KAFİF periods such as `2025 / Yıllık` are read correctly; future financial periods remain rejected.
-- README screenshots and a documented live audit of 30 random equity companies.
+- A recorded demo video with an animated README preview, and a documented live audit of 30 random equity companies.
 
 ## Validation
 
@@ -25,8 +25,10 @@ Download **katilim-finans-chrome-v1.4.3.zip**, extract it, open `chrome://extens
 
 The audit report is attached as Markdown, CSV and JSON. **SHA256SUMS.txt** contains checksums for the ZIP and reports.
 
+**katilim-demo.mp4** is the original 56-second recording, including its audio. Watch the full video from the README or download it here. Dates and results shown in the recording are historical examples.
+
 لا يحتاج API أو اشتراك. حمّل ZIP وفك الضغط، ثم اختر المجلد من Load unpacked في Chrome. التقرير المرفق يفصّل نتائج الأسهم الثلاثين والنواقص.
 
 ## Scope
 
-This is a GitHub release for local installation; it has not been published in Chrome Web Store. Screenshots use recorded responses. The live audit exercised the packaged worker with real HTTPS requests and simulated Chrome messaging/storage, not an installed-browser context-menu test. Index membership and disclosed ratios are not a complete religious verdict or investment recommendation. Source availability and freshness depend on the official providers.
+This is a GitHub release for local installation; it has not been published in Chrome Web Store. The live audit exercised the packaged worker with real HTTPS requests and simulated Chrome messaging/storage, not an installed-browser context-menu test. Index membership and disclosed ratios are not a complete religious verdict or investment recommendation. Source availability and freshness depend on the official providers.
