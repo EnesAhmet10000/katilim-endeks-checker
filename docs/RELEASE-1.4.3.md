@@ -25,7 +25,7 @@ Download **katilim-finans-chrome-v1.4.3.zip**, extract it, open `chrome://extens
 
 The audit report is attached as Markdown, CSV and JSON. **SHA256SUMS.txt** contains checksums for the ZIP and reports.
 
-**katilim-demo.mp4** is the original 56-second recording, including its audio. Watch the full video from the README or download it here. Dates and results shown in the recording are historical examples.
+**katilim-demo.mp4** is the original 56-second recording, including its audio. The README shows an animated preview; download the full MP4 here or through its README link. Dates and results shown in the recording are historical examples.
 
 لا يحتاج API أو اشتراك. حمّل ZIP وفك الضغط، ثم اختر المجلد من Load unpacked في Chrome. التقرير المرفق يفصّل نتائج الأسهم الثلاثين والنواقص.
 

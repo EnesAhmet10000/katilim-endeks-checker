@@ -6,9 +6,9 @@ Check BIST participation-index membership and available official company/fund di
 
 ## Demo video
 
-[![Animated preview of the extension in use on stock search pages](docs/demo-preview.gif)](docs/demo.mp4)
+[![Animated preview of the extension in use on stock search pages](docs/demo-preview.gif)](https://github.com/EnesAhmet10000/katilim-endeks-checker/releases/download/v1.4.3/katilim-demo.mp4)
 
-[▶ Watch the full video (56 seconds, original recording)](docs/demo.mp4) · [Download MP4](https://github.com/EnesAhmet10000/katilim-endeks-checker/releases/download/v1.4.3/katilim-demo.mp4)
+[Download the full video — MP4, 56 seconds, original recording with audio](https://github.com/EnesAhmet10000/katilim-endeks-checker/releases/download/v1.4.3/katilim-demo.mp4)
 
 The recording shows the extension on real stock-search pages, including full details, custom visibility options and source navigation. The animated preview is silent; the full MP4 preserves the original recording and audio. Displayed dates and results belong to the recording.
 
