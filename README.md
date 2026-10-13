@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="apps/extension/public/icons/icon128.png" alt="Katılım Endeksi Checker" width="64" height="64">
-
 # Katılım Endeksi Checker
 
 ### Select a ticker. Right-click. See the official data.
