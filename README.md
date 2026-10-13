@@ -6,9 +6,9 @@ A Chrome extension that brings BIST participation-index membership, company disc
 
 **Free. No API key. No account. No tracking.**
 
-[⬇ Download the extension](https://github.com/EnesAhmet10000/katilim-endeks-checker/releases/latest) · [Watch / download the demo](https://github.com/EnesAhmet10000/katilim-endeks-checker/releases/download/v1.5.0/katilim-demo.mp4)
+[⬇ Download the extension](https://github.com/EnesAhmet10000/katilim-endeks-checker/releases/latest) · [▶ Watch the demo on YouTube](https://youtu.be/j1KZuk8OvZg) · [Download the original demo (MP4)](https://github.com/EnesAhmet10000/katilim-endeks-checker/releases/download/v1.5.0/katilim-demo.mp4)
 
-[![See the extension in action](docs/demo-preview.gif)](https://github.com/EnesAhmet10000/katilim-endeks-checker/releases/download/v1.5.0/katilim-demo.mp4)
+[![See the extension in action on YouTube](docs/demo-preview.gif)](https://youtu.be/j1KZuk8OvZg)
 
 ### Your language. Your view.
 
