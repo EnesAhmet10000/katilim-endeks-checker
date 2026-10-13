@@ -4,7 +4,7 @@
 
 ### Select a ticker. Right-click. See the official data.
 
-Turkish stocks & funds, checked from the page you're already on.
+Turkish stocks BIST & funds, checked from the page you're already on.
 <br>
 **BIST · KAP · TEFAS**
 
