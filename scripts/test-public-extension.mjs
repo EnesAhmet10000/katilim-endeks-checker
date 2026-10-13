@@ -3,8 +3,8 @@ import vm from 'node:vm';
 import assert from 'node:assert/strict';
 const read=name=>readFileSync(name,'utf8');
 const bodies={directory:read('kap-directory-fixture.html'),funds:read('kap-funds-directory-fixture.html'),fund:read('kap-fund-kua-fixture.html'),bist:read('bist-membership-fixture.csv'),kafif:read('kap-kafif-fixture.html'),profile:read('tefas-profile-fixture.json'),allocation:read('tefas-allocation-fixture.json')};
-const storage={};let listener;const requests=[];let offline=false;let blockBist=false;
-const chrome={runtime:{onInstalled:{addListener(){}},onMessage:{addListener(fn){listener=fn;}}},contextMenus:{onClicked:{addListener(){}}},storage:{local:{get(keys,cb){cb(Object.fromEntries(keys.map(k=>[k,storage[k]])));},set(obj,cb){Object.assign(storage,obj);cb();}}}};
+const storage={};let listener,installed,storageChanged;let menuTitle;const requests=[];let offline=false;let blockBist=false;
+const chrome={runtime:{onInstalled:{addListener(fn){installed=fn;}},onMessage:{addListener(fn){listener=fn;}}},contextMenus:{removeAll(cb){cb();},create(item){menuTitle=item.title;},update(id,item,cb){assert.equal(id,'checkKatilimCompliance');menuTitle=item.title;cb();},onClicked:{addListener(){}}},storage:{onChanged:{addListener(fn){storageChanged=fn;}},local:{get(keys,cb){cb(Object.fromEntries(keys.map(k=>[k,storage[k]])));},set(obj,cb){Object.assign(storage,obj);cb();}}}};
 class TestDate extends Date {constructor(...args){super(...(args.length?args:['2026-10-12T12:00:00Z']));}static now(){return Date.parse('2026-10-12T12:00:00Z');}}
 const context=vm.createContext({chrome,console,URL,performance,setTimeout,clearTimeout,AbortController,Date:TestDate,fetch:async(url,options)=>{
  requests.push({url,options});if(offline||blockBist&&url.includes('.csv')) throw Error('offline');
@@ -12,6 +12,10 @@ const context=vm.createContext({chrome,console,URL,performance,setTimeout,clearT
  return {ok:true,url,text:async()=>body};
 }});
 vm.runInContext(read('apps/extension/dist/chrome/background.js'),context);
+storage['katilim-language-v1']='ar';installed();await new Promise(resolve=>setTimeout(resolve,0));
+assert.equal(menuTitle,'فحص التوافق التشاركي');
+storageChanged({'katilim-language-v1':{newValue:'en'}},'local');assert.equal(menuTitle,'Check Participation Eligibility');
+storageChanged({'katilim-language-v1':{newValue:'tr'}},'local');assert.equal(menuTitle,'Katılım Uygunluğunu Kontrol Et');
 const send=message=>new Promise(resolve=>listener(message,{},resolve));
 let result=await send({type:'POPUP_DIRECT_CHECK',query:'Petkim'});
 assert.equal(result.evaluation.instrument.symbol,'PETKM');assert.equal(result.evaluation.status,'UNCERTAIN');assert.equal(result.evaluation.indices[0].isMember,true);assert.equal(result.evaluation.criteria[6].actualValue,24.19);assert.equal(requests.length,4);
@@ -30,5 +34,5 @@ blockBist=false;
 result=await send({type:'POPUP_DIRECT_CHECK',query:'FON:KUA',forceRefresh:true});assert.equal(result.evaluation.instrument.type,'MUTUAL_FUND');assert.equal(result.evaluation.fundProfile.reportedParticipation,true);assert.equal(result.evaluation.status,'UNCERTAIN');assert.equal(result.evaluation.fundData.allocation.length,4);assert.equal(result.evaluation.sources.length,3);
 assert.equal((await send({type:'POPUP_SEARCH',query:'KUA'})).results[0].type,'MUTUAL_FUND');
 for(const {url,options} of requests){assert.ok(/^https:\/\/(?:www\.kap\.org\.tr|borsaistanbul\.com|www\.tefas\.gov\.tr)\//.test(url));assert.equal(options.credentials,'omit');assert.ok(!options.headers?.Authorization);assert.ok(!options.body?.includes('query'));}
-const manifest=JSON.parse(read('apps/extension/dist/chrome/manifest.json'));assert.equal(manifest.version,'1.4.3');assert.equal(manifest.host_permissions.length,3);assert.ok(!manifest.permissions.includes('tabs'));assert.ok(!manifest.content_scripts);
+const manifest=JSON.parse(read('apps/extension/dist/chrome/manifest.json'));assert.equal(manifest.version,'1.5.0');assert.equal(manifest.host_permissions.length,3);assert.ok(!manifest.permissions.includes('tabs'));assert.ok(!manifest.content_scripts);
 console.log('PASS: actual bundled worker: public sources, fund allocation, missing source, aliases, directories, cache, forced refresh, offline; no keys/cookies/all-site permissions.');

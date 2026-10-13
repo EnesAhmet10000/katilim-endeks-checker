@@ -1,6 +1,7 @@
 import {readFileSync,writeFileSync} from 'node:fs';
-const rows=JSON.parse(readFileSync(process.argv[2]||'docs/public-source-coverage-2026-10-12.json','utf8'));
-const data={stock:rows.find(r=>r.query==='BIST:PETKM').evaluation,fund:rows.find(r=>r.query==='FON:KUA').evaluation};
+const rows=JSON.parse(readFileSync('docs/public-source-coverage-2026-10-12.json','utf8'));
+const audit=process.argv[2]?JSON.parse(readFileSync(process.argv[2],'utf8')):null;
+const data={stock:audit?.results?.find(r=>r.identity.symbol==='CIMSA')?.response.evaluation||rows.find(r=>r.query==='BIST:PETKM').evaluation,fund:rows.find(r=>r.query==='FON:KUA').evaluation};
 data.missing={...data.stock,status:'INSUFFICIENT_DATA',statusLabel:'Güncel veri doğrulanamadı',summaryReason:'Resmi kaynak bağlantısı kurulamadı. Eksik veri sıfır sayılmaz.',asOf:'',criteria:[],indices:[],sources:[],dataWarnings:['Güncel kaynak doğrulanamadı.']};
 const json=JSON.stringify(data).replace(/</g,'\\u003c');
 const storageShim=`const listeners=new Set();window.chrome.storage={local:{get(keys,cb){const result={};for(const key of keys){try{result[key]=JSON.parse(localStorage.getItem(key));}catch{}}cb(result)},set(values){for(const [key,value] of Object.entries(values)){localStorage.setItem(key,JSON.stringify(value));for(const fn of listeners)fn({[key]:{newValue:value}},'local')}}},onChanged:{addListener(fn){listeners.add(fn)},removeListener(fn){listeners.delete(fn)}}};`;
@@ -8,5 +9,5 @@ writeFileSync('qa-preview.html',`<!doctype html><html lang="tr"><meta charset="u
 const shim=`<script>const samples=${json};window.chrome={runtime:{sendMessage(message,cb){const fund=message.query.includes('KUA');const evaluation=fund?samples.fund:samples.stock;cb(message.type==='POPUP_SEARCH'?{results:[evaluation.instrument]}:{success:true,evaluation,resolution:{isResolved:true,instrument:evaluation.instrument}})}}};</script>`;
 const popup=readFileSync('apps/extension/dist/chrome/src/popup/popup.html','utf8').replace('<head>','<head><base href="/apps/extension/dist/chrome/src/popup/">'+shim);
 writeFileSync('qa-popup-preview.html',popup.replace('</script>',storageShim+'</script>'));
-const preview=readFileSync('qa-preview.html','utf8').replace('</script>',storageShim+'</script>').replaceAll('Kontrol 1.3','Kontrol 1.4').replaceAll('Katılım 1.3','Katılım 1.4');
+const preview=readFileSync('qa-preview.html','utf8').replace('</script>',storageShim+'</script>').replaceAll('Kontrol 1.3','Kontrol 1.5').replaceAll('Katılım 1.3','Katılım 1.5').replace('<button id="stock">PETKM</button>',`<button id="stock">${data.stock.instrument.symbol}</button>`);
 writeFileSync('qa-preview.html',preview);

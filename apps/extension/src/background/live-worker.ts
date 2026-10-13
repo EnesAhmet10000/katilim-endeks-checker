@@ -4,6 +4,7 @@ import { COMPANY_DIRECTORY, CompanyIdentity, KAP_DIRECTORY_URL, parseCompanyDire
 import { LocalComplianceEvaluator } from './local-evaluator.js';
 import { FUND_DIRECTORY, FundIdentity, KAP_FUNDS_DIRECTORY_URL, parseFundDirectory, resolveInstrument, searchInstruments } from '@katilim/compliance-engine';
 import { checkPublicInstrument } from '@katilim/compliance-engine';
+import {LANGUAGE_KEY,normalizeLanguage,translate} from '../i18n.js';
 
 const localEvaluator = new LocalComplianceEvaluator();
 const HOUR = 60 * 60 * 1000;
@@ -52,8 +53,12 @@ async function check(query: string, force=false): Promise<ComplianceCheckRespons
  return response;
 }
 
+async function contextMenuTitle(){return translate('Katılım Uygunluğunu Kontrol Et',normalizeLanguage(await BrowserRuntime.getStorage(LANGUAGE_KEY)));}
 chrome.runtime.onInstalled.addListener(()=>{
- chrome.contextMenus.removeAll(()=>chrome.contextMenus.create({id:'checkKatilimCompliance',title:'Katılım Uygunluğunu Kontrol Et',contexts:['selection']}));
+ void contextMenuTitle().then(title=>chrome.contextMenus.removeAll(()=>chrome.contextMenus.create({id:'checkKatilimCompliance',title,contexts:['selection']})));
+});
+chrome.storage.onChanged?.addListener((changes,area)=>{
+ if(area==='local'&&changes[LANGUAGE_KEY]) chrome.contextMenus.update('checkKatilimCompliance',{title:translate('Katılım Uygunluğunu Kontrol Et',normalizeLanguage(changes[LANGUAGE_KEY].newValue))},()=>{void chrome.runtime.lastError;});
 });
 chrome.contextMenus.onClicked.addListener((info,tab)=>{
  if(info.menuItemId==='checkKatilimCompliance' && tab?.id && info.selectionText) void executeComplianceCheck(tab.id,info.selectionText);

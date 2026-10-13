@@ -1,10 +1,13 @@
 import { sourceLinks, instrumentQuery } from '@katilim/compliance-engine';
 import { applyView, bindViewControls, normalizeView, readView } from '../view-preferences.js';
 import { resultAppearance } from '../result-appearance.js';
+import {initLanguage,localize,onLanguageChange} from '../i18n.js';
 const escapeHtml = (text: string) => (text || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]!));
 import { ComplianceCheckResponse, ComplianceEvaluation, InstrumentSummary, InstrumentType } from '@katilim/shared-types';
 
 document.addEventListener('DOMContentLoaded', () => {
+  onLanguageChange(()=>localize(document));
+  void initLanguage().then(()=>localize(document));
   const searchInput = document.getElementById('searchInput') as HTMLInputElement;
   const clearSearchBtn = document.getElementById('clearSearchBtn') as HTMLButtonElement;
   const quickTags = document.getElementById('quickTags') as HTMLElement;
@@ -107,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     });
+    localize(document);
   }
 
   function performDirectCheck(query: string, forceRefresh=false) {
@@ -195,6 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     `;
     applyView(detailCard,view);
+    localize(document);
     detailCard.querySelector('#refreshDetail')?.addEventListener('click', () => performDirectCheck(instrumentQuery(inst),true));
   }
 
@@ -213,5 +218,6 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       </div>
     `;
+    localize(document);
   }
 });

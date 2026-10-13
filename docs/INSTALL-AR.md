@@ -1,6 +1,8 @@
-# تثبيت وتجربة الإصدار 1.4.3
+# تثبيت وتجربة الإصدار 1.5.0
 
-حمّل `katilim-finans-chrome-v1.4.3.zip` من [إصدارات GitHub](https://github.com/EnesAhmet10000/katilim-endeks-checker/releases/tag/v1.4.3)، وفك ضغطه في مجلد ثابت. ملف ZIP نفسه لا يُختار في Load unpacked؛ اختر المجلد الذي يحتوي على `manifest.json`.
+حمّل `katilim-finans-chrome-v1.5.0.zip` من [إصدارات GitHub](https://github.com/EnesAhmet10000/katilim-endeks-checker/releases/tag/v1.5.0)، وفك ضغطه في مجلد ثابت. ملف ZIP نفسه لا يُختار في Load unpacked؛ اختر المجلد الذي يحتوي على `manifest.json`.
+
+اختر **العربية** أو **English** أو **Türkçe** من قائمة اللغة في نافذة الإضافة أو بطاقة النتائج. يُحفظ اختيارك محليًا، والعربية تُعرض من اليمين إلى اليسار. قائمة النقر الأيمن تتبع اللغة المختارة.
 
 1. افتح `chrome://extensions` وفعل Developer mode.
 2. اختر Load unpacked ثم المجلد الذي فككت فيه ZIP. عند البناء من المصدر اختر `apps/extension/dist/chrome`. لتحديث تثبيت سابق، فك النسخة الجديدة في مجلد التثبيت نفسه ثم اضغط Reload.

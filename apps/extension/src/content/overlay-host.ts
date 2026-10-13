@@ -2,6 +2,7 @@ import { sourceLinks, instrumentQuery } from '@katilim/compliance-engine';
 import { ComplianceEvaluation, DisambiguationCandidate, InstrumentType } from '@katilim/shared-types';
 import { applyView, bindViewControls, normalizeView, readView, ViewPreferences } from '../view-preferences.js';
 import { resultAppearance } from '../result-appearance.js';
+import {initLanguage,localize,onLanguageChange} from '../i18n.js';
 
 class KatilimOverlayManager {
   private container: HTMLElement | null = null;
@@ -10,6 +11,8 @@ class KatilimOverlayManager {
   private disposeView?: () => void;
 
   constructor() {
+    onLanguageChange(()=>{if(this.shadow)localize(this.shadow);});
+    void initLanguage();
     void readView().then(view=>{this.view=view;this.mountView();});
     this.initMessageListener();
     console.log('🌙 Katılım Finans content script initialized.');
@@ -72,7 +75,12 @@ class KatilimOverlayManager {
       [hidden] { display: none !important; }
       .view-controls { padding:10px 18px; background:#f8fafc; color:#334155; font-size:12px; border-bottom:1px solid #e2e8f0; }
       .view-controls select, .view-controls button { padding:5px 8px; border:1px solid #cbd5e1; border-radius:6px; background:white; color:#334155; font:inherit; }
-      .view-controls button { margin-left:8px; cursor:pointer; }
+      .view-controls button { margin-inline-start:8px; cursor:pointer; }
+      .language-control { display:inline-flex; align-items:center; gap:4px; margin-inline-end:10px; }
+      .view-controls { display:flex; flex-wrap:wrap; align-items:center; gap:6px; }
+      .view-controls fieldset { flex-basis:100%; }
+      [dir="rtl"] { text-align:right; }
+      .symbol-badge, .company-name { direction:ltr; unicode-bidi:plaintext; }
       .view-controls fieldset { border:0; margin-top:10px; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
       .view-controls legend { margin-bottom:8px; }
       .view-controls fieldset label { display:flex; align-items:center; gap:6px; }
@@ -525,6 +533,7 @@ class KatilimOverlayManager {
       </div>
     `;
 
+    localize(shadow);
     shadow.getElementById('closeCard')?.addEventListener('click', () => this.remove());
   }
 
@@ -722,6 +731,7 @@ class KatilimOverlayManager {
       </div>
     `;
 
+    localize(shadow);
     shadow.getElementById('closeCard')?.addEventListener('click', () => this.remove());
 
     shadow.querySelectorAll('.candidate-item').forEach(el => {
@@ -763,6 +773,7 @@ class KatilimOverlayManager {
       </div>
     `;
 
+    localize(shadow);
     shadow.getElementById('closeCard')?.addEventListener('click', () => this.remove());
   }
 
@@ -772,6 +783,7 @@ class KatilimOverlayManager {
     if(!controls||!this.shadow) return;
     applyView(this.shadow,this.view);
     this.disposeView=bindViewControls(controls,this.view,view=>{this.view=view;if(this.shadow) applyView(this.shadow,view);});
+    localize(this.shadow);
   }
 
   public remove() {
